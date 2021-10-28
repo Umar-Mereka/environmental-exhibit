@@ -1,0 +1,32 @@
+{
+	"name": "MS_ES",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 900961523962890,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Sprite3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 229143878266273,
+					"parameters": {
+						"layout": "CharacterSelectScreen"
+					}
+				}
+			],
+			"sid": 865808259895719
+		}
+	],
+	"sid": 225017219049683
+}

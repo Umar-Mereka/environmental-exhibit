@@ -1,0 +1,59 @@
+{
+	"name": "SS_ES",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 538515750627324
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 602015686494159,
+					"parameters": {
+						"seconds": "2.0"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 496116589070026,
+					"parameters": {
+						"layout": "MenuScreen"
+					}
+				}
+			],
+			"sid": 440469584532504
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 572423017581804
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 611185022118280,
+					"parameters": {
+						"audio-file": "civilization-v-ost-casimir-war-theme-bog-sie-rodzi",
+						"loop": "looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 410561438080991
+		}
+	],
+	"sid": 372748299650649
+}

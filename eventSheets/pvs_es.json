@@ -1,0 +1,181 @@
+{
+	"name": "PVS_ES",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "videoStart",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 613611856625809
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 519040518040808
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "bg_pvs",
+					"sid": 101298521617946,
+					"parameters": {
+						"x": "0",
+						"y": "0"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Video",
+					"sid": 868833615543206,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "pause",
+					"objectClass": "Video",
+					"sid": 543086514158610
+				}
+			],
+			"sid": 237221351495787
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "button_play_video",
+					"sid": 243502257834405
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 440756011984169,
+					"parameters": {
+						"variable": "videoStart",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 185071096121701,
+					"parameters": {
+						"variable": "videoStart",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Video",
+					"sid": 760864847655969,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-source",
+					"objectClass": "Video",
+					"sid": 161775588722096,
+					"parameters": {
+						"webm-source": "\"\"",
+						"ogg-theora-source": "\"\"",
+						"h264-source": "\"playstation_intro_1080p.mp4\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Video",
+					"sid": 229381613835407
+				}
+			],
+			"sid": 712737226092732
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "button_pause_video",
+					"sid": 874776854622314
+				}
+			],
+			"actions": [
+				{
+					"id": "pause",
+					"objectClass": "Video",
+					"sid": 167216830826852
+				}
+			],
+			"sid": 185473314423531
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "button_play_video",
+					"sid": 620639409633036
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 960809614294436,
+					"parameters": {
+						"variable": "videoStart",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Video",
+					"sid": 557900412835273
+				}
+			],
+			"sid": 935333058745208
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "has-ended",
+					"objectClass": "Video",
+					"sid": 475613245376277
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "Video",
+					"sid": 466145535488262,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Button_continue",
+					"sid": 268904990326232,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 885023776321186
+		}
+	],
+	"sid": 993948919694928
+}

@@ -1,0 +1,51 @@
+{
+	"name": "question_box",
+	"plugin-id": "Sprite",
+	"sid": 618113157692541,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "text_box",
+			"type": "boolean",
+			"desc": "",
+			"sid": 973079614583722
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7087666,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Q",
+								"x": 0.24,
+								"y": 0.24
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 653334556900269,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,57 @@
+{
+	"name": "test_sampah",
+	"plugin-id": "Sprite",
+	"sid": 745495639912811,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 870,
+						"height": 336,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4317671,
+						"collisionPoly": {
+							"points": [
+								0.2403846153846154,
+								0.2403846153846154,
+								0.5,
+								0.1346153846153846,
+								0.75,
+								0.2403846153846154,
+								0.8365384615384616,
+								0.5,
+								0.7307692307692307,
+								0.7307692307692307,
+								0.5,
+								0.8173076923076923,
+								0.25961538461538464,
+								0.7307692307692307,
+								0.15384615384615385,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 602697504770443,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

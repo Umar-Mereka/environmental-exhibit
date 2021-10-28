@@ -1,0 +1,1076 @@
+{
+	"name": "L1_ES",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "score_tally",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 495293551341430
+		},
+		{
+			"eventType": "variable",
+			"name": "current_question",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 683048847326563
+		},
+		{
+			"eventType": "variable",
+			"name": "timer",
+			"type": "number",
+			"initialValue": "20",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 986763190565795
+		},
+		{
+			"eventType": "variable",
+			"name": "isFinished",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "check if all questions tackled",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 976473443501009
+		},
+		{
+			"eventType": "variable",
+			"name": "question_time",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 475919932115497
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 757550899770837
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "text_question",
+					"sid": 431322292190638,
+					"parameters": {
+						"object": "question_box",
+						"image-point-optional": "1"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 187058735311851,
+					"parameters": {
+						"layer": "1",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 253921537733712,
+					"parameters": {
+						"variable": "isFinished",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 918792795296045,
+					"parameters": {
+						"variable": "current_question",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 385716352025370,
+					"parameters": {
+						"variable": "score_tally",
+						"value": "100"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 717121352645742,
+					"parameters": {
+						"audio-file": "ragtime-piano-scott-joplin-the-entertainer-1902",
+						"loop": "looping",
+						"volume": "0",
+						"tag-optional": "\"l1bg\""
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "overlay",
+					"sid": 498029721082689,
+					"parameters": {
+						"x": "0",
+						"y": "0"
+					}
+				}
+			],
+			"sid": 676702556572291
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-end-of-layout",
+					"objectClass": "System",
+					"sid": 877421009285781
+				}
+			],
+			"actions": [
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 476960045178506,
+					"parameters": {
+						"tag": "\"l1bg\""
+					}
+				}
+			],
+			"sid": 748752871919768
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 175907350626893,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "home_button"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 471753367538723,
+					"parameters": {
+						"layout": "GameOverScreen"
+					}
+				}
+			],
+			"sid": 678598241604190
+		},
+		{
+			"eventType": "comment",
+			"text": "To send the player to the next screen"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 121704076331761,
+					"parameters": {
+						"variable": "isFinished",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 817935033928726,
+					"parameters": {
+						"layout": "GameOverScreen"
+					}
+				}
+			],
+			"sid": 411846243784630
+		},
+		{
+			"eventType": "comment",
+			"text": "Timer"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 218106091856087,
+					"parameters": {
+						"variable": "question_time"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 213681837823591,
+					"parameters": {
+						"variable": "timer",
+						"comparison": 4,
+						"value": "0"
+					}
+				},
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 404497817042944,
+					"parameters": {
+						"interval-seconds": "1.0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 689106761920389,
+					"parameters": {
+						"variable": "timer",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 742598399820345
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 754509818302122,
+					"parameters": {
+						"variable": "timer",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 811253720217755,
+					"parameters": {
+						"variable": "question_time",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 332026934082176,
+					"parameters": {
+						"variable": "timer",
+						"value": "20"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 849613138303477,
+					"parameters": {
+						"layer": "1",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"callFunction": "EndQuestion",
+					"sid": 362851279507238
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "overlay",
+					"sid": 430390372188780,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 132262605545071
+		},
+		{
+			"eventType": "comment",
+			"text": "If the right answer is chosen"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 752239556783270,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "text_ans1"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 518775965917820,
+					"parameters": {
+						"variable": "question_time"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "text_ans1",
+					"sid": 163238843461269,
+					"parameters": {
+						"instance-variable": "isAnswer",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "Answer",
+					"sid": 739508338171420,
+					"parameters": [
+						"10"
+					]
+				}
+			],
+			"sid": 121386603954152
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 255365107902182,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "text_ans2"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 540486122142549,
+					"parameters": {
+						"variable": "question_time"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "text_ans2",
+					"sid": 567230629674360,
+					"parameters": {
+						"instance-variable": "isAnswer",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "Answer",
+					"sid": 850477507069533,
+					"parameters": [
+						"10"
+					]
+				}
+			],
+			"sid": 837231625644111
+		},
+		{
+			"eventType": "comment",
+			"text": "If the wrong answer is chosen"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 818128848326397,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "text_ans1"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 596890865563416,
+					"parameters": {
+						"variable": "question_time"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "text_ans1",
+					"sid": 747974754325402,
+					"parameters": {
+						"instance-variable": "isAnswer",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "Answer",
+					"sid": 140307423373556,
+					"parameters": [
+						"0"
+					]
+				}
+			],
+			"sid": 486452463500645
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 503572157755969,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "text_ans2"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 940980609127007,
+					"parameters": {
+						"variable": "question_time"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "text_ans2",
+					"sid": 783558979691420,
+					"parameters": {
+						"instance-variable": "isAnswer",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "Answer",
+					"sid": 462463127872906,
+					"parameters": [
+						"0"
+					]
+				}
+			],
+			"sid": 334628312162947
+		},
+		{
+			"eventType": "comment",
+			"text": "Keep track of vaariables"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 221873297086342
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "text_score",
+					"sid": 425663960928127,
+					"parameters": {
+						"text": "score_tally"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "questiontimechecker",
+					"sid": 593410792026920,
+					"parameters": {
+						"text": "question_time"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "text_timer",
+					"sid": 970116000972332,
+					"parameters": {
+						"text": "timer"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "text_timer",
+					"sid": 583433666002074,
+					"parameters": {
+						"text": "timer"
+					}
+				}
+			],
+			"sid": 265396669227737
+		},
+		{
+			"eventType": "comment",
+			"text": "Setup question 1"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 837559961760421,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "sampah"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "sampah",
+					"sid": 918001865893570,
+					"parameters": {
+						"instance-variable": "clickable",
+						"comparison": 0,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "sampah",
+					"sid": 859647208498220,
+					"parameters": {
+						"instance-variable": "complete",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 265302336398525,
+					"parameters": {
+						"audio-file": "hover Click_Standard_0",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 254170196584653,
+					"parameters": {
+						"layer": "1",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 942969300566432,
+					"parameters": {
+						"variable": "question_time",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 645604702548489,
+					"parameters": {
+						"variable": "current_question",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "sampah",
+					"sid": 437613946745173,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "sampah",
+					"sid": 218715497142285,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "sampah",
+					"sid": 189166143215243,
+					"parameters": {
+						"instance-variable": "complete",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "sampah2",
+					"sid": 528674072451435,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "overlay",
+					"sid": 412831914497493,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "tip_box",
+					"sid": 343482976787861,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 406612044925241
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 511943930267062,
+					"parameters": {
+						"variable": "current_question",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "SetQuestion",
+					"sid": 318169978764910,
+					"parameters": [
+						"\"What is 1 + 35\"",
+						"\"36\"",
+						"\"33\"",
+						"1",
+						"0"
+					]
+				}
+			],
+			"sid": 916235291240288
+		},
+		{
+			"eventType": "comment",
+			"text": "Setup question 2"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 868346473126698,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "sampah2"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "sampah2",
+					"sid": 742124561789478,
+					"parameters": {
+						"instance-variable": "clickable",
+						"comparison": 0,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "sampah2",
+					"sid": 304071918727575,
+					"parameters": {
+						"instance-variable": "complete",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 431724842439972,
+					"parameters": {
+						"audio-file": "hover Click_Standard_0",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 667155624911525,
+					"parameters": {
+						"layer": "1",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 191324895479149,
+					"parameters": {
+						"variable": "question_time",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 412215895625366,
+					"parameters": {
+						"variable": "current_question",
+						"value": "2"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "sampah2",
+					"sid": 957121974609480,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "sampah2",
+					"sid": 730011508184265,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "sampah2",
+					"sid": 132028194883135,
+					"parameters": {
+						"instance-variable": "complete",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "sampah",
+					"sid": 518279753411672,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "overlay",
+					"sid": 241859574250713,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "tip_box",
+					"sid": 952851180527820,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 767634667952408
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 719259993002173,
+					"parameters": {
+						"variable": "current_question",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "SetQuestion",
+					"sid": 959705018514317,
+					"parameters": [
+						"\"Who is JFK?\"",
+						"\"Former President of Mali\"",
+						"\"Former President of the USA\"",
+						"0",
+						"1"
+					]
+				}
+			],
+			"sid": 747454907788185
+		},
+		{
+			"eventType": "comment",
+			"text": "End of the question"
+		},
+		{
+			"functionName": "EndQuestion",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "sampah",
+					"sid": 863337512947212,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "sampah2",
+					"sid": 169326621216710,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "1"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 277396884627333,
+					"parameters": {
+						"variable": "isFinished",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 757905333327460
+		},
+		{
+			"eventType": "comment",
+			"text": "Set question text and correct ones"
+		},
+		{
+			"functionName": "SetQuestion",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "textQ",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 766338914264200
+				},
+				{
+					"name": "textAns1",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 706607389188385
+				},
+				{
+					"name": "textAns2",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 507536828408341
+				},
+				{
+					"name": "q1a",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 342575293090703
+				},
+				{
+					"name": "q2a",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 872763642765225
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "text_question",
+					"sid": 834745876032940,
+					"parameters": {
+						"text": "textQ"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "text_ans1",
+					"sid": 946303482153259,
+					"parameters": {
+						"instance-variable": "isAnswer",
+						"value": "q1a"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "text_ans1",
+					"sid": 513814043760490,
+					"parameters": {
+						"text": "textAns1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "text_ans2",
+					"sid": 230374611191782,
+					"parameters": {
+						"instance-variable": "isAnswer",
+						"value": "q2a"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "text_ans2",
+					"sid": 481608254035369,
+					"parameters": {
+						"text": "textAns2"
+					}
+				}
+			],
+			"sid": 383624962918185
+		},
+		{
+			"eventType": "comment",
+			"text": "Answer Fucntion"
+		},
+		{
+			"functionName": "Answer",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "score",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 840395873802720
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 196816321492065,
+					"parameters": {
+						"variable": "score_tally",
+						"value": "score"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 720285190450979,
+					"parameters": {
+						"layer": "1",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 182465613567823,
+					"parameters": {
+						"variable": "question_time",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 356837824828565,
+					"parameters": {
+						"variable": "timer",
+						"value": "20"
+					}
+				},
+				{
+					"callFunction": "EndQuestion",
+					"sid": 911571469938275
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "overlay",
+					"sid": 187267340637690,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 256159743595995
+		}
+	],
+	"sid": 482210164493416
+}

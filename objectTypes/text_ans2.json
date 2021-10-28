@@ -1,0 +1,16 @@
+{
+	"name": "text_ans2",
+	"plugin-id": "Text",
+	"sid": 983922849631745,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "isAnswer",
+			"type": "number",
+			"desc": "is it the answer?",
+			"sid": 169659945461678
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

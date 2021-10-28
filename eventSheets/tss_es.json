@@ -1,0 +1,184 @@
+{
+	"name": "TSS_ES",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 656228763758633
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "right_scroll",
+					"sid": 640754517745096,
+					"parameters": {
+						"x": "780",
+						"y": "0"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "leftscroll",
+					"sid": 370996621190990,
+					"parameters": {
+						"x": "0",
+						"y": "0"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "x_value",
+					"sid": 843201152003345,
+					"parameters": {
+						"text": "bg_scroll.X"
+					}
+				}
+			],
+			"sid": 781724145056881
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 659573459453126,
+					"parameters": {
+						"object": "right_scroll"
+					}
+				},
+				{
+					"id": "compare-x",
+					"objectClass": "bg_scroll",
+					"sid": 938191062552312,
+					"parameters": {
+						"comparison": 4,
+						"x-co-ordinate": "-1730"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "bg_scroll",
+					"sid": 152829457625234,
+					"parameters": {
+						"x": "self.x - (80 * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "test_sampah",
+					"sid": 267110084746566,
+					"parameters": {
+						"x": "self.x - (80 * dt)"
+					}
+				}
+			],
+			"sid": 386564316943174
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 112051518224487,
+					"parameters": {
+						"object": "leftscroll"
+					}
+				},
+				{
+					"id": "compare-x",
+					"objectClass": "bg_scroll",
+					"sid": 410424585408977,
+					"parameters": {
+						"comparison": 2,
+						"x-co-ordinate": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "bg_scroll",
+					"sid": 577807548981220,
+					"parameters": {
+						"x": "Self.X + (80 * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "test_sampah",
+					"sid": 542098505730376,
+					"parameters": {
+						"x": "Self.X + (80 * dt)"
+					}
+				}
+			],
+			"sid": 400231858926721
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 109947912812768,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "test_sampah"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "test_sampah",
+					"sid": 610273943095198,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 146237094519058
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 553921186422113
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "bg_scroll",
+					"sid": 327765260167154,
+					"parameters": {
+						"x": "0",
+						"y": "0"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "test_sampah",
+					"sid": 654417418648710,
+					"parameters": {
+						"x": "bg_scroll.X + 340",
+						"y": "bg_scroll.Y + 400"
+					}
+				}
+			],
+			"sid": 226966136314223
+		}
+	],
+	"sid": 958339901837368
+}

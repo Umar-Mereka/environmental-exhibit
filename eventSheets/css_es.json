@@ -1,0 +1,204 @@
+{
+	"name": "CSS_ES",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 449597655086129
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "playerAvatar",
+					"sid": 370761975392058,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 232856720148052
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 588285660858286,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "avatar1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load-image-from-url",
+					"objectClass": "playerAvatar",
+					"sid": 905923895137594,
+					"parameters": {
+						"uri": "\"https://dl.airtable.com/.attachmentThumbnails/78577be94ed574bd91fafa4cdfc8921c/00eb5b81\"",
+						"size": "keep-current-size",
+						"cross-origin": "anonymous"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 474494858006983,
+					"parameters": {
+						"audio-file": "hover Click_Standard_0",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 638136657226981
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 391213341151844,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "avatar2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load-image-from-url",
+					"objectClass": "playerAvatar",
+					"sid": 936933937759054,
+					"parameters": {
+						"uri": "\"https://dl.airtable.com/.attachmentThumbnails/fa1711f6e86b800f8234a6598e32dc81/e93e3dca\"",
+						"size": "keep-current-size",
+						"cross-origin": "anonymous"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 579423883150419,
+					"parameters": {
+						"audio-file": "hover Click_Standard_0",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 122206146867353
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 338989523538622,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "avatar3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load-image-from-url",
+					"objectClass": "playerAvatar",
+					"sid": 654065459846223,
+					"parameters": {
+						"uri": "\"https://dl.airtable.com/.attachmentThumbnails/be63e057c441703fada800d2ad3881b8/3ea5015e\"",
+						"size": "keep-current-size",
+						"cross-origin": "anonymous"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 301293832300193,
+					"parameters": {
+						"audio-file": "hover Click_Standard_0",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 696920442466648
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 843556100715229,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "avatar4"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load-image-from-url",
+					"objectClass": "playerAvatar",
+					"sid": 675831537109786,
+					"parameters": {
+						"uri": "\"https://dl.airtable.com/.attachmentThumbnails/779b78dad571fb65aaa8e394a30981df/5facd333\"",
+						"size": "keep-current-size",
+						"cross-origin": "anonymous"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 894224785306571,
+					"parameters": {
+						"audio-file": "hover Click_Standard_0",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 359130361237479
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "continue_button",
+					"sid": 340531006450427
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 440347859793207,
+					"parameters": {
+						"layout": "Level1Screen"
+					}
+				}
+			],
+			"sid": 370419682354220
+		}
+	],
+	"sid": 445239924784703
+}
