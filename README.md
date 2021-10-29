@@ -1,7 +1,7 @@
 # environmental-exhibit
 It's a game y'all
 
-#Naming Standards
+# Naming Standards
 
 - Screen - ExampleScreen, MyFirstExampleScreen, etc.
     - Each environment should be classified as 'Levels' internally. Environment: City should then be named Level1 for example. Subsequent levels should be named Level2, Level3, etc.
