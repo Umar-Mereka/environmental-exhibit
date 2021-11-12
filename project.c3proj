@@ -166,7 +166,8 @@
 			"CharacterSelectScreen",
 			"PlayVideoScreen",
 			"TestScrollScreen",
-			"DragDropScreen"
+			"DragDropScreen",
+			"UITestScreen"
 		],
 		"subfolders": []
 	},
@@ -179,7 +180,8 @@
 			"CSS_ES",
 			"PVS_ES",
 			"TSS_ES",
-			"DDS_ES"
+			"DDS_ES",
+			"UIT_ES"
 		],
 		"subfolders": []
 	},
