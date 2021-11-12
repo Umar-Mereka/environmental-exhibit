@@ -2,6 +2,10 @@
 	"name": "TSS_ES",
 	"events": [
 		{
+			"eventType": "comment",
+			"text": "ensures that the trigger points is consistently at the ends of the screen"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -13,7 +17,7 @@
 			"actions": [
 				{
 					"id": "set-position",
-					"objectClass": "right_scroll",
+					"objectClass": "scroll_right",
 					"sid": 640754517745096,
 					"parameters": {
 						"x": "780",
@@ -22,23 +26,19 @@
 				},
 				{
 					"id": "set-position",
-					"objectClass": "leftscroll",
+					"objectClass": "scroll_left",
 					"sid": 370996621190990,
 					"parameters": {
 						"x": "0",
 						"y": "0"
 					}
-				},
-				{
-					"id": "set-text",
-					"objectClass": "x_value",
-					"sid": 843201152003345,
-					"parameters": {
-						"text": "bg_scroll.X"
-					}
 				}
 			],
 			"sid": 781724145056881
+		},
+		{
+			"eventType": "comment",
+			"text": "To scroll right"
 		},
 		{
 			"eventType": "block",
@@ -48,7 +48,7 @@
 					"objectClass": "Mouse",
 					"sid": 659573459453126,
 					"parameters": {
-						"object": "right_scroll"
+						"object": "scroll_right"
 					}
 				},
 				{
@@ -62,6 +62,10 @@
 				}
 			],
 			"actions": [
+				{
+					"type": "comment",
+					"text": "So basically we need to move all the objects as well from this part. The UI stuff is left untouched"
+				},
 				{
 					"id": "set-x",
 					"objectClass": "bg_scroll",
@@ -82,6 +86,10 @@
 			"sid": 386564316943174
 		},
 		{
+			"eventType": "comment",
+			"text": "To scroll left"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -89,7 +97,7 @@
 					"objectClass": "Mouse",
 					"sid": 112051518224487,
 					"parameters": {
-						"object": "leftscroll"
+						"object": "scroll_left"
 					}
 				},
 				{
@@ -123,6 +131,10 @@
 			"sid": 400231858926721
 		},
 		{
+			"eventType": "comment",
+			"text": "Test the functionality of the objexts"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -147,6 +159,10 @@
 				}
 			],
 			"sid": 146237094519058
+		},
+		{
+			"eventType": "comment",
+			"text": "Set up the position of tthe bg + objects"
 		},
 		{
 			"eventType": "block",

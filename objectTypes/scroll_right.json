@@ -1,7 +1,7 @@
 {
-	"name": "bg_level1",
+	"name": "scroll_right",
 	"plugin-id": "Sprite",
-	"sid": 646926224367463,
+	"sid": 752687100606439,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,39 +11,19 @@
 			{
 				"frames": [
 					{
-						"width": 4096,
-						"height": 814,
+						"width": 250,
+						"height": 250,
 						"originX": 0,
 						"originY": 0,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 4295903,
-						"collisionPoly": {
-							"points": [
-								0,
-								0,
-								0.5,
-								0,
-								0.9993288590604027,
-								0,
-								0.9993288590604027,
-								0.5,
-								0.9993288590604027,
-								0.9988066825775657,
-								0.5,
-								0.9988066825775657,
-								0,
-								0.9988066825775657,
-								0,
-								0.5
-							]
-						},
+						"imageSpriteId": 342227,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 982000782830280,
+				"sid": 541247370913886,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

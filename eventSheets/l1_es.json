@@ -62,6 +62,10 @@
 			],
 			"actions": [
 				{
+					"type": "comment",
+					"text": "Q&A stuff"
+				},
+				{
 					"id": "set-position-to-another-object",
 					"objectClass": "text_question",
 					"sid": 431322292190638,
@@ -107,9 +111,56 @@
 					}
 				},
 				{
+					"id": "set-position",
+					"objectClass": "overlay",
+					"sid": 498029721082689,
+					"parameters": {
+						"x": "0",
+						"y": "0"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Button_continue",
+					"sid": 875471738786973,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"type": "comment",
+					"text": "Scroll stuff"
+				},
+				{
+					"id": "set-position",
+					"objectClass": "bg_level1",
+					"sid": 460604384076066,
+					"parameters": {
+						"x": "0",
+						"y": "0"
+					}
+				}
+			],
+			"sid": 676702556572291
+		},
+		{
+			"eventType": "comment",
+			"text": "Sounds + Music"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 836697490098653
+				}
+			],
+			"actions": [
+				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 717121352645742,
+					"sid": 157163896637173,
 					"parameters": {
 						"audio-file": "ragtime-piano-scott-joplin-the-entertainer-1902",
 						"loop": "looping",
@@ -118,16 +169,60 @@
 					}
 				},
 				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 467768198629818,
+					"parameters": {
+						"audio-file": "bg_city1",
+						"loop": "looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 294355951100268,
+					"parameters": {
+						"audio-file": "bg_city2",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 937845403327416
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 323840357841227
+				}
+			],
+			"actions": [
+				{
 					"id": "set-position",
-					"objectClass": "overlay",
-					"sid": 498029721082689,
+					"objectClass": "scroll_right",
+					"sid": 990887230104283,
+					"parameters": {
+						"x": "780",
+						"y": "0"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "scroll_left",
+					"sid": 617917110741963,
 					"parameters": {
 						"x": "0",
 						"y": "0"
 					}
 				}
 			],
-			"sid": 676702556572291
+			"sid": 492818244189908
 		},
 		{
 			"eventType": "block",
@@ -178,6 +273,112 @@
 		},
 		{
 			"eventType": "comment",
+			"text": "Scrolling"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 133480232657392,
+					"parameters": {
+						"object": "scroll_right"
+					}
+				},
+				{
+					"id": "compare-x",
+					"objectClass": "bg_level1",
+					"sid": 577800435899373,
+					"parameters": {
+						"comparison": 4,
+						"x-co-ordinate": "-1530"
+					}
+				}
+			],
+			"actions": [
+				{
+					"type": "comment",
+					"text": "So basically we need to move all the objects as well from this part. The UI stuff is left untouched"
+				},
+				{
+					"id": "set-x",
+					"objectClass": "bg_level1",
+					"sid": 352745834478497,
+					"parameters": {
+						"x": "self.x - (80 * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "sampah",
+					"sid": 282660999598230,
+					"parameters": {
+						"x": "Self.X - (80 * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "sampah2",
+					"sid": 810922913475381,
+					"parameters": {
+						"x": "Self.X - (80 * dt)"
+					}
+				}
+			],
+			"sid": 931806300675244
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 122220061821088,
+					"parameters": {
+						"object": "scroll_left"
+					}
+				},
+				{
+					"id": "compare-x",
+					"objectClass": "bg_level1",
+					"sid": 224586621843063,
+					"parameters": {
+						"comparison": 2,
+						"x-co-ordinate": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "bg_level1",
+					"sid": 762697487535732,
+					"parameters": {
+						"x": "Self.X + (80 * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "sampah",
+					"sid": 698171875445910,
+					"parameters": {
+						"x": "Self.X + (80 * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "sampah2",
+					"sid": 650850380568302,
+					"parameters": {
+						"x": "Self.X + (80 * dt)"
+					}
+				}
+			],
+			"sid": 606540686990615
+		},
+		{
+			"eventType": "comment",
 			"text": "To send the player to the next screen"
 		},
 		{
@@ -196,15 +397,50 @@
 			],
 			"actions": [
 				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 817935033928726,
+					"id": "set-visible",
+					"objectClass": "Button_continue",
+					"sid": 294079300076319,
 					"parameters": {
-						"layout": "GameOverScreen"
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Button_continue",
+					"sid": 681995183212890,
+					"parameters": {
+						"x": "100",
+						"y": "100"
 					}
 				}
 			],
 			"sid": 411846243784630
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 286111081387397,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Button_continue"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 663935502669308,
+					"parameters": {
+						"layout": "DragDropScreen"
+					}
+				}
+			],
+			"sid": 449093860201719
 		},
 		{
 			"eventType": "comment",

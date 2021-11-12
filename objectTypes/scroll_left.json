@@ -1,7 +1,7 @@
 {
-	"name": "right_scroll",
+	"name": "scroll_left",
 	"plugin-id": "Sprite",
-	"sid": 752687100606439,
+	"sid": 376827469170146,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -18,12 +18,12 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 342227,
+						"imageSpriteId": 693640,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 541247370913886,
+				"sid": 956818453128943,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

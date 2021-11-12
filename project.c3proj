@@ -61,6 +61,22 @@
 			"author": "Scirra",
 			"version": "r268",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "DragnDrop",
+			"name": "Drag & Drop",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "LOS",
+			"name": "Line of sight",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
 		}
 	],
 	"uniqueId": "71p28mlynva",
@@ -107,12 +123,16 @@
 			"button_play_video",
 			"button_pause_video",
 			"bg_scroll",
-			"right_scroll",
-			"leftscroll",
+			"scroll_right",
+			"scroll_left",
 			"x_value",
 			"Button_continue",
 			"test_sampah",
-			"Sprite5"
+			"Sprite5",
+			"card_dd",
+			"drop_bin",
+			"drag_mask1",
+			"drag_styrofoam"
 		],
 		"subfolders": []
 	},
@@ -145,7 +165,8 @@
 			"Level1Screen",
 			"CharacterSelectScreen",
 			"PlayVideoScreen",
-			"TestScrollScreen"
+			"TestScrollScreen",
+			"DragDropScreen"
 		],
 		"subfolders": []
 	},
@@ -157,7 +178,8 @@
 			"L1_ES",
 			"CSS_ES",
 			"PVS_ES",
-			"TSS_ES"
+			"TSS_ES",
+			"DDS_ES"
 		],
 		"subfolders": []
 	},
@@ -172,6 +194,16 @@
 					"name": "hover Click_Standard_0.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 297002522660400
+				},
+				{
+					"name": "bg_city1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 871118599633566
+				},
+				{
+					"name": "bg_city2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 722527197658331
 				}
 			],
 			"subfolders": []

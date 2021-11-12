@@ -1,0 +1,312 @@
+{
+	"name": "DDS_ES",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "testClick",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 531324729785626
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 392448179601548
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 745234924182903,
+					"parameters": {
+						"layer": "1",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 952198616950935,
+					"parameters": {
+						"layer": "2",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text",
+					"sid": 650688437585221,
+					"parameters": {
+						"text": "testClick"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "text_score",
+					"sid": 410774335387968,
+					"parameters": {
+						"text": "score_tally"
+					}
+				}
+			],
+			"sid": 658114575781532
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 632703719340437
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "text_score",
+					"sid": 753676400031229,
+					"parameters": {
+						"text": "score_tally"
+					}
+				}
+			],
+			"sid": 581664789103303
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 561631099009453,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "sampah"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Text",
+					"sid": 457912095449471,
+					"parameters": {
+						"text": "testClick"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 767013118193771,
+					"parameters": {
+						"layer": "1",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 934976044700505,
+					"parameters": {
+						"layer": "2",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "playerAvatar",
+					"sid": 206282494939996,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "overlay",
+					"sid": 585665994539693,
+					"parameters": {
+						"x": "0",
+						"y": "0"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "overlay",
+					"sid": 460240864805148,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 637124188712118,
+					"parameters": {
+						"variable": "testClick",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 485267454350001
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "has-los-to-object",
+					"objectClass": "drag_styrofoam",
+					"sid": 554109509885790,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"object": "drag_sampah_toggle",
+						"image-point": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "drag_styrofoam",
+					"sid": 448749160267955,
+					"parameters": {
+						"object": "drag_sampah_toggle",
+						"image-point-optional": "0"
+					}
+				}
+			],
+			"sid": 141904111684534,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drop",
+							"objectClass": "drag_styrofoam",
+							"sid": 413100709461496,
+							"behaviorType": "DragDrop"
+						},
+						{
+							"id": "compare-x",
+							"objectClass": "drag_styrofoam",
+							"sid": 942840578626779,
+							"parameters": {
+								"comparison": 0,
+								"x-co-ordinate": "drag_sampah_toggle.X"
+							}
+						},
+						{
+							"id": "compare-y",
+							"objectClass": "drag_styrofoam",
+							"sid": 829329293191540,
+							"parameters": {
+								"comparison": 0,
+								"y-co-ordinate": "drag_sampah_toggle.Y"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "drag_styrofoam",
+							"sid": 242909638824064
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 410350659849892,
+							"parameters": {
+								"variable": "score_tally",
+								"value": "10"
+							}
+						}
+					],
+					"sid": 330574323824862
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "has-los-to-object",
+					"objectClass": "drag_mask1",
+					"sid": 869445715251330,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"object": "drag_sampah_toggle",
+						"image-point": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "drag_mask1",
+					"sid": 817783592529148,
+					"parameters": {
+						"object": "drag_sampah_toggle",
+						"image-point-optional": "0"
+					}
+				}
+			],
+			"sid": 241547700804713,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drop",
+							"objectClass": "drag_mask1",
+							"sid": 118895206740365,
+							"behaviorType": "DragDrop"
+						},
+						{
+							"id": "compare-x",
+							"objectClass": "drag_mask1",
+							"sid": 580828073270679,
+							"parameters": {
+								"comparison": 0,
+								"x-co-ordinate": "drag_sampah_toggle.X"
+							}
+						},
+						{
+							"id": "compare-y",
+							"objectClass": "drag_mask1",
+							"sid": 954131977763803,
+							"parameters": {
+								"comparison": 0,
+								"y-co-ordinate": "drag_sampah_toggle.Y"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "drag_mask1",
+							"sid": 269330257484184
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 144681432025857,
+							"parameters": {
+								"variable": "score_tally",
+								"value": "10"
+							}
+						}
+					],
+					"sid": 469666653304712
+				}
+			]
+		}
+	],
+	"sid": 816884253811725
+}

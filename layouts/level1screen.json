@@ -18,12 +18,12 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 425.5,
-						"y": 245,
-						"width": 873,
-						"height": 504.00000000000006,
-						"originX": 0.5,
-						"originY": 0.5,
+						"x": -6,
+						"y": -5,
+						"width": 2399.8711409395974,
+						"height": 489.56563245823395,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,
@@ -218,7 +218,7 @@
 				{
 					"type": "drag_sampah_toggle",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -242,6 +242,36 @@
 						],
 						"angle": 0,
 						"zElevation": 0
+					}
+				},
+				{
+					"type": "Button_continue",
+					"properties": {
+						"type": "button",
+						"text": "CONTINUE",
+						"tooltip": "",
+						"initially-visible": false,
+						"enabled": true,
+						"auto-font-size": true,
+						"checked": false,
+						"id": ""
+					},
+					"uid": 54,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 336,
+						"y": 612,
+						"width": 101.49480284935294,
+						"height": 24,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
 					}
 				},
 				{
@@ -368,9 +398,9 @@
 				1
 			],
 			"backgroundColor": [
-				1,
-				1,
-				1,
+				0,
+				0,
+				0,
 				1
 			],
 			"isTransparent": false,
@@ -386,7 +416,7 @@
 			"global": false
 		},
 		{
-			"name": "Text Boxes",
+			"name": "Q&A",
 			"overriden": 0,
 			"instances": [
 				{
@@ -610,6 +640,158 @@
 				}
 			],
 			"sid": 838579761711659,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Scroll Items",
+			"overriden": 0,
+			"instances": [
+				{
+					"type": "scroll_left",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 62,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": -5,
+						"y": -15,
+						"width": 80,
+						"height": 1043,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							0
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "scroll_right",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 63,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 778,
+						"y": -25,
+						"width": 80,
+						"height": 1043,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							0
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 846095626018868,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "D&D",
+			"overriden": 0,
+			"instances": [],
+			"sid": 878344712214044,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Level End",
+			"overriden": 0,
+			"instances": [],
+			"sid": 607475881678741,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"color": [
