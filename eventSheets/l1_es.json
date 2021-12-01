@@ -3,30 +3,40 @@
 	"events": [
 		{
 			"eventType": "variable",
+			"name": "user_name",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 270213051190267
+		},
+		{
+			"eventType": "variable",
 			"name": "score_tally",
 			"type": "number",
 			"initialValue": "0",
-			"comment": "",
+			"comment": "total score throughout the ENTIRE game",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 495293551341430
 		},
 		{
-			"eventType": "variable",
-			"name": "current_question",
-			"type": "number",
-			"initialValue": "1",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 683048847326563
+			"eventType": "comment",
+			"text": "<---->",
+			"background-color": [
+				0,
+				0,
+				0,
+				0
+			]
 		},
 		{
 			"eventType": "variable",
 			"name": "timer",
 			"type": "number",
 			"initialValue": "20",
-			"comment": "",
+			"comment": "timer for the question & answer portion",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 986763190565795
@@ -43,13 +53,103 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "finishLimit",
+			"type": "number",
+			"initialValue": "5",
+			"comment": "the amount of questions/interactivity (this includes d&d oso)",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 283270380393337
+		},
+		{
+			"eventType": "comment",
+			"text": "<---->",
+			"background-color": [
+				0,
+				0,
+				0,
+				0
+			]
+		},
+		{
+			"eventType": "variable",
+			"name": "current_question",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "which question is the user on? Q&A",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 479931652355228
+		},
+		{
+			"eventType": "variable",
 			"name": "question_time",
 			"type": "boolean",
 			"initialValue": "false",
-			"comment": "",
+			"comment": "is the player currently answering a question?",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 475919932115497
+		},
+		{
+			"eventType": "comment",
+			"text": "<---->",
+			"background-color": [
+				0,
+				0,
+				0,
+				0
+			]
+		},
+		{
+			"eventType": "variable",
+			"name": "drag_time",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "is the user currently draggin and droppin",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 592225289832790
+		},
+		{
+			"eventType": "variable",
+			"name": "drag_check",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "total items that can be dragged - correct or incorrect",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 227427023686074
+		},
+		{
+			"eventType": "variable",
+			"name": "drag_correct",
+			"type": "number",
+			"initialValue": "2",
+			"comment": "number of items that are the correct answer",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 534366789961994
+		},
+		{
+			"eventType": "variable",
+			"name": "dragDone",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "is the user done with the drag & drop section",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 663078791980816
+		},
+		{
+			"eventType": "comment",
+			"text": "<---->",
+			"background-color": [
+				0,
+				0,
+				0,
+				0
+			]
 		},
 		{
 			"eventType": "block",
@@ -67,11 +167,29 @@
 				},
 				{
 					"id": "set-position-to-another-object",
-					"objectClass": "text_question",
-					"sid": 431322292190638,
+					"objectClass": "bar_bg",
+					"sid": 863407774470283,
 					"parameters": {
 						"object": "question_box",
-						"image-point-optional": "1"
+						"image-point-optional": "2"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "bar_progress",
+					"sid": 445827964488162,
+					"parameters": {
+						"object": "question_box",
+						"image-point-optional": "2"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "bar_icon",
+					"sid": 372200044299575,
+					"parameters": {
+						"object": "question_box",
+						"image-point-optional": "2"
 					}
 				},
 				{
@@ -80,6 +198,15 @@
 					"sid": 187058735311851,
 					"parameters": {
 						"layer": "1",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 652310182791491,
+					"parameters": {
+						"layer": "3",
 						"visibility": "invisible"
 					}
 				},
@@ -121,10 +248,27 @@
 				},
 				{
 					"id": "set-visible",
-					"objectClass": "Button_continue",
+					"objectClass": "button_continue",
 					"sid": 875471738786973,
 					"parameters": {
 						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "text_username",
+					"sid": 405952502536365,
+					"parameters": {
+						"text": "user_name"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "text_score",
+					"sid": 570734649611640,
+					"parameters": {
+						"object": "score_box",
+						"image-point-optional": "0"
 					}
 				},
 				{
@@ -138,6 +282,15 @@
 					"parameters": {
 						"x": "0",
 						"y": "0"
+					}
+				},
+				{
+					"id": "paste-object",
+					"objectClass": "DrawingCanvas",
+					"sid": 471330131262130,
+					"parameters": {
+						"object": "playerAvatar",
+						"effects": "with-effects"
 					}
 				}
 			],
@@ -160,33 +313,33 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 157163896637173,
+					"sid": 908858052718041,
 					"parameters": {
 						"audio-file": "ragtime-piano-scott-joplin-the-entertainer-1902",
 						"loop": "looping",
-						"volume": "0",
+						"volume": "-5",
 						"tag-optional": "\"l1bg\""
 					}
 				},
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 467768198629818,
+					"sid": 289724831800140,
 					"parameters": {
 						"audio-file": "bg_city1",
 						"loop": "looping",
-						"volume": "0",
+						"volume": "-10",
 						"tag-optional": "\"\""
 					}
 				},
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 294355951100268,
+					"sid": 689975686326688,
 					"parameters": {
 						"audio-file": "bg_city2",
 						"loop": "not-looping",
-						"volume": "0",
+						"volume": "-10",
 						"tag-optional": "\"\""
 					}
 				}
@@ -219,6 +372,15 @@
 					"parameters": {
 						"x": "0",
 						"y": "0"
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "bar_progress",
+					"sid": 252740605616862,
+					"parameters": {
+						"width": "timer*10",
+						"height": "12"
 					}
 				}
 			],
@@ -287,6 +449,24 @@
 					}
 				},
 				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 475826972201387,
+					"parameters": {
+						"variable": "question_time"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 563452792938906,
+					"parameters": {
+						"variable": "drag_time"
+					},
+					"isInverted": true
+				},
+				{
 					"id": "compare-x",
 					"objectClass": "bg_level1",
 					"sid": 577800435899373,
@@ -311,7 +491,7 @@
 				},
 				{
 					"id": "set-x",
-					"objectClass": "sampah",
+					"objectClass": "level1_q1_toggle",
 					"sid": 282660999598230,
 					"parameters": {
 						"x": "Self.X - (80 * dt)"
@@ -319,8 +499,32 @@
 				},
 				{
 					"id": "set-x",
-					"objectClass": "sampah2",
+					"objectClass": "level1_q2_toggle",
 					"sid": 810922913475381,
+					"parameters": {
+						"x": "Self.X - (80 * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "toggle_drag_drop",
+					"sid": 710706945965063,
+					"parameters": {
+						"x": "Self.X - (80 * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "level1_q3_toggle",
+					"sid": 690126594156844,
+					"parameters": {
+						"x": "Self.X - (80 * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "level1_q4_toggle",
+					"sid": 552429980952472,
 					"parameters": {
 						"x": "Self.X - (80 * dt)"
 					}
@@ -338,6 +542,24 @@
 					"parameters": {
 						"object": "scroll_left"
 					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 832568056933176,
+					"parameters": {
+						"variable": "question_time"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 543188156021961,
+					"parameters": {
+						"variable": "drag_time"
+					},
+					"isInverted": true
 				},
 				{
 					"id": "compare-x",
@@ -360,7 +582,7 @@
 				},
 				{
 					"id": "set-x",
-					"objectClass": "sampah",
+					"objectClass": "level1_q1_toggle",
 					"sid": 698171875445910,
 					"parameters": {
 						"x": "Self.X + (80 * dt)"
@@ -368,8 +590,32 @@
 				},
 				{
 					"id": "set-x",
-					"objectClass": "sampah2",
+					"objectClass": "level1_q2_toggle",
 					"sid": 650850380568302,
+					"parameters": {
+						"x": "Self.X + (80 * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "toggle_drag_drop",
+					"sid": 473435515494789,
+					"parameters": {
+						"x": "Self.X + (80 * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "level1_q3_toggle",
+					"sid": 754519056243278,
+					"parameters": {
+						"x": "Self.X + (80 * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "level1_q4_toggle",
+					"sid": 305326129530833,
 					"parameters": {
 						"x": "Self.X + (80 * dt)"
 					}
@@ -387,18 +633,18 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 121704076331761,
+					"sid": 512728337225544,
 					"parameters": {
 						"variable": "isFinished",
 						"comparison": 0,
-						"value": "2"
+						"value": "finishLimit"
 					}
 				}
 			],
 			"actions": [
 				{
 					"id": "set-visible",
-					"objectClass": "Button_continue",
+					"objectClass": "button_continue",
 					"sid": 294079300076319,
 					"parameters": {
 						"visibility": "visible"
@@ -406,7 +652,7 @@
 				},
 				{
 					"id": "set-position",
-					"objectClass": "Button_continue",
+					"objectClass": "button_continue",
 					"sid": 681995183212890,
 					"parameters": {
 						"x": "100",
@@ -426,7 +672,7 @@
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "Button_continue"
+						"object-clicked": "button_continue"
 					}
 				}
 			],
@@ -484,6 +730,25 @@
 					"parameters": {
 						"variable": "timer",
 						"value": "1"
+					}
+				},
+				{
+					"id": "rotate-clockwise",
+					"objectClass": "bar_icon",
+					"sid": 985459395208311,
+					"parameters": {
+						"degrees": "30"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 790205821568787,
+					"parameters": {
+						"audio-file": "Click_Soft_00",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
 					}
 				}
 			],
@@ -763,14 +1028,6 @@
 					"parameters": {
 						"text": "timer"
 					}
-				},
-				{
-					"id": "set-text",
-					"objectClass": "text_timer",
-					"sid": 583433666002074,
-					"parameters": {
-						"text": "timer"
-					}
 				}
 			],
 			"sid": 265396669227737
@@ -789,12 +1046,12 @@
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "sampah"
+						"object-clicked": "level1_q1_toggle"
 					}
 				},
 				{
 					"id": "compare-instance-variable",
-					"objectClass": "sampah",
+					"objectClass": "level1_q1_toggle",
 					"sid": 918001865893570,
 					"parameters": {
 						"instance-variable": "clickable",
@@ -804,7 +1061,7 @@
 				},
 				{
 					"id": "compare-instance-variable",
-					"objectClass": "sampah",
+					"objectClass": "level1_q1_toggle",
 					"sid": 859647208498220,
 					"parameters": {
 						"instance-variable": "complete",
@@ -815,46 +1072,15 @@
 			],
 			"actions": [
 				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 265302336398525,
-					"parameters": {
-						"audio-file": "hover Click_Standard_0",
-						"loop": "not-looping",
-						"volume": "0",
-						"tag-optional": "\"\""
-					}
-				},
-				{
-					"id": "set-layer-visible",
-					"objectClass": "System",
-					"sid": 254170196584653,
-					"parameters": {
-						"layer": "1",
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 942969300566432,
-					"parameters": {
-						"variable": "question_time",
-						"value": "true"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 645604702548489,
-					"parameters": {
-						"variable": "current_question",
-						"value": "1"
-					}
+					"callFunction": "questionUISetup",
+					"sid": 362401265296458,
+					"parameters": [
+						"1"
+					]
 				},
 				{
 					"id": "set-instvar-value",
-					"objectClass": "sampah",
+					"objectClass": "level1_q1_toggle",
 					"sid": 437613946745173,
 					"parameters": {
 						"instance-variable": "clickable",
@@ -863,7 +1089,7 @@
 				},
 				{
 					"id": "set-visible",
-					"objectClass": "sampah",
+					"objectClass": "level1_q1_toggle",
 					"sid": 218715497142285,
 					"parameters": {
 						"visibility": "invisible"
@@ -871,7 +1097,7 @@
 				},
 				{
 					"id": "set-instvar-value",
-					"objectClass": "sampah",
+					"objectClass": "level1_q1_toggle",
 					"sid": 189166143215243,
 					"parameters": {
 						"instance-variable": "complete",
@@ -880,27 +1106,11 @@
 				},
 				{
 					"id": "set-instvar-value",
-					"objectClass": "sampah2",
-					"sid": 528674072451435,
+					"objectClass": "level1_q1_toggle",
+					"sid": 598160815776769,
 					"parameters": {
 						"instance-variable": "clickable",
 						"value": "0"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "overlay",
-					"sid": 412831914497493,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "tip_box",
-					"sid": 343482976787861,
-					"parameters": {
-						"visibility": "invisible"
 					}
 				}
 			],
@@ -923,13 +1133,13 @@
 			"actions": [
 				{
 					"callFunction": "SetQuestion",
-					"sid": 318169978764910,
+					"sid": 219994640708224,
 					"parameters": [
-						"\"What is 1 + 35\"",
-						"\"36\"",
-						"\"33\"",
-						"1",
-						"0"
+						"\"You and your two housemates decide to spend the day in the city. You are at Sentral Station. Which option would you take to get into the city?\"",
+						"\"A: Carpool\"",
+						"\"B: Walk to the station and take the train\"",
+						"0",
+						"1"
 					]
 				}
 			],
@@ -949,12 +1159,12 @@
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "sampah2"
+						"object-clicked": "level1_q2_toggle"
 					}
 				},
 				{
 					"id": "compare-instance-variable",
-					"objectClass": "sampah2",
+					"objectClass": "level1_q2_toggle",
 					"sid": 742124561789478,
 					"parameters": {
 						"instance-variable": "clickable",
@@ -964,7 +1174,7 @@
 				},
 				{
 					"id": "compare-instance-variable",
-					"objectClass": "sampah2",
+					"objectClass": "level1_q2_toggle",
 					"sid": 304071918727575,
 					"parameters": {
 						"instance-variable": "complete",
@@ -975,46 +1185,15 @@
 			],
 			"actions": [
 				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 431724842439972,
-					"parameters": {
-						"audio-file": "hover Click_Standard_0",
-						"loop": "not-looping",
-						"volume": "0",
-						"tag-optional": "\"\""
-					}
-				},
-				{
-					"id": "set-layer-visible",
-					"objectClass": "System",
-					"sid": 667155624911525,
-					"parameters": {
-						"layer": "1",
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 191324895479149,
-					"parameters": {
-						"variable": "question_time",
-						"value": "true"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 412215895625366,
-					"parameters": {
-						"variable": "current_question",
-						"value": "2"
-					}
+					"callFunction": "questionUISetup",
+					"sid": 174225548811748,
+					"parameters": [
+						"2"
+					]
 				},
 				{
 					"id": "set-instvar-value",
-					"objectClass": "sampah2",
+					"objectClass": "level1_q2_toggle",
 					"sid": 957121974609480,
 					"parameters": {
 						"instance-variable": "clickable",
@@ -1023,7 +1202,7 @@
 				},
 				{
 					"id": "set-visible",
-					"objectClass": "sampah2",
+					"objectClass": "level1_q2_toggle",
 					"sid": 730011508184265,
 					"parameters": {
 						"visibility": "invisible"
@@ -1031,7 +1210,7 @@
 				},
 				{
 					"id": "set-instvar-value",
-					"objectClass": "sampah2",
+					"objectClass": "level1_q2_toggle",
 					"sid": 132028194883135,
 					"parameters": {
 						"instance-variable": "complete",
@@ -1040,27 +1219,11 @@
 				},
 				{
 					"id": "set-instvar-value",
-					"objectClass": "sampah",
-					"sid": 518279753411672,
+					"objectClass": "level1_q2_toggle",
+					"sid": 308666159299402,
 					"parameters": {
 						"instance-variable": "clickable",
 						"value": "0"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "overlay",
-					"sid": 241859574250713,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "tip_box",
-					"sid": 952851180527820,
-					"parameters": {
-						"visibility": "invisible"
 					}
 				}
 			],
@@ -1083,17 +1246,243 @@
 			"actions": [
 				{
 					"callFunction": "SetQuestion",
-					"sid": 959705018514317,
+					"sid": 973193151744352,
 					"parameters": [
-						"\"Who is JFK?\"",
-						"\"Former President of Mali\"",
-						"\"Former President of the USA\"",
+						"\"Oops! You were riding your razor scooter and accidentally fell. You are alright, you brush off your shoulders and get back up, but you notice a tiny tear on your jeans. What do you do?\"",
+						"\"A: Throw your jeans away and buy a brand new pair.\"",
+						"\"B: Ask a tailor to stitch the tear and continue to wear them.\"",
 						"0",
 						"1"
 					]
 				}
 			],
 			"sid": 747454907788185
+		},
+		{
+			"eventType": "comment",
+			"text": "Setup question 3"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 227497438592868,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "level1_q3_toggle"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "level1_q3_toggle",
+					"sid": 771101610319837,
+					"parameters": {
+						"instance-variable": "clickable",
+						"comparison": 0,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "level1_q3_toggle",
+					"sid": 734946513310991,
+					"parameters": {
+						"instance-variable": "complete",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "questionUISetup",
+					"sid": 305290045165561,
+					"parameters": [
+						"3"
+					]
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "level1_q3_toggle",
+					"sid": 677035723873248,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "level1_q3_toggle",
+					"sid": 359817155024225,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "level1_q3_toggle",
+					"sid": 986435333210771,
+					"parameters": {
+						"instance-variable": "complete",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "level1_q3_toggle",
+					"sid": 796367960094431,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 939314154338561
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 288187768344606,
+					"parameters": {
+						"variable": "current_question",
+						"comparison": 0,
+						"value": "3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "SetQuestion",
+					"sid": 164215153688803,
+					"parameters": [
+						"\"You had an impromptu picnic and now you have a few empty plastic containers. What will you do with them?\"",
+						"\"A: Check if they are recyclable, and throw them into the nearest recycling bin to you.\"",
+						"\"B: Take them home, wash and reuse them. \"",
+						"0",
+						"1"
+					]
+				}
+			],
+			"sid": 990208690250348
+		},
+		{
+			"eventType": "comment",
+			"text": "Setup question 4"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 135323681158013,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "level1_q4_toggle"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "level1_q4_toggle",
+					"sid": 377849058673334,
+					"parameters": {
+						"instance-variable": "clickable",
+						"comparison": 0,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "level1_q4_toggle",
+					"sid": 759595638951969,
+					"parameters": {
+						"instance-variable": "complete",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "questionUISetup",
+					"sid": 527328602110532,
+					"parameters": [
+						"3"
+					]
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "level1_q4_toggle",
+					"sid": 787414619602228,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "level1_q4_toggle",
+					"sid": 607908251775802,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "level1_q4_toggle",
+					"sid": 836830357038399,
+					"parameters": {
+						"instance-variable": "complete",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "level1_q4_toggle",
+					"sid": 134829659973577,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 663227331867393
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 307630794657027,
+					"parameters": {
+						"variable": "current_question",
+						"comparison": 0,
+						"value": "3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "SetQuestion",
+					"sid": 141830500703474,
+					"parameters": [
+						"\"Let’s head over to the groceries section to top up this week’s set of groceries. There are so many products that come from a lot of different sources, near and far. Which is the more sustainable option for buying goods?\"",
+						"\"A: Choose the produce imported from all around the world.\"",
+						"\"B: Choose the locally-produced  variety with locally-sourced ingredients.\"",
+						"0",
+						"1"
+					]
+				}
+			],
+			"sid": 164716115469463
 		},
 		{
 			"eventType": "comment",
@@ -1111,7 +1500,7 @@
 			"actions": [
 				{
 					"id": "set-instvar-value",
-					"objectClass": "sampah",
+					"objectClass": "level1_q1_toggle",
 					"sid": 863337512947212,
 					"parameters": {
 						"instance-variable": "clickable",
@@ -1120,7 +1509,7 @@
 				},
 				{
 					"id": "set-instvar-value",
-					"objectClass": "sampah2",
+					"objectClass": "level1_q2_toggle",
 					"sid": 169326621216710,
 					"parameters": {
 						"instance-variable": "clickable",
@@ -1138,6 +1527,93 @@
 				}
 			],
 			"sid": 757905333327460
+		},
+		{
+			"eventType": "comment",
+			"text": "for the UI of the question"
+		},
+		{
+			"functionName": "questionUISetup",
+			"functionDescription": "setting up questions",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "qNumber",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 448758183817914
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 481954250854679,
+					"parameters": {
+						"audio-file": "hover Click_Standard_0",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 108218029013713,
+					"parameters": {
+						"layer": "1",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 423751735514741,
+					"parameters": {
+						"variable": "question_time",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 954769723463389,
+					"parameters": {
+						"variable": "current_question",
+						"value": "qNumber"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "overlay",
+					"sid": 124390080252025,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "tip_box",
+					"sid": 220725393549274,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "bar_bg",
+					"sid": 986533353718257,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 306021161301340
 		},
 		{
 			"eventType": "comment",
@@ -1303,9 +1779,549 @@
 					"parameters": {
 						"visibility": "invisible"
 					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "bar_bg",
+					"sid": 251793657955764,
+					"parameters": {
+						"visibility": "invisible"
+					}
 				}
 			],
 			"sid": 256159743595995
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Drag & Drop",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Activate D&D portion"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 588890309916996,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "toggle_drag_drop"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 769288665959919,
+							"parameters": {
+								"layer": "3",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "overlay",
+							"sid": 737974145981643,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 791072691715497,
+							"parameters": {
+								"variable": "drag_time",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 859819388711583
+				},
+				{
+					"eventType": "comment",
+					"text": "Deactivate D&D"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 518251142326790,
+							"parameters": {
+								"variable": "drag_correct",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 553884500204391,
+							"parameters": {
+								"variable": "dragDone"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 473094544904631,
+							"parameters": {
+								"layer": "3",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "overlay",
+							"sid": 519756270148590,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 588253365920022,
+							"parameters": {
+								"variable": "drag_time",
+								"value": "false"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 698366181852666,
+							"parameters": {
+								"variable": "isFinished",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 304962865312851,
+							"parameters": {
+								"variable": "dragDone",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 948353056236609
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 392807018966786,
+							"parameters": {
+								"variable": "drag_check",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 275380898584862,
+							"parameters": {
+								"variable": "dragDone"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 980322701872340,
+							"parameters": {
+								"layer": "3",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "overlay",
+							"sid": 284513843415065,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 590737687611234,
+							"parameters": {
+								"variable": "drag_time",
+								"value": "false"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 762336786729579,
+							"parameters": {
+								"variable": "isFinished",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 821068763896409,
+							"parameters": {
+								"variable": "dragDone",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 498304002796021
+				},
+				{
+					"eventType": "comment",
+					"text": "for wrong answers"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "drag_styrofoam",
+							"sid": 586673500715391,
+							"parameters": {
+								"object": "drag_sampah_toggle"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "drag_styrofoam",
+							"sid": 551239277784890,
+							"parameters": {
+								"object": "drag_sampah_toggle",
+								"image-point-optional": "0"
+							}
+						}
+					],
+					"sid": 555799013952520,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-drop",
+									"objectClass": "drag_styrofoam",
+									"sid": 148150906697141,
+									"behaviorType": "DragDrop"
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "drag_styrofoam",
+									"sid": 795989129283038,
+									"parameters": {
+										"object": "drag_sampah_toggle"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "drag_styrofoam",
+									"sid": 795929971616598
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 695667469185938,
+									"parameters": {
+										"variable": "score_tally",
+										"value": "10"
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 631144988189285,
+									"parameters": {
+										"variable": "drag_check",
+										"value": "1"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 495014584121391,
+									"parameters": {
+										"audio-file": "Click_Standard_03",
+										"loop": "not-looping",
+										"volume": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 209207760545275
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "for right answers"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "drag_mask1",
+							"sid": 983067320722166,
+							"parameters": {
+								"object": "drag_sampah_toggle"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "drag_mask1",
+							"sid": 474970541067515,
+							"parameters": {
+								"object": "drag_sampah_toggle",
+								"image-point-optional": "0"
+							}
+						}
+					],
+					"sid": 655370035414466,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-drop",
+									"objectClass": "drag_mask1",
+									"sid": 510354583148384,
+									"behaviorType": "DragDrop"
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "drag_mask1",
+									"sid": 634379539368975,
+									"parameters": {
+										"object": "drag_sampah_toggle"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "drag_mask1",
+									"sid": 479772924154269
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 762826309354272,
+									"parameters": {
+										"variable": "score_tally",
+										"value": "10"
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 876410525567359,
+									"parameters": {
+										"variable": "drag_check",
+										"value": "1"
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 359113546433373,
+									"parameters": {
+										"variable": "drag_correct",
+										"value": "1"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 361698400049301,
+									"parameters": {
+										"audio-file": "Click_Standard_03",
+										"loop": "not-looping",
+										"volume": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 612183514589295
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "drag_mask2",
+							"sid": 573709732932060,
+							"parameters": {
+								"object": "drag_sampah_toggle"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "drag_mask2",
+							"sid": 627287946886404,
+							"parameters": {
+								"object": "drag_sampah_toggle",
+								"image-point-optional": "0"
+							}
+						}
+					],
+					"sid": 848078479656670,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-drop",
+									"objectClass": "drag_mask2",
+									"sid": 372729863802037,
+									"behaviorType": "DragDrop"
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "drag_mask2",
+									"sid": 908654388834067,
+									"parameters": {
+										"object": "drag_sampah_toggle"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "drag_mask2",
+									"sid": 927846313756133
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 590082178284442,
+									"parameters": {
+										"variable": "score_tally",
+										"value": "10"
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 272728325293839,
+									"parameters": {
+										"variable": "drag_check",
+										"value": "1"
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 810958107632931,
+									"parameters": {
+										"variable": "drag_correct",
+										"value": "1"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 768030537080819,
+									"parameters": {
+										"audio-file": "Click_Standard_03",
+										"loop": "not-looping",
+										"volume": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 881241896901383
+						}
+					]
+				}
+			],
+			"sid": 734437886546885
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Tests",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 910008695841121
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "temp_test",
+							"sid": 842949598216228,
+							"parameters": {
+								"text": "isFinished"
+							}
+						}
+					],
+					"sid": 695678525148221,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 398086677515025
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "temp_test",
+							"sid": 602503645452894,
+							"parameters": {
+								"text": "user_name"
+							}
+						}
+					],
+					"sid": 127325621669543
+				}
+			],
+			"sid": 314960304345935
 		}
 	],
 	"sid": 482210164493416

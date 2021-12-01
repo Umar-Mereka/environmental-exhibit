@@ -23,7 +23,7 @@
 			"actions": [
 				{
 					"id": "set-position",
-					"objectClass": "bg_pvs",
+					"objectClass": "bg_basic",
 					"sid": 101298521617946,
 					"parameters": {
 						"x": "0",
@@ -167,7 +167,7 @@
 				},
 				{
 					"id": "set-visible",
-					"objectClass": "Button_continue",
+					"objectClass": "button_continue",
 					"sid": 268904990326232,
 					"parameters": {
 						"visibility": "visible"
@@ -175,6 +175,27 @@
 				}
 			],
 			"sid": 885023776321186
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "button_continue",
+					"sid": 255096023812266
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 136766554200272,
+					"parameters": {
+						"layout": "Level1Screen"
+					}
+				}
+			],
+			"sid": 188583432792694
 		}
 	],
 	"sid": 993948919694928

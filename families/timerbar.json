@@ -1,0 +1,13 @@
+{
+	"name": "timerBar",
+	"plugin-id": "Sprite",
+	"sid": 263645025046638,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"bar_bg",
+		"bar_progress",
+		"bar_icon"
+	]
+}

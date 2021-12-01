@@ -1,0 +1,64 @@
+{
+	"name": "quiz4_a1",
+	"plugin-id": "Sprite",
+	"sid": 803272696634652,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "active",
+			"type": "boolean",
+			"desc": "",
+			"sid": 449273416765604
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 387,
+						"height": 40,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2258398,
+						"collisionPoly": {
+							"points": [
+								0.015503875968992248,
+								0.15,
+								0.5,
+								0,
+								0.9819121447028424,
+								0.15,
+								0.9974160206718347,
+								0.5,
+								0.9819121447028424,
+								0.825,
+								0.5,
+								0.975,
+								0.015503875968992248,
+								0.825,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 495839896091854,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

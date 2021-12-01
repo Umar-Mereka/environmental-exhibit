@@ -63,6 +63,54 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "progressbar",
+			"name": "Progress bar",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "filechooser",
+			"name": "File chooser",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "UserMedia",
+			"name": "User Media",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Twitter",
+			"name": "Twitter",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "DrawingCanvas",
+			"name": "Drawing canvas",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TextBox",
+			"name": "Text input",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "DragnDrop",
 			"name": "Drag & Drop",
@@ -82,15 +130,15 @@
 	"uniqueId": "71p28mlynva",
 	"objectTypes": {
 		"items": [
-			"Sprite",
+			"bg_studio",
 			"Audio",
 			"TiledBackground",
-			"Sprite2",
+			"bg_game_over",
 			"Sprite3",
 			"Mouse",
 			"Text",
 			"bg_level1",
-			"sampah",
+			"level1_q1_toggle",
 			"question_box",
 			"text_question",
 			"answer_box",
@@ -100,10 +148,9 @@
 			"text_score",
 			"questiontimechecker",
 			"text_timer",
-			"sampah2",
+			"level1_q2_toggle",
 			"exit_button",
 			"menu_button",
-			"Sprite4",
 			"avatar2",
 			"playerAvatar",
 			"continue_button",
@@ -117,7 +164,7 @@
 			"settings_button",
 			"instructions_button",
 			"drag_sampah_toggle",
-			"bg_pvs",
+			"bg_basic",
 			"card_video",
 			"Video",
 			"button_play_video",
@@ -126,13 +173,66 @@
 			"scroll_right",
 			"scroll_left",
 			"x_value",
-			"Button_continue",
+			"button_continue",
 			"test_sampah",
 			"Sprite5",
 			"card_dd",
 			"drop_bin",
 			"drag_mask1",
-			"drag_styrofoam"
+			"drag_styrofoam",
+			"drag_mask2",
+			"ProgressBar",
+			"bar_progress",
+			"bar_bg",
+			"bar_icon",
+			"toggle_drag_drop",
+			"FileChooser2",
+			"button_upload",
+			"UserMedia",
+			"Twitter",
+			"DrawingCanvas",
+			"text_quiz_q",
+			"temp_q1a",
+			"temp_q2a",
+			"temp_q3_a",
+			"temp_q4a",
+			"temp_q5a",
+			"temp_test",
+			"level1_q3_toggle",
+			"level1_q4_toggle",
+			"TextInput",
+			"temp_sprite",
+			"avatar_choice",
+			"title",
+			"arrow_right",
+			"arrow_left",
+			"button_crop",
+			"button_back",
+			"quiz1_a1",
+			"text_answer_box",
+			"quiz1_a2",
+			"quiz1_a3",
+			"quiz2_a1",
+			"quiz2_a2",
+			"quiz2_a3",
+			"quiz2_a4",
+			"quiz2_a5",
+			"quiz3_a1",
+			"quiz3_a2",
+			"quiz3_a3",
+			"quiz3_a4",
+			"quiz3_a5",
+			"quiz4_a1",
+			"quiz4_a2",
+			"quiz4_a3",
+			"quiz4_a4",
+			"quiz4_a5",
+			"quiz5_a1",
+			"quiz5_a2",
+			"quiz5_a3",
+			"quiz5_a4",
+			"quiz5_a5",
+			"text_username"
 		],
 		"subfolders": []
 	},
@@ -140,36 +240,49 @@
 	"containers": [
 		{
 			"members": [
-				"question_box",
-				"text_question"
-			],
-			"selectMode": "all"
-		},
-		{
-			"members": [
 				"bg_scroll",
 				"test_sampah"
 			],
 			"selectMode": "normal"
+		},
+		{
+			"members": [
+				"bar_bg",
+				"bar_icon",
+				"bar_progress"
+			],
+			"selectMode": "all"
 		}
 	],
 	"families": {
-		"items": [],
+		"items": [
+			"timerBar"
+		],
 		"subfolders": []
 	},
 	"layouts": {
 		"items": [
 			"StudioScreen",
 			"MenuScreen",
-			"GameOverScreen",
 			"Level1Screen",
 			"CharacterSelectScreen",
-			"PlayVideoScreen",
-			"TestScrollScreen",
-			"DragDropScreen",
-			"UITestScreen"
+			"PlayVideoScreen"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"TestScrollScreen",
+					"DragDropScreen",
+					"UITestScreen",
+					"GameOverScreen",
+					"TimerBarTestScreen",
+					"VideoCaptureScreen",
+					"QuizScreen"
+				],
+				"subfolders": [],
+				"name": "Tests"
+			}
+		]
 	},
 	"eventSheets": {
 		"items": [
@@ -181,7 +294,10 @@
 			"PVS_ES",
 			"TSS_ES",
 			"DDS_ES",
-			"UIT_ES"
+			"UIT_ES",
+			"TBTS_ES",
+			"VCS_ES",
+			"QS_ES"
 		],
 		"subfolders": []
 	},
@@ -206,6 +322,21 @@
 					"name": "bg_city2.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 722527197658331
+				},
+				{
+					"name": "Click_Soft_00.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 891193407602879
+				},
+				{
+					"name": "Click_Standard_05.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 694861884562907
+				},
+				{
+					"name": "Click_Standard_03.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 933751370128207
 				}
 			],
 			"subfolders": []
