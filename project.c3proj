@@ -106,6 +106,8 @@
 			"type": "plugin",
 			"id": "TextBox",
 			"name": "Text input",
+			"id": "Touch",
+			"name": "Touch",
 			"author": "Scirra",
 			"version": "r268",
 			"bundled": false
@@ -122,6 +124,14 @@
 			"type": "behavior",
 			"id": "LOS",
 			"name": "Line of sight",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Tween",
+			"name": "Tween",
 			"author": "Scirra",
 			"version": "r268",
 			"bundled": false
@@ -233,6 +243,8 @@
 			"quiz5_a4",
 			"quiz5_a5",
 			"text_username"
+			"settingsTest",
+			"Touch"
 		],
 		"subfolders": []
 	},
@@ -298,6 +310,7 @@
 			"TBTS_ES",
 			"VCS_ES",
 			"QS_ES"
+			"Event sheet 1"
 		],
 		"subfolders": []
 	},
@@ -438,7 +451,19 @@
 		},
 		"general": {
 			"items": [],
-			"subfolders": []
+			"subfolders": [
+				{
+					"items": [],
+					"subfolders": [
+						{
+							"items": [],
+							"subfolders": [],
+							"name": "Buttons"
+						}
+					],
+					"name": "Design Stuffs"
+				}
+			]
 		}
 	},
 	"timelines": {
