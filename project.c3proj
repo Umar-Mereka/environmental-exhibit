@@ -64,6 +64,7 @@
 		},
 		{
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"type": "plugin",
 			"id": "progressbar",
 			"name": "Progress bar",
@@ -114,6 +115,8 @@
 			"bundled": false
 		},
 		{
+=======
+>>>>>>> parent of b4042d4 (lots of updates)
 =======
 >>>>>>> parent of b4042d4 (lots of updates)
 			"type": "behavior",
@@ -194,6 +197,7 @@
 			"drop_bin",
 			"drag_mask1",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"drag_styrofoam",
 			"drag_mask2",
 			"ProgressBar",
@@ -253,6 +257,9 @@
 =======
 			"drag_styrofoam"
 >>>>>>> parent of b4042d4 (lots of updates)
+=======
+			"drag_styrofoam"
+>>>>>>> parent of b4042d4 (lots of updates)
 		],
 		"subfolders": []
 	},
@@ -302,11 +309,15 @@
 			"TSS_ES",
 			"DDS_ES",
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"UIT_ES",
 			"TBTS_ES",
 			"VCS_ES",
 			"QS_ES"
 			"Event sheet 1"
+=======
+			"UIT_ES"
+>>>>>>> parent of b4042d4 (lots of updates)
 =======
 			"UIT_ES"
 >>>>>>> parent of b4042d4 (lots of updates)
