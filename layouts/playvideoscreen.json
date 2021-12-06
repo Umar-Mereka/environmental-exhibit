@@ -6,7 +6,7 @@
 			"overriden": 0,
 			"instances": [
 				{
-					"type": "bg_basic",
+					"type": "bg_pvs",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -152,7 +152,7 @@
 					}
 				},
 				{
-					"type": "button_continue",
+					"type": "Button_continue",
 					"properties": {
 						"type": "button",
 						"text": "CONTINUE",

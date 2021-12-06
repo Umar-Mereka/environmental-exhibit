@@ -1,14 +1,20 @@
 {
-	"name": "question_box",
+	"name": "sampah",
 	"plugin-id": "Sprite",
-	"sid": 618113157692541,
+	"sid": 879866216127202,
 	"isGlobal": false,
 	"instanceVariables": [
 		{
-			"name": "text_box",
-			"type": "boolean",
+			"name": "clickable",
+			"type": "number",
+			"desc": "to see if q has been tackled before",
+			"sid": 824485778289287
+		},
+		{
+			"name": "complete",
+			"type": "number",
 			"desc": "",
-			"sid": 973079614583722
+			"sid": 937929384443838
 		}
 	],
 	"behaviorTypes": [],
@@ -25,19 +31,12 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 7087666,
+						"imageSpriteId": 5053369,
 						"useCollisionPoly": true,
-						"imagePoints": [
-							{
-								"name": "Q",
-								"x": 0.24,
-								"y": 0.24
-							}
-						],
 						"duration": 1
 					}
 				],
-				"sid": 653334556900269,
+				"sid": 231296015125896,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

@@ -63,6 +63,7 @@
 			"bundled": false
 		},
 		{
+<<<<<<< HEAD
 			"type": "plugin",
 			"id": "progressbar",
 			"name": "Progress bar",
@@ -113,6 +114,8 @@
 			"bundled": false
 		},
 		{
+=======
+>>>>>>> parent of b4042d4 (lots of updates)
 			"type": "behavior",
 			"id": "DragnDrop",
 			"name": "Drag & Drop",
@@ -140,15 +143,15 @@
 	"uniqueId": "71p28mlynva",
 	"objectTypes": {
 		"items": [
-			"bg_studio",
+			"Sprite",
 			"Audio",
 			"TiledBackground",
-			"bg_game_over",
+			"Sprite2",
 			"Sprite3",
 			"Mouse",
 			"Text",
 			"bg_level1",
-			"level1_q1_toggle",
+			"sampah",
 			"question_box",
 			"text_question",
 			"answer_box",
@@ -158,9 +161,10 @@
 			"text_score",
 			"questiontimechecker",
 			"text_timer",
-			"level1_q2_toggle",
+			"sampah2",
 			"exit_button",
 			"menu_button",
+			"Sprite4",
 			"avatar2",
 			"playerAvatar",
 			"continue_button",
@@ -174,7 +178,7 @@
 			"settings_button",
 			"instructions_button",
 			"drag_sampah_toggle",
-			"bg_basic",
+			"bg_pvs",
 			"card_video",
 			"Video",
 			"button_play_video",
@@ -183,12 +187,13 @@
 			"scroll_right",
 			"scroll_left",
 			"x_value",
-			"button_continue",
+			"Button_continue",
 			"test_sampah",
 			"Sprite5",
 			"card_dd",
 			"drop_bin",
 			"drag_mask1",
+<<<<<<< HEAD
 			"drag_styrofoam",
 			"drag_mask2",
 			"ProgressBar",
@@ -245,6 +250,9 @@
 			"text_username"
 			"settingsTest",
 			"Touch"
+=======
+			"drag_styrofoam"
+>>>>>>> parent of b4042d4 (lots of updates)
 		],
 		"subfolders": []
 	},
@@ -252,49 +260,36 @@
 	"containers": [
 		{
 			"members": [
+				"question_box",
+				"text_question"
+			],
+			"selectMode": "all"
+		},
+		{
+			"members": [
 				"bg_scroll",
 				"test_sampah"
 			],
 			"selectMode": "normal"
-		},
-		{
-			"members": [
-				"bar_bg",
-				"bar_icon",
-				"bar_progress"
-			],
-			"selectMode": "all"
 		}
 	],
 	"families": {
-		"items": [
-			"timerBar"
-		],
+		"items": [],
 		"subfolders": []
 	},
 	"layouts": {
 		"items": [
 			"StudioScreen",
 			"MenuScreen",
+			"GameOverScreen",
 			"Level1Screen",
 			"CharacterSelectScreen",
-			"PlayVideoScreen"
+			"PlayVideoScreen",
+			"TestScrollScreen",
+			"DragDropScreen",
+			"UITestScreen"
 		],
-		"subfolders": [
-			{
-				"items": [
-					"TestScrollScreen",
-					"DragDropScreen",
-					"UITestScreen",
-					"GameOverScreen",
-					"TimerBarTestScreen",
-					"VideoCaptureScreen",
-					"QuizScreen"
-				],
-				"subfolders": [],
-				"name": "Tests"
-			}
-		]
+		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
@@ -306,11 +301,15 @@
 			"PVS_ES",
 			"TSS_ES",
 			"DDS_ES",
+<<<<<<< HEAD
 			"UIT_ES",
 			"TBTS_ES",
 			"VCS_ES",
 			"QS_ES"
 			"Event sheet 1"
+=======
+			"UIT_ES"
+>>>>>>> parent of b4042d4 (lots of updates)
 		],
 		"subfolders": []
 	},
@@ -335,21 +334,6 @@
 					"name": "bg_city2.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 722527197658331
-				},
-				{
-					"name": "Click_Soft_00.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 891193407602879
-				},
-				{
-					"name": "Click_Standard_05.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 694861884562907
-				},
-				{
-					"name": "Click_Standard_03.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 933751370128207
 				}
 			],
 			"subfolders": []

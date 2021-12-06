@@ -3,26 +3,6 @@
 	"events": [
 		{
 			"eventType": "variable",
-			"name": "correct_drag",
-			"type": "number",
-			"initialValue": "2",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 611287292752284
-		},
-		{
-			"eventType": "variable",
-			"name": "check_drag",
-			"type": "number",
-			"initialValue": "3",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 651013713245278
-		},
-		{
-			"eventType": "variable",
 			"name": "testClick",
 			"type": "number",
 			"initialValue": "0",
@@ -79,10 +59,6 @@
 			"sid": 658114575781532
 		},
 		{
-			"eventType": "comment",
-			"text": "Keep track of score"
-		},
-		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -104,10 +80,6 @@
 			"sid": 581664789103303
 		},
 		{
-			"eventType": "comment",
-			"text": "Activate D&D portion"
-		},
-		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -117,7 +89,7 @@
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "level1_q1_toggle"
+						"object-clicked": "sampah"
 					}
 				}
 			],
@@ -181,107 +153,21 @@
 						"variable": "testClick",
 						"value": "1"
 					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "level1_q1_toggle",
-					"sid": 511027494231638,
-					"parameters": {
-						"visibility": "invisible"
-					}
 				}
 			],
 			"sid": 485267454350001
 		},
 		{
-			"eventType": "comment",
-			"text": "Deactivate D&D"
-		},
-		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 394328718701916,
-					"parameters": {
-						"variable": "correct_drag",
-						"comparison": 0,
-						"value": "0"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-layer-visible",
-					"objectClass": "System",
-					"sid": 935658666965230,
-					"parameters": {
-						"layer": "1",
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-layer-visible",
-					"objectClass": "System",
-					"sid": 773270271037303,
-					"parameters": {
-						"layer": "2",
-						"visibility": "invisible"
-					}
-				}
-			],
-			"sid": 680422771622430
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 329437812108823,
-					"parameters": {
-						"variable": "check_drag",
-						"comparison": 0,
-						"value": "0"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-layer-visible",
-					"objectClass": "System",
-					"sid": 340917833657225,
-					"parameters": {
-						"layer": "1",
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-layer-visible",
-					"objectClass": "System",
-					"sid": 234266719222944,
-					"parameters": {
-						"layer": "2",
-						"visibility": "invisible"
-					}
-				}
-			],
-			"sid": 640178358866359
-		},
-		{
-			"eventType": "comment",
-			"text": "for wrong answers"
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-overlapping-another-object",
+					"id": "has-los-to-object",
 					"objectClass": "drag_styrofoam",
-					"sid": 323856709555535,
+					"sid": 554109509885790,
+					"behaviorType": "LineOfSight",
 					"parameters": {
-						"object": "drag_sampah_toggle"
+						"object": "drag_sampah_toggle",
+						"image-point": "0"
 					}
 				}
 			],
@@ -308,11 +194,21 @@
 							"behaviorType": "DragDrop"
 						},
 						{
-							"id": "is-overlapping-another-object",
+							"id": "compare-x",
 							"objectClass": "drag_styrofoam",
-							"sid": 232964781633354,
+							"sid": 942840578626779,
 							"parameters": {
-								"object": "drag_sampah_toggle"
+								"comparison": 0,
+								"x-co-ordinate": "drag_sampah_toggle.X"
+							}
+						},
+						{
+							"id": "compare-y",
+							"objectClass": "drag_styrofoam",
+							"sid": 829329293191540,
+							"parameters": {
+								"comparison": 0,
+								"y-co-ordinate": "drag_sampah_toggle.Y"
 							}
 						}
 					],
@@ -330,15 +226,6 @@
 								"variable": "score_tally",
 								"value": "10"
 							}
-						},
-						{
-							"id": "subtract-from-eventvar",
-							"objectClass": "System",
-							"sid": 953103316578284,
-							"parameters": {
-								"variable": "check_drag",
-								"value": "1"
-							}
 						}
 					],
 					"sid": 330574323824862
@@ -346,18 +233,16 @@
 			]
 		},
 		{
-			"eventType": "comment",
-			"text": "for right answers"
-		},
-		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "is-overlapping-another-object",
+					"id": "has-los-to-object",
 					"objectClass": "drag_mask1",
-					"sid": 996147467115822,
+					"sid": 869445715251330,
+					"behaviorType": "LineOfSight",
 					"parameters": {
-						"object": "drag_sampah_toggle"
+						"object": "drag_sampah_toggle",
+						"image-point": "0"
 					}
 				}
 			],
@@ -384,11 +269,21 @@
 							"behaviorType": "DragDrop"
 						},
 						{
-							"id": "is-overlapping-another-object",
+							"id": "compare-x",
 							"objectClass": "drag_mask1",
-							"sid": 787182227913417,
+							"sid": 580828073270679,
 							"parameters": {
-								"object": "drag_sampah_toggle"
+								"comparison": 0,
+								"x-co-ordinate": "drag_sampah_toggle.X"
+							}
+						},
+						{
+							"id": "compare-y",
+							"objectClass": "drag_mask1",
+							"sid": 954131977763803,
+							"parameters": {
+								"comparison": 0,
+								"y-co-ordinate": "drag_sampah_toggle.Y"
 							}
 						}
 					],
@@ -406,108 +301,9 @@
 								"variable": "score_tally",
 								"value": "10"
 							}
-						},
-						{
-							"id": "subtract-from-eventvar",
-							"objectClass": "System",
-							"sid": 964898510270436,
-							"parameters": {
-								"variable": "check_drag",
-								"value": "1"
-							}
-						},
-						{
-							"id": "subtract-from-eventvar",
-							"objectClass": "System",
-							"sid": 444910507565242,
-							"parameters": {
-								"variable": "correct_drag",
-								"value": "1"
-							}
 						}
 					],
 					"sid": 469666653304712
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-overlapping-another-object",
-					"objectClass": "drag_mask2",
-					"sid": 838422317850489,
-					"parameters": {
-						"object": "drag_sampah_toggle"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-position-to-another-object",
-					"objectClass": "drag_mask2",
-					"sid": 853251308623416,
-					"parameters": {
-						"object": "drag_sampah_toggle",
-						"image-point-optional": "0"
-					}
-				}
-			],
-			"sid": 414168484576451,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-drop",
-							"objectClass": "drag_mask2",
-							"sid": 519613633336327,
-							"behaviorType": "DragDrop"
-						},
-						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "drag_mask2",
-							"sid": 603975279273752,
-							"parameters": {
-								"object": "drag_sampah_toggle"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "destroy",
-							"objectClass": "drag_mask2",
-							"sid": 755074000101181
-						},
-						{
-							"id": "subtract-from-eventvar",
-							"objectClass": "System",
-							"sid": 115430736927064,
-							"parameters": {
-								"variable": "score_tally",
-								"value": "10"
-							}
-						},
-						{
-							"id": "subtract-from-eventvar",
-							"objectClass": "System",
-							"sid": 239076386082600,
-							"parameters": {
-								"variable": "check_drag",
-								"value": "1"
-							}
-						},
-						{
-							"id": "subtract-from-eventvar",
-							"objectClass": "System",
-							"sid": 123042865053703,
-							"parameters": {
-								"variable": "correct_drag",
-								"value": "1"
-							}
-						}
-					],
-					"sid": 955099318625378
 				}
 			]
 		}
