@@ -1256,6 +1256,18 @@
 			]
 		},
 		{
+			"functionName": "QuizFunction",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 882070859342455
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -1843,6 +1855,28 @@
 						}
 					],
 					"sid": 926939992441087
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-clicked",
+							"objectClass": "button_continue",
+							"sid": 185065805290407
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 740673260606497,
+							"parameters": {
+								"variable": "score_tally",
+								"value": "quizPoints"
+							}
+						}
+					],
+					"sid": 970904658202130
 				}
 			]
 		},
@@ -2434,6 +2468,28 @@
 						}
 					],
 					"sid": 464087768516388
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-clicked",
+							"objectClass": "button_continue",
+							"sid": 735416948253149
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 949350924225266,
+							"parameters": {
+								"variable": "score_tally",
+								"value": "quizPoints"
+							}
+						}
+					],
+					"sid": 320325830042109
 				}
 			]
 		},
@@ -2562,14 +2618,23 @@
 							"id": "add-to-eventvar",
 							"objectClass": "System",
 							"sid": 902026028872547,
+							"disabled": true,
 							"parameters": {
 								"variable": "score_tally",
 								"value": "0"
 							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 491721027858247,
+							"parameters": {
+								"variable": "quizPoints",
+								"value": "0"
+							}
 						}
 					],
-					"sid": 565491169718757,
-					"disabled": true
+					"sid": 565491169718757
 				},
 				{
 					"eventType": "block",
@@ -2590,14 +2655,134 @@
 							"id": "add-to-eventvar",
 							"objectClass": "System",
 							"sid": 801396785243876,
+							"disabled": true,
 							"parameters": {
 								"variable": "score_tally",
 								"value": "quizPoints"
 							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 548792008503594,
+							"parameters": {
+								"variable": "quizPoints",
+								"value": "0"
+							}
 						}
 					],
-					"sid": 669853519237753,
-					"disabled": true
+					"sid": 669853519237753
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 963686296390182,
+							"parameters": {
+								"variable": "quiz_question",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 797760804270851,
+							"disabled": true,
+							"parameters": {
+								"variable": "score_tally",
+								"value": "quizPoints"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 904043145227199,
+							"parameters": {
+								"variable": "quizPoints",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 164078941868299
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 870764000227978,
+							"parameters": {
+								"variable": "quiz_question",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 154177825369113,
+							"disabled": true,
+							"parameters": {
+								"variable": "score_tally",
+								"value": "quizPoints"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 536940803422239,
+							"parameters": {
+								"variable": "quizPoints",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 400916285071101
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 699851398700378,
+							"parameters": {
+								"variable": "quiz_question",
+								"comparison": 0,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 620769209005900,
+							"disabled": true,
+							"parameters": {
+								"variable": "score_tally",
+								"value": "quizPoints"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 903789108283461,
+							"parameters": {
+								"variable": "quizPoints",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 634598423034417
 				}
 			]
 		},
@@ -2757,7 +2942,15 @@
 				{
 					"id": "set-text",
 					"objectClass": "text_score",
-					"sid": 620025261666653,
+					"sid": 785087579609887,
+					"parameters": {
+						"text": "quizPoints"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "temp_test",
+					"sid": 487085022269845,
 					"parameters": {
 						"text": "score_tally"
 					}
