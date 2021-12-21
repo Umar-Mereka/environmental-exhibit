@@ -1,0 +1,74 @@
+{
+	"name": "card_trivia",
+	"plugin-id": "Sprite",
+	"sid": 137756666230271,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 353,
+						"height": 267,
+						"originX": 0.48441926345609065,
+						"originY": 0.9438202247191011,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2742588,
+						"collisionPoly": {
+							"points": [
+								0.053824362606232294,
+								0.07116104868913857,
+								0.5,
+								0.03745318352059925,
+								0.943342776203966,
+								0.07116104868913857,
+								0.9688385269121813,
+								0.5,
+								0.9036827195467422,
+								0.8726591760299626,
+								0.5,
+								0.9213483146067416,
+								0.09348441926345609,
+								0.8726591760299626,
+								0.028328611898016998,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "title",
+								"x": 0.056657223796033995,
+								"y": 0.149812734082397
+							},
+							{
+								"name": "text",
+								"x": 0.056657223796033995,
+								"y": 0.35580524344569286
+							},
+							{
+								"name": "close button",
+								"x": 0.9065155807365439,
+								"y": 0.149812734082397
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 681495829257552,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

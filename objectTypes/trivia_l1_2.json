@@ -1,0 +1,77 @@
+{
+	"name": "trivia_l1_2",
+	"plugin-id": "Sprite",
+	"sid": 801065947071256,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "clickable",
+			"type": "number",
+			"desc": "",
+			"sid": 862088871424328
+		},
+		{
+			"name": "complete",
+			"type": "number",
+			"desc": "",
+			"sid": 527414647596407
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 104,
+						"height": 66,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3420558,
+						"collisionPoly": {
+							"points": [
+								0.19230769230769232,
+								0.30303030303030304,
+								0.5,
+								0.5151515151515151,
+								0.7980769230769231,
+								0.30303030303030304,
+								0.9230769230769231,
+								0.5,
+								0.8653846153846154,
+								0.7878787878787878,
+								0.5,
+								0.6515151515151515,
+								0.14423076923076922,
+								0.7575757575757576,
+								0.057692307692307696,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 0.5,
+								"y": -0.30303030303030304
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 779180434864721,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

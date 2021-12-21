@@ -4,6 +4,7 @@
 		{
 			"name": "bg",
 			"overriden": 0,
+			"subLayers": [],
 			"instances": [
 				{
 					"type": "bg_basic",
@@ -65,6 +66,7 @@
 		{
 			"name": "Layer 0",
 			"overriden": 0,
+			"subLayers": [],
 			"instances": [
 				{
 					"type": "playerAvatar",
@@ -156,6 +158,7 @@
 		{
 			"name": "Choice1",
 			"overriden": 0,
+			"subLayers": [],
 			"instances": [
 				{
 					"type": "avatar_choice",
@@ -464,6 +467,7 @@
 		{
 			"name": "Crop",
 			"overriden": 0,
+			"subLayers": [],
 			"instances": [
 				{
 					"type": "temp_sprite",

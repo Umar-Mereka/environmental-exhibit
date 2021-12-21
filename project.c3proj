@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 26800,
+	"savedWithRelease": 27602,
 	"name": "Test",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -11,7 +11,7 @@
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
-			"version": "r268",
+			"version": "r276.2",
 			"bundled": false
 		},
 		{
@@ -19,7 +19,7 @@
 			"id": "Audio",
 			"name": "Audio",
 			"author": "Scirra",
-			"version": "r268",
+			"version": "r276.2",
 			"bundled": false
 		},
 		{
@@ -27,7 +27,7 @@
 			"id": "TiledBg",
 			"name": "Tiled Background",
 			"author": "Scirra",
-			"version": "r268",
+			"version": "r276.2",
 			"bundled": false
 		},
 		{
@@ -35,7 +35,7 @@
 			"id": "Mouse",
 			"name": "Mouse",
 			"author": "Scirra",
-			"version": "r268",
+			"version": "r276.2",
 			"bundled": false
 		},
 		{
@@ -43,7 +43,7 @@
 			"id": "Text",
 			"name": "Text",
 			"author": "Scirra",
-			"version": "r268",
+			"version": "r276.2",
 			"bundled": false
 		},
 		{
@@ -51,7 +51,7 @@
 			"id": "Button",
 			"name": "Button",
 			"author": "Scirra",
-			"version": "r268",
+			"version": "r276.2",
 			"bundled": false
 		},
 		{
@@ -59,7 +59,7 @@
 			"id": "video",
 			"name": "Video",
 			"author": "Scirra",
-			"version": "r268",
+			"version": "r276.2",
 			"bundled": false
 		},
 		{
@@ -67,7 +67,7 @@
 			"id": "progressbar",
 			"name": "Progress bar",
 			"author": "Scirra",
-			"version": "r268",
+			"version": "r276.2",
 			"bundled": false
 		},
 		{
@@ -75,7 +75,7 @@
 			"id": "filechooser",
 			"name": "File chooser",
 			"author": "Scirra",
-			"version": "r268",
+			"version": "r276.2",
 			"bundled": false
 		},
 		{
@@ -83,7 +83,7 @@
 			"id": "UserMedia",
 			"name": "User Media",
 			"author": "Scirra",
-			"version": "r268",
+			"version": "r276.2",
 			"bundled": false
 		},
 		{
@@ -91,7 +91,7 @@
 			"id": "Twitter",
 			"name": "Twitter",
 			"author": "Scirra",
-			"version": "r268",
+			"version": "r276.2",
 			"bundled": false
 		},
 		{
@@ -99,7 +99,7 @@
 			"id": "DrawingCanvas",
 			"name": "Drawing canvas",
 			"author": "Scirra",
-			"version": "r268",
+			"version": "r276.2",
 			"bundled": false
 		},
 		{
@@ -107,7 +107,7 @@
 			"id": "TextBox",
 			"name": "Text input",
 			"author": "Scirra",
-			"version": "r268",
+			"version": "r276.2",
 			"bundled": false
 		},
 		{
@@ -115,7 +115,7 @@
 			"id": "DragnDrop",
 			"name": "Drag & Drop",
 			"author": "Scirra",
-			"version": "r268",
+			"version": "r276.2",
 			"bundled": false
 		},
 		{
@@ -123,7 +123,7 @@
 			"id": "LOS",
 			"name": "Line of sight",
 			"author": "Scirra",
-			"version": "r268",
+			"version": "r276.2",
 			"bundled": false
 		}
 	],
@@ -232,7 +232,13 @@
 			"quiz5_a3",
 			"quiz5_a4",
 			"quiz5_a5",
-			"text_username"
+			"text_username",
+			"trivia_l1_1",
+			"card_trivia",
+			"text_trivia_title",
+			"text_trivia",
+			"trivia_close",
+			"trivia_l1_2"
 		],
 		"subfolders": []
 	},
@@ -484,6 +490,7 @@
 			0
 		],
 		"orientations": "landscape",
+		"webgpu": "auto",
 		"gpuPreference": "high-performance",
 		"scriptsType": "module",
 		"framerateMode": "vsync",

@@ -4,6 +4,7 @@
 		{
 			"name": "Layer 0",
 			"overriden": 0,
+			"subLayers": [],
 			"instances": [
 				{
 					"type": "bg_level1",
@@ -249,6 +250,70 @@
 					}
 				},
 				{
+					"type": "trivia_l1_1",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 136,
+					"instanceVariables": {
+						"clickable": 1,
+						"complete": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": 800,
+						"y": 383,
+						"width": 26.867868410820698,
+						"height": 57.094220372993966,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "trivia_l1_2",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 141,
+					"instanceVariables": {
+						"clickable": 1,
+						"complete": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": 616.031297451773,
+						"y": 387.3273368029331,
+						"width": 91.93728580388407,
+						"height": 58.34481599092643,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
 					"type": "overlay",
 					"properties": {
 						"initially-visible": false,
@@ -350,6 +415,7 @@
 		{
 			"name": "Q&A",
 			"overriden": 0,
+			"subLayers": [],
 			"instances": [
 				{
 					"type": "answer_box",
@@ -630,6 +696,7 @@
 		{
 			"name": "Scroll Items",
 			"overriden": 0,
+			"subLayers": [],
 			"instances": [
 				{
 					"type": "scroll_left",
@@ -720,6 +787,7 @@
 		{
 			"name": "D&D",
 			"overriden": 0,
+			"subLayers": [],
 			"instances": [
 				{
 					"type": "card_dd",
@@ -971,6 +1039,7 @@
 		{
 			"name": "Level End",
 			"overriden": 0,
+			"subLayers": [],
 			"instances": [],
 			"sid": 607475881678741,
 			"effectTypes": [],
@@ -1002,7 +1071,153 @@
 		{
 			"name": "Trivia",
 			"overriden": 0,
-			"instances": [],
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "card_trivia",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 137,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 796,
+						"y": 342,
+						"width": 208.55935305163936,
+						"height": 157.74885910704734,
+						"originX": 0.48441926345609065,
+						"originY": 0.9438202247191011,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "text_trivia_title",
+					"properties": {
+						"text": "trivia title",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 7,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": false,
+						"origin": "top-left"
+					},
+					"uid": 138,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 713.2577909071485,
+						"y": 210.3611995875937,
+						"width": 164.8109288256171,
+						"height": 30,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "text_trivia",
+					"properties": {
+						"text": "trivia text",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 6,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": false,
+						"origin": "top-left"
+					},
+					"uid": 139,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 713.9842156533979,
+						"y": 241.98482209771151,
+						"width": 172.71027291129053,
+						"height": 75.24329913698489,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "trivia_close",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 140,
+					"instanceVariables": {
+						"active": false
+					},
+					"behaviors": {},
+					"world": {
+						"x": 879.8876715554326,
+						"y": 212.24243059350928,
+						"width": 12,
+						"height": 12,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
 			"sid": 469460031767356,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
@@ -1033,6 +1248,7 @@
 		{
 			"name": "UI",
 			"overriden": 0,
+			"subLayers": [],
 			"instances": [
 				{
 					"type": "score_box",

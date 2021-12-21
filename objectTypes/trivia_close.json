@@ -1,14 +1,14 @@
 {
-	"name": "quiz3_a1",
+	"name": "trivia_close",
 	"plugin-id": "Sprite",
-	"sid": 984054955645480,
+	"sid": 949298619210515,
 	"isGlobal": false,
 	"instanceVariables": [
 		{
 			"name": "active",
 			"type": "boolean",
 			"desc": "",
-			"sid": 507713835548475
+			"sid": 224096286730249
 		}
 	],
 	"behaviorTypes": [],
@@ -18,27 +18,27 @@
 			{
 				"frames": [
 					{
-						"width": 387,
-						"height": 56,
+						"width": 24,
+						"height": 24,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 8900180,
+						"imageSpriteId": 2222104,
 						"collisionPoly": {
 							"points": [
-								0,
-								0,
-								0.5,
+								1.493444870253463e-7,
 								0,
 								1,
 								0,
 								1,
-								0.5,
-								1,
+								0.16666666666666666,
 								1,
 								0.5,
+								1,
+								1,
+								0.49479113536873837,
 								1,
 								0,
 								1,
@@ -50,7 +50,7 @@
 						"duration": 1
 					}
 				],
-				"sid": 162591851571726,
+				"sid": 211825720299729,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

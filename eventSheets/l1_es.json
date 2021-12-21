@@ -528,6 +528,54 @@
 					"parameters": {
 						"x": "Self.X - (80 * dt)"
 					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "trivia_l1_1",
+					"sid": 808942619295929,
+					"parameters": {
+						"x": "Self.X - (80 * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "trivia_l1_2",
+					"sid": 475050471968372,
+					"parameters": {
+						"x": "Self.X - (80 * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "card_trivia",
+					"sid": 739898184224480,
+					"parameters": {
+						"x": "Self.X - (80 * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "trivia_close",
+					"sid": 770782570314185,
+					"parameters": {
+						"x": "Self.X - (80 * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "text_trivia_title",
+					"sid": 773954126575246,
+					"parameters": {
+						"x": "Self.X - (80 * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "text_trivia",
+					"sid": 329052957402824,
+					"parameters": {
+						"x": "Self.X - (80 * dt)"
+					}
 				}
 			],
 			"sid": 931806300675244
@@ -616,6 +664,54 @@
 					"id": "set-x",
 					"objectClass": "level1_q4_toggle",
 					"sid": 305326129530833,
+					"parameters": {
+						"x": "Self.X + (80 * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "trivia_l1_1",
+					"sid": 935367743779672,
+					"parameters": {
+						"x": "Self.X + (80 * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "trivia_l1_2",
+					"sid": 614651828281669,
+					"parameters": {
+						"x": "Self.X + (80 * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "card_trivia",
+					"sid": 532429841077784,
+					"parameters": {
+						"x": "Self.X + (80 * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "trivia_close",
+					"sid": 216369116207812,
+					"parameters": {
+						"x": "Self.X + (80 * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "text_trivia_title",
+					"sid": 997654163180329,
+					"parameters": {
+						"x": "Self.X + (80 * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "text_trivia",
+					"sid": 504062031090290,
 					"parameters": {
 						"x": "Self.X + (80 * dt)"
 					}
@@ -1112,6 +1208,10 @@
 						"instance-variable": "clickable",
 						"value": "0"
 					}
+				},
+				{
+					"callFunction": "CloseTrivia",
+					"sid": 823858727522933
 				}
 			],
 			"sid": 406612044925241
@@ -1225,6 +1325,10 @@
 						"instance-variable": "clickable",
 						"value": "0"
 					}
+				},
+				{
+					"callFunction": "CloseTrivia",
+					"sid": 630029829677246
 				}
 			],
 			"sid": 767634667952408
@@ -1338,6 +1442,10 @@
 						"instance-variable": "clickable",
 						"value": "0"
 					}
+				},
+				{
+					"callFunction": "CloseTrivia",
+					"sid": 805119174744034
 				}
 			],
 			"sid": 939314154338561
@@ -1451,6 +1559,10 @@
 						"instance-variable": "clickable",
 						"value": "0"
 					}
+				},
+				{
+					"callFunction": "CloseTrivia",
+					"sid": 946473257717498
 				}
 			],
 			"sid": 663227331867393
@@ -1461,11 +1573,11 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 307630794657027,
+					"sid": 829919215830670,
 					"parameters": {
 						"variable": "current_question",
 						"comparison": 0,
-						"value": "3"
+						"value": "4"
 					}
 				}
 			],
@@ -1483,6 +1595,539 @@
 				}
 			],
 			"sid": 164716115469463
+		},
+		{
+			"eventType": "comment",
+			"text": "Setup trivia 1"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 320933486466286,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "trivia_l1_1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "trivia_l1_1",
+					"sid": 329275209747066,
+					"parameters": {
+						"instance-variable": "clickable",
+						"comparison": 0,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "trivia_l1_1",
+					"sid": 569881661543784,
+					"parameters": {
+						"instance-variable": "complete",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "card_trivia",
+					"sid": 877671311532731,
+					"parameters": {
+						"object": "trivia_l1_1",
+						"image-point-optional": "1"
+					}
+				},
+				{
+					"callFunction": "SetTrivia",
+					"sid": 401391494843314,
+					"parameters": [
+						"0",
+						"1",
+						"1",
+						"0",
+						"\"Tip #1: To waste is in poor taste\"",
+						"\"Bring your own reusable bottle with you when you travel. Most restaurants and cafes will gladly refill your bottle for you, and some will even offer you a little discount on your drink too!\""
+					]
+				}
+			],
+			"sid": 497282321071410
+		},
+		{
+			"eventType": "comment",
+			"text": "Setup trivia 2"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 417080590006116,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "trivia_l1_2"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "trivia_l1_2",
+					"sid": 725449462178216,
+					"parameters": {
+						"instance-variable": "clickable",
+						"comparison": 0,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "trivia_l1_2",
+					"sid": 913677113353455,
+					"parameters": {
+						"instance-variable": "complete",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "card_trivia",
+					"sid": 495450912289424,
+					"parameters": {
+						"object": "trivia_l1_2",
+						"image-point-optional": "1"
+					}
+				},
+				{
+					"callFunction": "SetTrivia",
+					"sid": 271215413412292,
+					"parameters": [
+						"1",
+						"0",
+						"0",
+						"1",
+						"\"Tip #2: Let’s ride against climate change\"",
+						"\"Having walkways and bike lanes in our neighborhood encourages walking and cycling. These are low-carbon choices that will reduce emissions in the city.\""
+					]
+				}
+			],
+			"sid": 546746509013485
+		},
+		{
+			"eventType": "comment",
+			"text": "Close the trivia"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 127441631954434,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "trivia_close"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "trivia_close",
+					"sid": 806194230684688,
+					"parameters": {
+						"instance-variable": "active"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "card_trivia",
+					"sid": 704320663282307,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "trivia_close",
+					"sid": 659110344167349,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "text_trivia_title",
+					"sid": 641394762546469,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "text_trivia",
+					"sid": 239746897096409,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 741451545375621,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "trivia_l1_1",
+							"sid": 550917534621104,
+							"parameters": {
+								"instance-variable": "clickable",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "trivia_l1_1",
+							"sid": 807369578583578,
+							"parameters": {
+								"instance-variable": "complete",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "ResetTrivia",
+							"sid": 570264930101396
+						}
+					],
+					"sid": 318459744572880
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "trivia_l1_2",
+							"sid": 491350356542689,
+							"parameters": {
+								"instance-variable": "clickable",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "trivia_l1_2",
+							"sid": 666109324776235,
+							"parameters": {
+								"instance-variable": "complete",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "ResetTrivia",
+							"sid": 326693100515924
+						}
+					],
+					"sid": 998704778444303
+				}
+			]
+		},
+		{
+			"functionName": "SetTrivia",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "t1_click",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 508907769694668
+				},
+				{
+					"name": "t1_complete",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 168219236510197
+				},
+				{
+					"name": "t2_click",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 466603258866672
+				},
+				{
+					"name": "t2_complete",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 273114955220534
+				},
+				{
+					"name": "title",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 383966862323508
+				},
+				{
+					"name": "text",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 130714870428918
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "text_trivia_title",
+					"sid": 892686802737227,
+					"parameters": {
+						"text": "title"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "text_trivia",
+					"sid": 227950811461623,
+					"parameters": {
+						"text": "text",
+						"duration": "1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_1",
+					"sid": 461583673382993,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "t1_click"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_1",
+					"sid": 979896045360336,
+					"parameters": {
+						"instance-variable": "complete",
+						"value": "t1_complete"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_2",
+					"sid": 333589392133812,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "t2_click"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_2",
+					"sid": 224893801178312,
+					"parameters": {
+						"instance-variable": "complete",
+						"value": "t2_complete"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "card_trivia",
+					"sid": 528417963622272,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "text_trivia_title",
+					"sid": 791083883605413,
+					"parameters": {
+						"object": "card_trivia",
+						"image-point-optional": "1"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "text_trivia",
+					"sid": 388592196255715,
+					"parameters": {
+						"object": "card_trivia",
+						"image-point-optional": "2"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "trivia_close",
+					"sid": 186421827001209,
+					"parameters": {
+						"object": "card_trivia",
+						"image-point-optional": "3"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "trivia_close",
+					"sid": 786948414125250,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "trivia_close",
+					"sid": 211769602991119,
+					"parameters": {
+						"instance-variable": "active",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "text_trivia_title",
+					"sid": 422095788086931,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "text_trivia",
+					"sid": 465238658949665,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 902660044211127
+		},
+		{
+			"eventType": "comment",
+			"text": "Resets trivia boxes"
+		},
+		{
+			"functionName": "ResetTrivia",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_1",
+					"sid": 984567955978201,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_1",
+					"sid": 629467496762680,
+					"parameters": {
+						"instance-variable": "complete",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_2",
+					"sid": 276494144450525,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_2",
+					"sid": 416092881707378,
+					"parameters": {
+						"instance-variable": "complete",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 143537714389608
+		},
+		{
+			"functionName": "CloseTrivia",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "card_trivia",
+					"sid": 937051063976980,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "trivia_close",
+					"sid": 673579761543567,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "text_trivia_title",
+					"sid": 483332351653957,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "text_trivia",
+					"sid": 677732662966564,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"callFunction": "ResetTrivia",
+					"sid": 304255919290356
+				}
+			],
+			"sid": 304718792172762
 		},
 		{
 			"eventType": "comment",
@@ -1842,6 +2487,10 @@
 								"variable": "drag_time",
 								"value": "true"
 							}
+						},
+						{
+							"callFunction": "CloseTrivia",
+							"sid": 917548768000650
 						}
 					],
 					"sid": 859819388711583

@@ -93,6 +93,41 @@
 								"variable": "playerAge",
 								"value": "0"
 							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "quiz1_a1",
+							"sid": 449895154919983,
+							"parameters": {
+								"opacity": "100"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "quiz1_a2",
+							"sid": 629493055727564,
+							"parameters": {
+								"opacity": "50"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "quiz1_a3",
+							"sid": 485295905767036,
+							"parameters": {
+								"opacity": "50"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 366573448254957,
+							"parameters": {
+								"audio-file": "hover Click_Standard_0",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 623104737125345
@@ -120,6 +155,41 @@
 								"variable": "playerAge",
 								"value": "1"
 							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "quiz1_a2",
+							"sid": 860137002610036,
+							"parameters": {
+								"opacity": "100"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "quiz1_a1",
+							"sid": 517830354366478,
+							"parameters": {
+								"opacity": "50"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "quiz1_a3",
+							"sid": 170712922604701,
+							"parameters": {
+								"opacity": "50"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 188030985148720,
+							"parameters": {
+								"audio-file": "hover Click_Standard_0",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 535950382915619
@@ -146,6 +216,41 @@
 							"parameters": {
 								"variable": "playerAge",
 								"value": "2"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "quiz1_a3",
+							"sid": 508611408962245,
+							"parameters": {
+								"opacity": "100"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "quiz1_a1",
+							"sid": 288940641243516,
+							"parameters": {
+								"opacity": "50"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "quiz1_a2",
+							"sid": 324046064782650,
+							"parameters": {
+								"opacity": "50"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 318779681574371,
+							"parameters": {
+								"audio-file": "hover Click_Standard_0",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
 							}
 						}
 					],
@@ -219,6 +324,17 @@
 							"parameters": {
 								"variable": "quizPoints",
 								"value": "25"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 264344564051671,
+							"parameters": {
+								"audio-file": "hover Click_Standard_0",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
 							}
 						},
 						{
@@ -307,6 +423,17 @@
 							}
 						},
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 234898546025416,
+							"parameters": {
+								"audio-file": "hover Click_Standard_0",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"type": "comment",
 							"text": "2 turn top green"
 						},
@@ -389,6 +516,17 @@
 							"parameters": {
 								"variable": "quizPoints",
 								"value": "15"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 263133245289941,
+							"parameters": {
+								"audio-file": "hover Click_Standard_0",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
 							}
 						},
 						{
@@ -477,6 +615,17 @@
 							}
 						},
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 934741251197819,
+							"parameters": {
+								"audio-file": "hover Click_Standard_0",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"type": "comment",
 							"text": "4 turn top green"
 						},
@@ -562,6 +711,17 @@
 							}
 						},
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 594931989391885,
+							"parameters": {
+								"audio-file": "hover Click_Standard_0",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"type": "comment",
 							"text": "4 turn top green"
 						},
@@ -638,7 +798,8 @@
 							}
 						}
 					],
-					"sid": 749138553539717
+					"sid": 749138553539717,
+					"disabled": true
 				}
 			]
 		},
@@ -715,6 +876,14 @@
 					],
 					"actions": [
 						{
+							"id": "set-opacity",
+							"objectClass": "quiz3_a1",
+							"sid": 140942420065378,
+							"parameters": {
+								"opacity": "50"
+							}
+						},
+						{
 							"id": "set-boolean-instvar",
 							"objectClass": "quiz3_a1",
 							"sid": 787838385659036,
@@ -729,6 +898,17 @@
 							"sid": 835471819807076,
 							"parameters": {
 								"angle": "20"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 235744241910391,
+							"parameters": {
+								"audio-file": "hover Click_Standard_0",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
 							}
 						},
 						{
@@ -767,6 +947,14 @@
 					],
 					"actions": [
 						{
+							"id": "set-opacity",
+							"objectClass": "quiz3_a1",
+							"sid": 743903677190318,
+							"parameters": {
+								"opacity": "100"
+							}
+						},
+						{
 							"id": "set-boolean-instvar",
 							"objectClass": "quiz3_a1",
 							"sid": 905860309981646,
@@ -781,6 +969,17 @@
 							"sid": 217652811661785,
 							"parameters": {
 								"angle": "0"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 424547793460067,
+							"parameters": {
+								"audio-file": "hover Click_Standard_0",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
 							}
 						},
 						{
@@ -824,6 +1023,14 @@
 					],
 					"actions": [
 						{
+							"id": "set-opacity",
+							"objectClass": "quiz3_a2",
+							"sid": 626336079343078,
+							"parameters": {
+								"opacity": "100"
+							}
+						},
+						{
 							"id": "set-boolean-instvar",
 							"objectClass": "quiz3_a2",
 							"sid": 958931969757685,
@@ -838,6 +1045,17 @@
 							"sid": 938788671840644,
 							"parameters": {
 								"angle": "20"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 515351478944594,
+							"parameters": {
+								"audio-file": "hover Click_Standard_0",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
 							}
 						},
 						{
@@ -876,6 +1094,14 @@
 					],
 					"actions": [
 						{
+							"id": "set-opacity",
+							"objectClass": "quiz3_a2",
+							"sid": 175952422394127,
+							"parameters": {
+								"opacity": "50"
+							}
+						},
+						{
 							"id": "set-boolean-instvar",
 							"objectClass": "quiz3_a2",
 							"sid": 134491739131989,
@@ -890,6 +1116,17 @@
 							"sid": 117487753275948,
 							"parameters": {
 								"angle": "0"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 228802917426080,
+							"parameters": {
+								"audio-file": "hover Click_Standard_0",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
 							}
 						},
 						{
@@ -957,6 +1194,17 @@
 								"variable": "quizPoints",
 								"value": "5"
 							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 993689343948038,
+							"parameters": {
+								"audio-file": "hover Click_Standard_0",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 601374227750440
@@ -1008,6 +1256,17 @@
 							"parameters": {
 								"variable": "quizPoints",
 								"value": "5"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 524438797001932,
+							"parameters": {
+								"audio-file": "hover Click_Standard_0",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
 							}
 						}
 					],
@@ -1066,6 +1325,17 @@
 								"variable": "quizPoints",
 								"value": "5"
 							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 490528437359787,
+							"parameters": {
+								"audio-file": "hover Click_Standard_0",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 267272099162278
@@ -1117,6 +1387,17 @@
 							"parameters": {
 								"variable": "quizPoints",
 								"value": "5"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 974622280200507,
+							"parameters": {
+								"audio-file": "hover Click_Standard_0",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
 							}
 						}
 					],
@@ -1175,6 +1456,17 @@
 								"variable": "quizPoints",
 								"value": "5"
 							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 399464138048402,
+							"parameters": {
+								"audio-file": "hover Click_Standard_0",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 483113575191590
@@ -1227,6 +1519,17 @@
 								"variable": "quizPoints",
 								"value": "5"
 							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 529993428262851,
+							"parameters": {
+								"audio-file": "hover Click_Standard_0",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 893924998112954
@@ -1251,7 +1554,8 @@
 							}
 						}
 					],
-					"sid": 857678052764215
+					"sid": 857678052764215,
+					"disabled": true
 				}
 			]
 		},
@@ -1843,6 +2147,29 @@
 						}
 					],
 					"sid": 926939992441087
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-clicked",
+							"objectClass": "button_continue",
+							"sid": 371638410511180
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 461619220260569,
+							"parameters": {
+								"variable": "score_tally",
+								"value": "quizPoints"
+							}
+						}
+					],
+					"sid": 683766166241883,
+					"disabled": true
 				}
 			]
 		},
@@ -2434,6 +2761,29 @@
 						}
 					],
 					"sid": 464087768516388
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-clicked",
+							"objectClass": "button_continue",
+							"sid": 702913948543841
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 844292808457963,
+							"parameters": {
+								"variable": "score_tally",
+								"value": "quizPoints"
+							}
+						}
+					],
+					"sid": 418695862502671,
+					"disabled": true
 				}
 			]
 		},
@@ -2503,6 +2853,17 @@
 					"parameters": {
 						"layout": "PlayVideoScreen"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 501593432881737,
+					"parameters": {
+						"audio-file": "hover Click_Standard_0",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 402741851189524
@@ -2539,6 +2900,17 @@
 						"variable": "quiz_question",
 						"value": "1"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 548048538547871,
+					"parameters": {
+						"audio-file": "hover Click_Standard_0",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 174209275612329,
@@ -2559,17 +2931,16 @@
 					],
 					"actions": [
 						{
-							"id": "add-to-eventvar",
+							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 902026028872547,
+							"sid": 699765983480507,
 							"parameters": {
-								"variable": "score_tally",
+								"variable": "quizPoints",
 								"value": "0"
 							}
 						}
 					],
-					"sid": 565491169718757,
-					"disabled": true
+					"sid": 565491169718757
 				},
 				{
 					"eventType": "block",
@@ -2594,10 +2965,126 @@
 								"variable": "score_tally",
 								"value": "quizPoints"
 							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 575908819301131,
+							"parameters": {
+								"variable": "quizPoints",
+								"value": "0"
+							}
 						}
 					],
-					"sid": 669853519237753,
-					"disabled": true
+					"sid": 669853519237753
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 114563485478534,
+							"parameters": {
+								"variable": "quiz_question",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 893748003191440,
+							"parameters": {
+								"variable": "score_tally",
+								"value": "quizPoints"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 651852395743915,
+							"parameters": {
+								"variable": "quizPoints",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 704422927825447
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 907505167444348,
+							"parameters": {
+								"variable": "quiz_question",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 812147336335548,
+							"parameters": {
+								"variable": "score_tally",
+								"value": "quizPoints"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 498277132570709,
+							"parameters": {
+								"variable": "quizPoints",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 221899996978230
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 737163197726482,
+							"parameters": {
+								"variable": "quiz_question",
+								"comparison": 0,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 555272917341798,
+							"parameters": {
+								"variable": "score_tally",
+								"value": "quizPoints"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 365587480196833,
+							"parameters": {
+								"variable": "quizPoints",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 586726505852000
 				}
 			]
 		},
@@ -2760,6 +3247,14 @@
 					"sid": 620025261666653,
 					"parameters": {
 						"text": "score_tally"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "temp_test",
+					"sid": 825485494508500,
+					"parameters": {
+						"text": "quizPoints"
 					}
 				}
 			],

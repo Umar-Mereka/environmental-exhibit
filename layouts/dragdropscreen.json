@@ -4,6 +4,7 @@
 		{
 			"name": "Layer 0",
 			"overriden": 0,
+			"subLayers": [],
 			"instances": [
 				{
 					"type": "bg_level1",
@@ -239,6 +240,7 @@
 		{
 			"name": "Overlay",
 			"overriden": 0,
+			"subLayers": [],
 			"instances": [
 				{
 					"type": "overlay",
@@ -329,6 +331,7 @@
 		{
 			"name": "Drag Items",
 			"overriden": 0,
+			"subLayers": [],
 			"instances": [
 				{
 					"type": "drop_bin",
