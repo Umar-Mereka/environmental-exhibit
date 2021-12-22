@@ -1,0 +1,47 @@
+{
+	"name": "menu_progress1",
+	"plugin-id": "Sprite",
+	"sid": 676642263701034,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 438,
+						"height": 82,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8985874,
+						"collisionPoly": {
+							"points": [
+								0.0319634703196347,
+								0.17073170731707318,
+								0.4634703196347032,
+								0.5,
+								0.45662100456621,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 980257657192128,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

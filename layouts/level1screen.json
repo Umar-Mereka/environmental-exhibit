@@ -201,8 +201,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 1998.5289014256898,
-						"y": 434.52869965657817,
+						"x": 1982.3138949650324,
+						"y": 446.6899776772254,
 						"width": 43.176004967475244,
 						"height": 64.3566866496329,
 						"originX": 0.5,
@@ -425,10 +425,74 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 1925.5177742176177,
-						"y": 352.4018803375665,
+						"x": 1884,
+						"y": 389,
 						"width": 42.979240310605626,
 						"height": 42.979240310605626,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "level1_q5_toggle",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 153,
+					"instanceVariables": {
+						"clickable": 1,
+						"complete": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1512,
+						"y": 443,
+						"width": 61.378810710931006,
+						"height": 61.378810710931006,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "level1_q6_toggle",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 154,
+					"instanceVariables": {
+						"clickable": 1,
+						"complete": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": 2066.6352999702435,
+						"y": 361.2284559520257,
+						"width": 52.5700961004498,
+						"height": 52.5700961004498,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1702,8 +1766,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 105.5812627717022,
-						"y": 50.098294718624615,
+						"x": 105,
+						"y": 55,
 						"width": 63.023841641916825,
 						"height": 18.834404905829665,
 						"originX": 0.5,
@@ -1719,7 +1783,7 @@
 					}
 				},
 				{
-					"type": "home_button",
+					"type": "button_home",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -1731,10 +1795,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 785,
-						"y": 28,
-						"width": 30.48781583737652,
-						"height": 29.943390554566225,
+						"x": 772.9661355138003,
+						"y": 38,
+						"width": 30,
+						"height": 29.999999999999996,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1815,12 +1879,41 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 75.56632043290972,
-						"y": 17.72580041321696,
+						"x": 75,
+						"y": 25,
 						"width": 62.94607788093899,
 						"height": 18.234512664325024,
 						"originX": 0,
 						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "button_settings",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 161,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 815.0362290288432,
+						"y": 38,
+						"width": 30,
+						"height": 30,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -1886,8 +1979,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 47.456378921625394,
-						"y": 46.29269309493532,
+						"x": 48,
+						"y": 48,
 						"width": 50,
 						"height": 50,
 						"originX": 0.5,
@@ -1904,6 +1997,38 @@
 				}
 			],
 			"sid": 759085987057965,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "UI Boxes",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [],
+			"sid": 632733622901199,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"color": [

@@ -55,7 +55,7 @@
 			"eventType": "variable",
 			"name": "finishLimit",
 			"type": "number",
-			"initialValue": "5",
+			"initialValue": "7",
 			"comment": "the amount of questions/interactivity (this includes d&d oso)",
 			"isStatic": false,
 			"isConstant": false,
@@ -467,7 +467,7 @@
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "home_button"
+						"object-clicked": "button_home"
 					}
 				}
 			],
@@ -475,9 +475,9 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 471753367538723,
+					"sid": 786291452910902,
 					"parameters": {
-						"layout": "GameOverScreen"
+						"layout": "MenuScreen"
 					}
 				}
 			],
@@ -575,6 +575,22 @@
 					"id": "set-x",
 					"objectClass": "level1_q4_toggle",
 					"sid": 728753469625372,
+					"parameters": {
+						"x": "Self.X - (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "level1_q5_toggle",
+					"sid": 651750499947043,
+					"parameters": {
+						"x": "Self.X - (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "level1_q6_toggle",
+					"sid": 495037700287636,
 					"parameters": {
 						"x": "Self.X - (scroll_speed * dt)"
 					}
@@ -738,6 +754,22 @@
 					"id": "set-x",
 					"objectClass": "level1_q4_toggle",
 					"sid": 779231784261007,
+					"parameters": {
+						"x": "Self.X + (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "level1_q5_toggle",
+					"sid": 493419825504059,
+					"parameters": {
+						"x": "Self.X + (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "level1_q6_toggle",
+					"sid": 675049143145753,
 					"parameters": {
 						"x": "Self.X + (scroll_speed * dt)"
 					}
@@ -2510,6 +2542,234 @@
 			]
 		},
 		{
+			"eventType": "comment",
+			"text": "Setup question 5"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 153507101263607,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "level1_q5_toggle"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "level1_q5_toggle",
+					"sid": 356381895246727,
+					"parameters": {
+						"instance-variable": "clickable",
+						"comparison": 0,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "level1_q5_toggle",
+					"sid": 663755841625752,
+					"parameters": {
+						"instance-variable": "complete",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "questionUISetup",
+					"sid": 336441278784555,
+					"parameters": [
+						"5"
+					]
+				},
+				{
+					"callFunction": "DisableItemClick",
+					"sid": 852542536357542
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "level1_q5_toggle",
+					"sid": 784550674715392,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "level1_q5_toggle",
+					"sid": 844842986917263,
+					"parameters": {
+						"instance-variable": "complete",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "level1_q5_toggle",
+					"sid": 536629807636674,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "0"
+					}
+				},
+				{
+					"callFunction": "CloseTrivia",
+					"sid": 680032935355117
+				}
+			],
+			"sid": 780014014209845,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 702888960515408,
+							"parameters": {
+								"variable": "current_question",
+								"comparison": 0,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "SetQuestion",
+							"sid": 111108036203576,
+							"parameters": [
+								"\"Oops! We were zooming pretty fast on the razor scooters and we collided. We both fell, laughed it off and got straight back up. But you notice a tiny tear on your jeans. What do you do?\"",
+								"\"A: Throw your jeans away and buy a brand new pair.\"",
+								"\"B: Ask a tailor to stitch the tear and continue to wear them.\"",
+								"0",
+								"1"
+							]
+						}
+					],
+					"sid": 359025073631443
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "Setup question 6"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 349215029032207,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "level1_q6_toggle"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "level1_q6_toggle",
+					"sid": 241565921702367,
+					"parameters": {
+						"instance-variable": "clickable",
+						"comparison": 0,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "level1_q6_toggle",
+					"sid": 252742791969147,
+					"parameters": {
+						"instance-variable": "complete",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "questionUISetup",
+					"sid": 726981587140654,
+					"parameters": [
+						"6"
+					]
+				},
+				{
+					"callFunction": "DisableItemClick",
+					"sid": 131653158850989
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "level1_q6_toggle",
+					"sid": 367547880105645,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "level1_q6_toggle",
+					"sid": 137939409311195,
+					"parameters": {
+						"instance-variable": "complete",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "level1_q6_toggle",
+					"sid": 338107761323424,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "0"
+					}
+				},
+				{
+					"callFunction": "CloseTrivia",
+					"sid": 579172486634409
+				}
+			],
+			"sid": 176859065262753,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 407345123967147,
+							"parameters": {
+								"variable": "current_question",
+								"comparison": 0,
+								"value": "6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "SetQuestion",
+							"sid": 800218546245245,
+							"parameters": [
+								"\"We decided to have an impromptu picnic but now we have a few empty plastic containers on our hands. What should we do with these?\"",
+								"\"A: Check if they are recyclable, and throw them into the nearest recycling bin.\"",
+								"\"B: Take them home, wash and reuse them.\"",
+								"0",
+								"1"
+							]
+						}
+					],
+					"sid": 976618483595525
+				}
+			]
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -3048,6 +3308,24 @@
 						"instance-variable": "clickable",
 						"value": "0"
 					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "level1_q5_toggle",
+					"sid": 962971960617306,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "level1_q6_toggle",
+					"sid": 482243449500906,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "0"
+					}
 				}
 			],
 			"sid": 578956354158380
@@ -3093,6 +3371,24 @@
 					"id": "set-instvar-value",
 					"objectClass": "level1_q4_toggle",
 					"sid": 287646295872488,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "level1_q5_toggle",
+					"sid": 844804506453413,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "level1_q6_toggle",
+					"sid": 774902797336714,
 					"parameters": {
 						"instance-variable": "clickable",
 						"value": "1"
@@ -4218,6 +4514,15 @@
 		{
 			"eventType": "group",
 			"disabled": false,
+			"title": "UI Boxes",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [],
+			"sid": 850666385033394
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
 			"title": "Drag & Drop",
 			"description": "",
 			"isActiveOnStart": true,
@@ -4345,6 +4650,14 @@
 								"variable": "dragDone",
 								"value": "true"
 							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "toggle_drag_drop",
+							"sid": 347413119565520,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						}
 					],
 					"sid": 948353056236609
@@ -4418,7 +4731,8 @@
 							}
 						}
 					],
-					"sid": 498304002796021
+					"sid": 498304002796021,
+					"disabled": true
 				},
 				{
 					"eventType": "comment",

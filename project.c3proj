@@ -160,7 +160,7 @@
 			"avatar4",
 			"overlay",
 			"tip_box",
-			"home_button",
+			"button_home",
 			"settings_button",
 			"instructions_button",
 			"drag_sampah_toggle",
@@ -249,7 +249,14 @@
 			"text_post_points",
 			"trivia_l1_4",
 			"trivia_l1_3",
-			"trivia_l1_5"
+			"trivia_l1_5",
+			"level1_q5_toggle",
+			"level1_q6_toggle",
+			"menu_lvl1",
+			"menu_progress1",
+			"menu_lvl2",
+			"menu_lvl3",
+			"button_settings"
 		],
 		"subfolders": []
 	},
