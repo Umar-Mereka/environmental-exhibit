@@ -1,20 +1,20 @@
 {
-	"name": "level1_q4_toggle",
+	"name": "trivia_l1_3",
 	"plugin-id": "Sprite",
-	"sid": 988490122653416,
+	"sid": 603861767008887,
 	"isGlobal": false,
 	"instanceVariables": [
 		{
 			"name": "clickable",
 			"type": "number",
 			"desc": "",
-			"sid": 962061968349924
+			"sid": 648240537049745
 		},
 		{
 			"name": "complete",
 			"type": "number",
 			"desc": "",
-			"sid": 324380686850435
+			"sid": 769829272169838
 		}
 	],
 	"behaviorTypes": [],
@@ -24,19 +24,26 @@
 			{
 				"frames": [
 					{
-						"width": 707,
-						"height": 143,
+						"width": 250,
+						"height": 250,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 3233891,
+						"imageSpriteId": 6675819,
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 0.5,
+								"y": -0.08
+							}
+						],
 						"duration": 1
 					}
 				],
-				"sid": 375530454847710,
+				"sid": 119540588281412,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

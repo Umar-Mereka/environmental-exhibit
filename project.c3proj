@@ -139,7 +139,7 @@
 			"Text",
 			"bg_level1",
 			"level1_q1_toggle",
-			"question_box",
+			"card_question",
 			"text_question",
 			"answer_box",
 			"text_ans1",
@@ -238,7 +238,18 @@
 			"text_trivia_title",
 			"text_trivia",
 			"trivia_close",
-			"trivia_l1_2"
+			"trivia_l1_2",
+			"text_post_stat",
+			"text_post_ans",
+			"text_post_explanation",
+			"text_post_title",
+			"text_post_trivia",
+			"button_post_answer",
+			"post_points",
+			"text_post_points",
+			"trivia_l1_4",
+			"trivia_l1_3",
+			"trivia_l1_5"
 		],
 		"subfolders": []
 	},

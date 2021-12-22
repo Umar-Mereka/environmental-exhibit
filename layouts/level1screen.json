@@ -51,10 +51,10 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 350.73146076194865,
-						"y": 400.25559175001126,
-						"width": 372.7225002036971,
-						"height": 143.94800007866922,
+						"x": 255,
+						"y": 404,
+						"width": 342.19929246240946,
+						"height": 132.15972674410295,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -83,10 +83,10 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 92.09397160542801,
-						"y": 360.2013176464223,
-						"width": 63.76004053405805,
-						"height": 38.5216911559934,
+						"x": 541.4270261761101,
+						"y": 348.81495969927715,
+						"width": 84.25201440858729,
+						"height": 54.861776824196355,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -201,8 +201,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 1160.1479011537892,
-						"y": 371.7801936683043,
+						"x": 1998.5289014256898,
+						"y": 434.52869965657817,
 						"width": 43.176004967475244,
 						"height": 64.3566866496329,
 						"originX": 0.5,
@@ -233,8 +233,8 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 933.27766498677,
-						"y": 389.147493935804,
+						"x": 924,
+						"y": 373,
 						"width": 72.75993582232277,
 						"height": 72.75993582232277,
 						"originX": 0.5,
@@ -265,8 +265,8 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 800,
-						"y": 383,
+						"x": 748,
+						"y": 362,
 						"width": 26.867868410820698,
 						"height": 57.094220372993966,
 						"originX": 0.5,
@@ -297,10 +297,138 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 616.031297451773,
-						"y": 387.3273368029331,
-						"width": 91.93728580388407,
-						"height": 58.34481599092643,
+						"x": 678,
+						"y": 426,
+						"width": 70.58104476983378,
+						"height": 44.79181687316374,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "trivia_l1_4",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 150,
+					"instanceVariables": {
+						"clickable": 1,
+						"complete": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1694.5849724368338,
+						"y": 388.83008359968346,
+						"width": 274.9932119924507,
+						"height": 85.51025673263484,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "level1_q4_toggle",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 101,
+					"instanceVariables": {
+						"clickable": 1,
+						"complete": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1126,
+						"y": 407,
+						"width": 179.5724329845759,
+						"height": 36.3208739982947,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "trivia_l1_3",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 151,
+					"instanceVariables": {
+						"clickable": 1,
+						"complete": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1055.2726868591144,
+						"y": 341.78299617912876,
+						"width": 54.09863586101591,
+						"height": 54.09863586101591,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "trivia_l1_5",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 152,
+					"instanceVariables": {
+						"clickable": 1,
+						"complete": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1925.5177742176177,
+						"y": 352.4018803375665,
+						"width": 42.979240310605626,
+						"height": 42.979240310605626,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -368,8 +496,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 71,
-						"y": 154,
+						"x": 482.179710869892,
+						"y": 1033.4489740911179,
 						"width": 200,
 						"height": 30,
 						"originX": 0,
@@ -447,7 +575,7 @@
 					}
 				},
 				{
-					"type": "question_box",
+					"type": "card_question",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -483,7 +611,7 @@
 						"text": "Text",
 						"enable-bbcode": true,
 						"font": "Arial",
-						"size": 10,
+						"size": 8,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
@@ -496,15 +624,15 @@
 						"horizontal-alignment": "left",
 						"vertical-alignment": "top",
 						"wrapping": "word",
-						"initially-visible": true,
+						"initially-visible": false,
 						"origin": "top-left"
 					},
 					"uid": 12,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 320,
-						"y": 151.5090048045038,
+						"x": 717,
+						"y": 1005,
 						"width": 200,
 						"height": 130,
 						"originX": 0,
@@ -538,7 +666,7 @@
 						"horizontal-alignment": "left",
 						"vertical-alignment": "top",
 						"wrapping": "word",
-						"initially-visible": true,
+						"initially-visible": false,
 						"origin": "top-left"
 					},
 					"uid": 15,
@@ -547,8 +675,8 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 320,
-						"y": 332.92405413014836,
+						"x": 717,
+						"y": 1187,
 						"width": 200,
 						"height": 30,
 						"originX": 0,
@@ -593,6 +721,48 @@
 					}
 				},
 				{
+					"type": "text_post_stat",
+					"properties": {
+						"text": "you and 10% of other users chose:",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 8,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": false,
+						"origin": "center"
+					},
+					"uid": 142,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1060.0966796875,
+						"y": 1135.2362060546875,
+						"width": 200,
+						"height": 30,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
 					"type": "text_ans1",
 					"properties": {
 						"text": "Answer 1",
@@ -611,7 +781,7 @@
 						"horizontal-alignment": "left",
 						"vertical-alignment": "top",
 						"wrapping": "word",
-						"initially-visible": true,
+						"initially-visible": false,
 						"origin": "top-left"
 					},
 					"uid": 14,
@@ -620,8 +790,8 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 320,
-						"y": 295.82675308572647,
+						"x": 717,
+						"y": 1150,
 						"width": 200,
 						"height": 30,
 						"originX": 0,
@@ -1128,9 +1298,9 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 713.2577909071485,
-						"y": 210.3611995875937,
-						"width": 164.8109288256171,
+						"x": 698,
+						"y": 1033,
+						"width": 152.0971151071218,
 						"height": 30,
 						"originX": 0,
 						"originY": 0,
@@ -1170,9 +1340,9 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 713.9842156533979,
-						"y": 241.98482209771151,
-						"width": 172.71027291129053,
+						"x": 699,
+						"y": 1065,
+						"width": 158.58366247062384,
 						"height": 75.24329913698489,
 						"originX": 0,
 						"originY": 0,
@@ -1201,10 +1371,279 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 879.8876715554326,
-						"y": 212.24243059350928,
+						"x": 865,
+						"y": 1035,
 						"width": 12,
 						"height": 12,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "text_post_ans",
+					"properties": {
+						"text": "walk to the station or whatevs",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 7,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": false,
+						"origin": "center"
+					},
+					"uid": 143,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1060.0822792846018,
+						"y": 1172.8174999200876,
+						"width": 200,
+						"height": 30,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "text_post_explanation",
+					"properties": {
+						"text": "lorem ipsum dolor sit amet consectitutotsrs easd assadf",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 7,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": false,
+						"origin": "center"
+					},
+					"uid": 144,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1061.2776714407996,
+						"y": 1208.1984720217133,
+						"width": 200,
+						"height": 60,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "text_post_title",
+					"properties": {
+						"text": "Did you know?",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 8,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": false,
+						"origin": "center"
+					},
+					"uid": 145,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1060.4769145608084,
+						"y": 1256.0443709506449,
+						"width": 200,
+						"height": 20,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "text_post_trivia",
+					"properties": {
+						"text": "taking the train reduces some stuff idk lorem ipsum dolor sit something something",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 7,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": false,
+						"origin": "center"
+					},
+					"uid": 146,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1062.4858094785411,
+						"y": 1289.8196600343108,
+						"width": 200,
+						"height": 50,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "button_post_answer",
+					"properties": {
+						"type": "button",
+						"text": "Continue",
+						"tooltip": "",
+						"initially-visible": false,
+						"enabled": true,
+						"auto-font-size": false,
+						"checked": false,
+						"id": ""
+					},
+					"uid": 147,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1019.8737017892893,
+						"y": 1308.3574268652126,
+						"width": 72,
+						"height": 24,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"type": "post_points",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 148,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 538.8547973632812,
+						"y": 1121.3670654296875,
+						"width": 50,
+						"height": 50,
+						"originX": 0.5,
+						"originY": 0.5625,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "text_post_points",
+					"properties": {
+						"text": "-10",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 7,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": false,
+						"origin": "center"
+					},
+					"uid": 149,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 562.8899765773997,
+						"y": 1243.6362795130854,
+						"width": 20,
+						"height": 20,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1292,8 +1731,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 826.312749222572,
-						"y": 27.611093889688576,
+						"x": 785,
+						"y": 28,
 						"width": 30.48781583737652,
 						"height": 29.943390554566225,
 						"originX": 0.5,
@@ -1334,44 +1773,12 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 39,
-						"y": 229,
+						"x": 144.24259846632273,
+						"y": 900.5594558486188,
 						"width": 200,
 						"height": 30,
 						"originX": 0,
 						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "level1_q4_toggle",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 101,
-					"instanceVariables": {
-						"clickable": 1,
-						"complete": 0
-					},
-					"behaviors": {},
-					"world": {
-						"x": 1082,
-						"y": 152,
-						"width": 63.49803146555018,
-						"height": 63.49803146555018,
-						"originX": 0.5,
-						"originY": 0.5,
 						"color": [
 							1,
 							1,
