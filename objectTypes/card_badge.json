@@ -1,0 +1,79 @@
+{
+	"name": "card_badge",
+	"plugin-id": "Sprite",
+	"sid": 986617564317282,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 352,
+						"height": 271,
+						"originX": 0.5,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4430925,
+						"collisionPoly": {
+							"points": [
+								0.017045454545454544,
+								0.02214022140221402,
+								0.5,
+								0,
+								0.9801136363636364,
+								0.02214022140221402,
+								0.9971590909090909,
+								0.5,
+								0.9801136363636364,
+								0.974169741697417,
+								0.5,
+								0.996309963099631,
+								0.017045454545454544,
+								0.974169741697417,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "title",
+								"x": 0.5,
+								"y": 0.08856088560885608
+							},
+							{
+								"name": "badge_avatar",
+								"x": 0.5,
+								"y": 0.23616236162361623
+							},
+							{
+								"name": "badge_title",
+								"x": 0.5,
+								"y": 0.6605166051660517
+							},
+							{
+								"name": "badge_description",
+								"x": 0.5,
+								"y": 0.8118081180811808
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 264087822021733,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

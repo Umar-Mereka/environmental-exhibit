@@ -3,30 +3,90 @@
 	"events": [
 		{
 			"eventType": "variable",
+			"name": "user_name",
+			"type": "string",
+			"initialValue": "username",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 270213051190267
+		},
+		{
+			"eventType": "variable",
 			"name": "score_tally",
 			"type": "number",
 			"initialValue": "0",
-			"comment": "",
+			"comment": "total score throughout the ENTIRE game",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 495293551341430
 		},
 		{
 			"eventType": "variable",
-			"name": "current_question",
+			"name": "score_right",
 			"type": "number",
-			"initialValue": "1",
+			"initialValue": "0",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 683048847326563
+			"sid": 937595828731534
+		},
+		{
+			"eventType": "variable",
+			"name": "score_previous",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 269878186104527
+		},
+		{
+			"eventType": "variable",
+			"name": "score_highest",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 769315482354507
+		},
+		{
+			"eventType": "variable",
+			"name": "user_badge",
+			"type": "string",
+			"initialValue": "baby",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 105768711642886
+		},
+		{
+			"eventType": "variable",
+			"name": "user_badge_explain",
+			"type": "string",
+			"initialValue": "baby",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 833042403690778
+		},
+		{
+			"eventType": "comment",
+			"text": "<---->",
+			"background-color": [
+				0,
+				0,
+				0,
+				0
+			]
 		},
 		{
 			"eventType": "variable",
 			"name": "timer",
 			"type": "number",
 			"initialValue": "20",
-			"comment": "",
+			"comment": "timer for the question & answer portion",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 986763190565795
@@ -43,13 +103,203 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "finishLimit",
+			"type": "number",
+			"initialValue": "7",
+			"comment": "the amount of questions/interactivity (this includes d&d oso)",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 283270380393337
+		},
+		{
+			"eventType": "variable",
+			"name": "scroll_speed",
+			"type": "number",
+			"initialValue": "80",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 434461849105574
+		},
+		{
+			"eventType": "comment",
+			"text": "<---->",
+			"background-color": [
+				0,
+				0,
+				0,
+				0
+			]
+		},
+		{
+			"eventType": "variable",
+			"name": "current_question",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "which question is the user on? Q&A",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 479931652355228
+		},
+		{
+			"eventType": "variable",
 			"name": "question_time",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "is the Q&A section on?",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 475919932115497
+		},
+		{
+			"eventType": "variable",
+			"name": "timer_time",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "is the player currently answering a question?",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 134377172144351
+		},
+		{
+			"eventType": "variable",
+			"name": "prev_ans",
+			"type": "string",
+			"initialValue": "placeholder",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 738902382951502
+		},
+		{
+			"eventType": "variable",
+			"name": "answer_correct",
+			"type": "number",
+			"initialValue": "20",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 185529196101631
+		},
+		{
+			"eventType": "variable",
+			"name": "answer_wrong",
+			"type": "number",
+			"initialValue": "10",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 481284412840394
+		},
+		{
+			"eventType": "comment",
+			"text": "<---->",
+			"background-color": [
+				0,
+				0,
+				0,
+				0
+			]
+		},
+		{
+			"eventType": "variable",
+			"name": "drag_time",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "is the user currently draggin and droppin",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 592225289832790
+		},
+		{
+			"eventType": "variable",
+			"name": "drag_check",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "total items that can be dragged - correct or incorrect",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 227427023686074
+		},
+		{
+			"eventType": "variable",
+			"name": "drag_correct",
+			"type": "number",
+			"initialValue": "2",
+			"comment": "number of items that are the correct answer",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 534366789961994
+		},
+		{
+			"eventType": "variable",
+			"name": "dragDone",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "is the user done with the drag & drop section",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 663078791980816
+		},
+		{
+			"eventType": "comment",
+			"text": "<---->",
+			"background-color": [
+				0,
+				0,
+				0,
+				0
+			]
+		},
+		{
+			"eventType": "variable",
+			"name": "pause_time",
 			"type": "boolean",
 			"initialValue": "false",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 475919932115497
+			"sid": 301989160467225
+		},
+		{
+			"eventType": "variable",
+			"name": "sound1_start",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 347009295038507
+		},
+		{
+			"eventType": "variable",
+			"name": "sound2_start",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 860690102876909
+		},
+		{
+			"eventType": "variable",
+			"name": "sound3_start",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 212836920606197
+		},
+		{
+			"eventType": "comment",
+			"text": "<---->",
+			"background-color": [
+				0,
+				0,
+				0,
+				0
+			]
 		},
 		{
 			"eventType": "block",
@@ -67,10 +317,28 @@
 				},
 				{
 					"id": "set-position-to-another-object",
-					"objectClass": "text_question",
-					"sid": 431322292190638,
+					"objectClass": "bar_bg",
+					"sid": 317006764495760,
 					"parameters": {
-						"object": "question_box",
+						"object": "card_question",
+						"image-point-optional": "1"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "bar_progress",
+					"sid": 706478470093424,
+					"parameters": {
+						"object": "card_question",
+						"image-point-optional": "1"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "bar_icon",
+					"sid": 169488410602555,
+					"parameters": {
+						"object": "card_question",
 						"image-point-optional": "1"
 					}
 				},
@@ -80,6 +348,15 @@
 					"sid": 187058735311851,
 					"parameters": {
 						"layer": "1",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 652310182791491,
+					"parameters": {
+						"layer": "3",
 						"visibility": "invisible"
 					}
 				},
@@ -102,6 +379,16 @@
 					}
 				},
 				{
+					"type": "comment",
+					"text": "temp",
+					"background-color": [
+						0.26666666666666666,
+						0.7725490196078432,
+						0.3686274509803922,
+						1
+					]
+				},
+				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
 					"sid": 385716352025370,
@@ -121,10 +408,27 @@
 				},
 				{
 					"id": "set-visible",
-					"objectClass": "Button_continue",
+					"objectClass": "button_continue",
 					"sid": 875471738786973,
 					"parameters": {
 						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "text_username",
+					"sid": 405952502536365,
+					"parameters": {
+						"text": "user_name"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "text_score",
+					"sid": 570734649611640,
+					"parameters": {
+						"object": "score_box",
+						"image-point-optional": "0"
 					}
 				},
 				{
@@ -138,6 +442,15 @@
 					"parameters": {
 						"x": "0",
 						"y": "0"
+					}
+				},
+				{
+					"id": "paste-object",
+					"objectClass": "DrawingCanvas",
+					"sid": 471330131262130,
+					"parameters": {
+						"object": "playerAvatar",
+						"effects": "with-effects"
 					}
 				}
 			],
@@ -160,33 +473,36 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 157163896637173,
+					"sid": 908858052718041,
+					"disabled": true,
 					"parameters": {
 						"audio-file": "ragtime-piano-scott-joplin-the-entertainer-1902",
 						"loop": "looping",
-						"volume": "0",
+						"volume": "-5",
 						"tag-optional": "\"l1bg\""
 					}
 				},
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 467768198629818,
+					"sid": 289724831800140,
+					"disabled": true,
 					"parameters": {
 						"audio-file": "bg_city1",
 						"loop": "looping",
-						"volume": "0",
+						"volume": "-10",
 						"tag-optional": "\"\""
 					}
 				},
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 294355951100268,
+					"sid": 689975686326688,
+					"disabled": true,
 					"parameters": {
 						"audio-file": "bg_city2",
 						"loop": "not-looping",
-						"volume": "0",
+						"volume": "-10",
 						"tag-optional": "\"\""
 					}
 				}
@@ -219,6 +535,15 @@
 					"parameters": {
 						"x": "0",
 						"y": "0"
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "bar_progress",
+					"sid": 252740605616862,
+					"parameters": {
+						"width": "timer*10",
+						"height": "12"
 					}
 				}
 			],
@@ -255,7 +580,7 @@
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "home_button"
+						"object-clicked": "button_home"
 					}
 				}
 			],
@@ -263,9 +588,9 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 471753367538723,
+					"sid": 786291452910902,
 					"parameters": {
-						"layout": "GameOverScreen"
+						"layout": "MenuScreen"
 					}
 				}
 			],
@@ -287,6 +612,33 @@
 					}
 				},
 				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 475826972201387,
+					"parameters": {
+						"variable": "question_time"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 563452792938906,
+					"parameters": {
+						"variable": "drag_time"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 168933395258177,
+					"parameters": {
+						"variable": "pause_time"
+					},
+					"isInverted": true
+				},
+				{
 					"id": "compare-x",
 					"objectClass": "bg_level1",
 					"sid": 577800435899373,
@@ -304,25 +656,161 @@
 				{
 					"id": "set-x",
 					"objectClass": "bg_level1",
-					"sid": 352745834478497,
+					"sid": 962698116302826,
 					"parameters": {
-						"x": "self.x - (80 * dt)"
+						"x": "self.x - (scroll_speed * dt)"
 					}
 				},
 				{
 					"id": "set-x",
-					"objectClass": "sampah",
-					"sid": 282660999598230,
+					"objectClass": "sound_l1_market",
+					"sid": 631188649817975,
 					"parameters": {
-						"x": "Self.X - (80 * dt)"
+						"x": "self.x - (scroll_speed * dt)"
 					}
 				},
 				{
 					"id": "set-x",
-					"objectClass": "sampah2",
-					"sid": 810922913475381,
+					"objectClass": "sound_l1_river",
+					"sid": 824188322259418,
 					"parameters": {
-						"x": "Self.X - (80 * dt)"
+						"x": "self.x - (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "sound_l1_station",
+					"sid": 738545308070398,
+					"parameters": {
+						"x": "self.x - (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "level1_q1_toggle",
+					"sid": 118449120062194,
+					"parameters": {
+						"x": "Self.X - (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "level1_q2_toggle",
+					"sid": 149851282293665,
+					"parameters": {
+						"x": "Self.X - (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "toggle_drag_drop",
+					"sid": 750324175116543,
+					"parameters": {
+						"x": "Self.X - (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "level1_q3_toggle",
+					"sid": 155620079373816,
+					"parameters": {
+						"x": "Self.X - (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "level1_q4_toggle",
+					"sid": 728753469625372,
+					"parameters": {
+						"x": "Self.X - (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "level1_q5_toggle",
+					"sid": 651750499947043,
+					"parameters": {
+						"x": "Self.X - (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "level1_q6_toggle",
+					"sid": 495037700287636,
+					"parameters": {
+						"x": "Self.X - (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "trivia_l1_1",
+					"sid": 146746315075133,
+					"parameters": {
+						"x": "Self.X - (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "trivia_l1_2",
+					"sid": 578272758629902,
+					"parameters": {
+						"x": "Self.X - (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "trivia_l1_3",
+					"sid": 302878354779428,
+					"parameters": {
+						"x": "Self.X - (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "trivia_l1_4",
+					"sid": 762246390880036,
+					"parameters": {
+						"x": "Self.X - (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "trivia_l1_5",
+					"sid": 974214060287654,
+					"parameters": {
+						"x": "Self.X - (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "card_trivia",
+					"sid": 667696257578164,
+					"parameters": {
+						"x": "Self.X - (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "trivia_close",
+					"sid": 874937982999118,
+					"parameters": {
+						"x": "Self.X - (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "text_trivia_title",
+					"sid": 982462569577802,
+					"parameters": {
+						"x": "Self.X - (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "text_trivia",
+					"sid": 190966618362451,
+					"parameters": {
+						"x": "Self.X - (scroll_speed * dt)"
 					}
 				}
 			],
@@ -340,6 +828,33 @@
 					}
 				},
 				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 832568056933176,
+					"parameters": {
+						"variable": "question_time"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 543188156021961,
+					"parameters": {
+						"variable": "drag_time"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 776545811989272,
+					"parameters": {
+						"variable": "pause_time"
+					},
+					"isInverted": true
+				},
+				{
 					"id": "compare-x",
 					"objectClass": "bg_level1",
 					"sid": 224586621843063,
@@ -353,25 +868,161 @@
 				{
 					"id": "set-x",
 					"objectClass": "bg_level1",
-					"sid": 762697487535732,
+					"sid": 701278079190954,
 					"parameters": {
-						"x": "Self.X + (80 * dt)"
+						"x": "Self.X + (scroll_speed * dt)"
 					}
 				},
 				{
 					"id": "set-x",
-					"objectClass": "sampah",
-					"sid": 698171875445910,
+					"objectClass": "sound_l1_market",
+					"sid": 690405356412557,
 					"parameters": {
-						"x": "Self.X + (80 * dt)"
+						"x": "Self.X + (scroll_speed * dt)"
 					}
 				},
 				{
 					"id": "set-x",
-					"objectClass": "sampah2",
-					"sid": 650850380568302,
+					"objectClass": "sound_l1_river",
+					"sid": 626131203111467,
 					"parameters": {
-						"x": "Self.X + (80 * dt)"
+						"x": "Self.X + (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "sound_l1_station",
+					"sid": 707292169080582,
+					"parameters": {
+						"x": "Self.X + (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "level1_q1_toggle",
+					"sid": 656481698695759,
+					"parameters": {
+						"x": "Self.X + (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "level1_q2_toggle",
+					"sid": 143353708879062,
+					"parameters": {
+						"x": "Self.X + (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "toggle_drag_drop",
+					"sid": 788077149492501,
+					"parameters": {
+						"x": "Self.X + (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "level1_q3_toggle",
+					"sid": 554777257034631,
+					"parameters": {
+						"x": "Self.X + (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "level1_q4_toggle",
+					"sid": 779231784261007,
+					"parameters": {
+						"x": "Self.X + (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "level1_q5_toggle",
+					"sid": 493419825504059,
+					"parameters": {
+						"x": "Self.X + (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "level1_q6_toggle",
+					"sid": 675049143145753,
+					"parameters": {
+						"x": "Self.X + (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "trivia_l1_1",
+					"sid": 103238880162981,
+					"parameters": {
+						"x": "Self.X + (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "trivia_l1_2",
+					"sid": 793001126404435,
+					"parameters": {
+						"x": "Self.X + (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "trivia_l1_3",
+					"sid": 869575815361397,
+					"parameters": {
+						"x": "Self.X + (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "trivia_l1_4",
+					"sid": 724455471478991,
+					"parameters": {
+						"x": "Self.X + (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "trivia_l1_5",
+					"sid": 530108000279668,
+					"parameters": {
+						"x": "Self.X + (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "card_trivia",
+					"sid": 119942482412640,
+					"parameters": {
+						"x": "Self.X + (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "trivia_close",
+					"sid": 596035607468452,
+					"parameters": {
+						"x": "Self.X + (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "text_trivia_title",
+					"sid": 717838715866502,
+					"parameters": {
+						"x": "Self.X + (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "text_trivia",
+					"sid": 581716340353516,
+					"parameters": {
+						"x": "Self.X + (scroll_speed * dt)"
 					}
 				}
 			],
@@ -387,18 +1038,26 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 121704076331761,
+					"sid": 512728337225544,
 					"parameters": {
 						"variable": "isFinished",
 						"comparison": 0,
-						"value": "2"
+						"value": "finishLimit"
 					}
 				}
 			],
 			"actions": [
 				{
+					"callFunction": "DisableTrivia",
+					"sid": 835864254041676
+				},
+				{
+					"callFunction": "DisableItemClick",
+					"sid": 263786453451513
+				},
+				{
 					"id": "set-visible",
-					"objectClass": "Button_continue",
+					"objectClass": "button_continue",
 					"sid": 294079300076319,
 					"parameters": {
 						"visibility": "visible"
@@ -406,11 +1065,68 @@
 				},
 				{
 					"id": "set-position",
-					"objectClass": "Button_continue",
+					"objectClass": "button_continue",
 					"sid": 681995183212890,
 					"parameters": {
 						"x": "100",
 						"y": "100"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "playerAvatar",
+					"sid": 641882834068946,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "score_box",
+					"sid": 682706426524581,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "text_score",
+					"sid": 819220214536486,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "text_username",
+					"sid": 863118883193682,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "text_score_right",
+					"sid": 611570071319725,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "overlay",
+					"sid": 252399143194342,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 991648273977883,
+					"parameters": {
+						"variable": "pause_time",
+						"value": "true"
 					}
 				}
 			],
@@ -426,7 +1142,7 @@
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "Button_continue"
+						"object-clicked": "button_continue"
 					}
 				}
 			],
@@ -434,9 +1150,9 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 663935502669308,
+					"sid": 924892079955254,
 					"parameters": {
-						"layout": "DragDropScreen"
+						"layout": "MenuScreen"
 					}
 				}
 			],
@@ -455,6 +1171,14 @@
 					"sid": 218106091856087,
 					"parameters": {
 						"variable": "question_time"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 901235382248122,
+					"parameters": {
+						"variable": "timer_time"
 					}
 				},
 				{
@@ -484,6 +1208,25 @@
 					"parameters": {
 						"variable": "timer",
 						"value": "1"
+					}
+				},
+				{
+					"id": "rotate-clockwise",
+					"objectClass": "bar_icon",
+					"sid": 985459395208311,
+					"parameters": {
+						"degrees": "30"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 790205821568787,
+					"parameters": {
+						"audio-file": "Click_Soft_00",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
 					}
 				}
 			],
@@ -580,18 +1323,210 @@
 						"comparison": 0,
 						"value": "1"
 					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "text_ans1",
+					"sid": 676806962906195,
+					"parameters": {
+						"instance-variable": "clickable",
+						"comparison": 0,
+						"value": "1"
+					}
 				}
 			],
 			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 677069584635489,
+					"parameters": {
+						"variable": "prev_ans",
+						"value": "text_ans1.Text"
+					}
+				},
 				{
 					"callFunction": "Answer",
 					"sid": 739508338171420,
 					"parameters": [
 						"10"
 					]
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 367486334567554,
+					"parameters": {
+						"variable": "score_right",
+						"value": "1"
+					}
 				}
 			],
-			"sid": 121386603954152
+			"sid": 121386603954152,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 231754907486742,
+							"parameters": {
+								"variable": "current_question",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "SetPostAnswer",
+							"sid": 780516915208460,
+							"parameters": [
+								"\"You and 18% other users chose:\"",
+								"\"Public transport is one of the greenest ways to get around - and taking the train means we have more time to be scrolling on tiktok doesn’t it?\"",
+								"\"Taking the train reduces your greenhouse gas emissions by 80% as opposed to driving a car. \""
+							]
+						}
+					],
+					"sid": 341538808779374
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 865279179209119,
+							"parameters": {
+								"variable": "current_question",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "SetPostAnswer",
+							"sid": 296718972721831,
+							"parameters": [
+								"\"You and 18% other users chose:\"",
+								"\"That’s right! Most recycling centres usually end up discarding a lot of waste because it is not sorted correctly. Let’s make it our shared responsibility to remember to put the right recyclables into the right bins. \"",
+								"\"About 113,200 aluminium cans are recycled per minute! Recycling cans are fairly cheap, fast and widely practised - a recycled aluminium can will be recycled, processed and back on the shelves from as fast as 60 days. \""
+							]
+						}
+					],
+					"sid": 106655754412407
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 190304474906403,
+							"parameters": {
+								"variable": "current_question",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "SetPostAnswer",
+							"sid": 468253526145441,
+							"parameters": [
+								"\"You and 18% other users chose:\"",
+								"\"#SapotLokal all the way! Local ingredients reduce the carbon footprint of your groceries, since they are grown and packaged nearer to you. They are also fresher, more accessible and support the local economy.\"",
+								"\"Some food producers are experimenting putting a ‘carbon footprint’ tag on every item so consumers like us are aware and encouraged to make more eco-friendly shopping choices.\""
+							]
+						}
+					],
+					"sid": 423289807900854
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 754733617791194,
+							"parameters": {
+								"variable": "current_question",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "SetPostAnswer",
+							"sid": 831391003284789,
+							"parameters": [
+								"\"You and 18% other users chose:\"",
+								"\"Way to go! Take out those cool reusable shopping bags with pride.\"",
+								"\"This year, some supermarkets in Malaysia have started a commitment for zero-single use plastic bags at checkouts. \""
+							]
+						}
+					],
+					"sid": 773827274953300
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 863622592083508,
+							"parameters": {
+								"variable": "current_question",
+								"comparison": 0,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "SetPostAnswer",
+							"sid": 465601277076556,
+							"parameters": [
+								"\"You and 18% other users chose:\"",
+								"\"By repairing and repurposing our clothes, we get to hold on longer to the clothes we love and reduce the amount of waste sent to landfill yearly. \"",
+								"\"In 2018, Malaysians threw away roughly 195,300 tonnes of fabric waste. That’s almost two times the weight of Menara KL!\""
+							]
+						}
+					],
+					"sid": 577430932843178
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 589814551978884,
+							"parameters": {
+								"variable": "current_question",
+								"comparison": 0,
+								"value": "6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "SetPostAnswer",
+							"sid": 572126093007948,
+							"parameters": [
+								"\"You and 18% other users chose:\"",
+								"\"When recycling cans and plastics, make sure to remove any food waste and properly rinse and dry the container before recycling them.\"",
+								"\"There are many types of plastic categories, but in Malaysia we can currently only recycle three types: PET 1, PET 2 and PET 5. Check the label on your container before putting them into the recycling bins.\""
+							]
+						}
+					],
+					"sid": 493566254075745
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -623,18 +1558,210 @@
 						"comparison": 0,
 						"value": "1"
 					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "text_ans2",
+					"sid": 521453218702371,
+					"parameters": {
+						"instance-variable": "clickable",
+						"comparison": 0,
+						"value": "1"
+					}
 				}
 			],
 			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 951816900017061,
+					"parameters": {
+						"variable": "prev_ans",
+						"value": "text_ans2.Text"
+					}
+				},
 				{
 					"callFunction": "Answer",
 					"sid": 850477507069533,
 					"parameters": [
 						"10"
 					]
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 147702480497556,
+					"parameters": {
+						"variable": "score_right",
+						"value": "1"
+					}
 				}
 			],
-			"sid": 837231625644111
+			"sid": 837231625644111,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 975688552968095,
+							"parameters": {
+								"variable": "current_question",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "SetPostAnswer",
+							"sid": 212685560069097,
+							"parameters": [
+								"\"You and 18% other users chose:\"",
+								"\"Public transport is one of the greenest ways to get around - and taking the train means we have more time to be scrolling on tiktok doesn’t it?\"",
+								"\"Taking the train reduces your greenhouse gas emissions by 80% as opposed to driving a car. \""
+							]
+						}
+					],
+					"sid": 374294442226851
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 236262060830044,
+							"parameters": {
+								"variable": "current_question",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "SetPostAnswer",
+							"sid": 249628591293166,
+							"parameters": [
+								"\"You and 18% other users chose:\"",
+								"\"That’s right! Most recycling centres usually end up discarding a lot of waste because it is not sorted correctly. Let’s make it our shared responsibility to remember to put the right recyclables into the right bins. \"",
+								"\"About 113,200 aluminium cans are recycled per minute! Recycling cans are fairly cheap, fast and widely practised - a recycled aluminium can will be recycled, processed and back on the shelves from as fast as 60 days. \""
+							]
+						}
+					],
+					"sid": 985040183324658
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 150952876898727,
+							"parameters": {
+								"variable": "current_question",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "SetPostAnswer",
+							"sid": 392546378099466,
+							"parameters": [
+								"\"You and 18% other users chose:\"",
+								"\"#SapotLokal all the way! Local ingredients reduce the carbon footprint of your groceries, since they are grown and packaged nearer to you. They are also fresher, more accessible and support the local economy.\"",
+								"\"Some food producers are experimenting putting a ‘carbon footprint’ tag on every item so consumers like us are aware and encouraged to make more eco-friendly shopping choices.\""
+							]
+						}
+					],
+					"sid": 367338431324715
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 974023771303148,
+							"parameters": {
+								"variable": "current_question",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "SetPostAnswer",
+							"sid": 881706122043851,
+							"parameters": [
+								"\"You and 18% other users chose:\"",
+								"\"Way to go! Take out those cool reusable shopping bags with pride.\"",
+								"\"This year, some supermarkets in Malaysia have started a commitment for zero-single use plastic bags at checkouts. \""
+							]
+						}
+					],
+					"sid": 369668427740431
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 504592771401315,
+							"parameters": {
+								"variable": "current_question",
+								"comparison": 0,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "SetPostAnswer",
+							"sid": 946938727462915,
+							"parameters": [
+								"\"You and 18% other users chose:\"",
+								"\"By repairing and repurposing our clothes, we get to hold on longer to the clothes we love and reduce the amount of waste sent to landfill yearly. \"",
+								"\"In 2018, Malaysians threw away roughly 195,300 tonnes of fabric waste. That’s almost two times the weight of Menara KL!\""
+							]
+						}
+					],
+					"sid": 664340369831949
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 452260213343275,
+							"parameters": {
+								"variable": "current_question",
+								"comparison": 0,
+								"value": "6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "SetPostAnswer",
+							"sid": 588558322172280,
+							"parameters": [
+								"\"You and 18% other users chose:\"",
+								"\"When recycling cans and plastics, make sure to remove any food waste and properly rinse and dry the container before recycling them.\"",
+								"\"There are many types of plastic categories, but in Malaysia we can currently only recycle three types: PET 1, PET 2 and PET 5. Check the label on your container before putting them into the recycling bins.\""
+							]
+						}
+					],
+					"sid": 707752535010139
+				}
+			]
 		},
 		{
 			"eventType": "comment",
@@ -670,9 +1797,29 @@
 						"comparison": 0,
 						"value": "0"
 					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "text_ans1",
+					"sid": 388050747256652,
+					"parameters": {
+						"instance-variable": "clickable",
+						"comparison": 0,
+						"value": "1"
+					}
 				}
 			],
 			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 350321182923356,
+					"disabled": true,
+					"parameters": {
+						"variable": "prev_ans",
+						"value": "text_ans1.Text"
+					}
+				},
 				{
 					"callFunction": "Answer",
 					"sid": 140307423373556,
@@ -681,7 +1828,225 @@
 					]
 				}
 			],
-			"sid": 486452463500645
+			"sid": 486452463500645,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 526965151383101,
+							"parameters": {
+								"variable": "current_question",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 993132487808545,
+							"parameters": {
+								"variable": "prev_ans",
+								"value": "text_ans1.Text"
+							}
+						},
+						{
+							"callFunction": "SetPostAnswer",
+							"sid": 582758310479963,
+							"parameters": [
+								"\"You and 18% other users chose:\"",
+								"\"Awesome - we need more carpoolers like you. With more than a single passenger in each car we have an excuse to car-aoke our way into the city and reduce the emissions of our journey too.\"",
+								"\"-If you carpool at least twice a week for a whole year, you can help avoid more than 700kg of greenhouse gas emissions. \n-An average small-sized car emits 200g of carbon dioxide for every kilometer driven.\""
+							]
+						}
+					],
+					"sid": 241220250337119
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 655207317928400,
+							"parameters": {
+								"variable": "current_question",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 593369603450756,
+							"parameters": {
+								"variable": "prev_ans",
+								"value": "\"Wrong answer\""
+							}
+						},
+						{
+							"callFunction": "SetPostAnswer",
+							"sid": 823811095924127,
+							"parameters": [
+								"\"You and 18% other users chose:\"",
+								"\"Unfortunately, that’s incorrect. Most recycling centres usually end up discarding a lot of waste because it is not sorted correctly. Let’s make it our shared responsibility to remember to put the right recyclables into the right bins.\"",
+								"\"Aluminium cans that aren’t recycled usually end up in landfills where it will take about 500 years for the can to break down and degrade. \""
+							]
+						}
+					],
+					"sid": 230431461898765
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 326099827235193,
+							"parameters": {
+								"variable": "current_question",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 911223860509647,
+							"parameters": {
+								"variable": "prev_ans",
+								"value": "\"Wrong answer\""
+							}
+						},
+						{
+							"callFunction": "SetPostAnswer",
+							"sid": 496291677147903,
+							"parameters": [
+								"\"You and 18% other users chose:\"",
+								"\"Unfortunately, that’s incorrect. Most recycling centres usually end up discarding a lot of waste because it is not sorted correctly. Let’s make it our shared responsibility to remember to put the right recyclables into the right bins.\"",
+								"\"Aluminium cans that aren’t recycled usually end up in landfills where it will take about 500 years for the can to break down and degrade. \""
+							]
+						}
+					],
+					"sid": 372303359322248
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 138490671770047,
+							"parameters": {
+								"variable": "current_question",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 674775830033980,
+							"parameters": {
+								"variable": "prev_ans",
+								"value": "\"Wrong answer\""
+							}
+						},
+						{
+							"callFunction": "SetPostAnswer",
+							"sid": 190148446549529,
+							"parameters": [
+								"\"You and 18% other users chose:\"",
+								"\"Sometimes we forget to bring our own shopping bags with us, but let’s make a pledge to keep at least one reusable shopping bag with us at all times.\"",
+								"\"The impact of plastic bags on the environment is high. Plastic bags mostly end up in landfills, taking 300 years to break down, and slowly releasing toxic chemicals into the soil and air while they decompose. \""
+							]
+						}
+					],
+					"sid": 923347975593297
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 920006121352406,
+							"parameters": {
+								"variable": "current_question",
+								"comparison": 0,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 610938604682063,
+							"parameters": {
+								"variable": "prev_ans",
+								"value": "\"Wrong answer\""
+							}
+						},
+						{
+							"callFunction": "SetPostAnswer",
+							"sid": 251192049607211,
+							"parameters": [
+								"\"You and 18% other users chose:\"",
+								"\"It can take a lot of natural resources to produce textiles for clothing. Roughly 10,000 litres of water is required to produce a single pair of jeans. By repairing and repurposing our clothes, we get to hold on longer to the clothes we love and reduce the amount of waste sent to landfill yearly. \"",
+								"\"In 2018, Malaysians threw away roughly 195,300 tonnes of fabric waste. That’s almost two times the weight of Menara KL!\""
+							]
+						}
+					],
+					"sid": 442309807751447
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 247140920473339,
+							"parameters": {
+								"variable": "current_question",
+								"comparison": 0,
+								"value": "6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 108630663778999,
+							"parameters": {
+								"variable": "prev_ans",
+								"value": "text_ans1.Text"
+							}
+						},
+						{
+							"callFunction": "SetPostAnswer",
+							"sid": 125033122759548,
+							"parameters": [
+								"\"You and 18% other users chose:\"",
+								"\"When recycling cans and plastics, make sure to remove any food waste and properly rinse and dry the container before recycling them.\"",
+								"\"Reusing plastic containers is an effective and cheap tip that people can adopt to reduce plastic waste. We can reuse these safely about 25 times before it loses durability and becomes unsafe for use. \""
+							]
+						}
+					],
+					"sid": 678763790713624
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -713,6 +2078,16 @@
 						"comparison": 0,
 						"value": "0"
 					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "text_ans1",
+					"sid": 796625249358919,
+					"parameters": {
+						"instance-variable": "clickable",
+						"comparison": 0,
+						"value": "1"
+					}
 				}
 			],
 			"actions": [
@@ -724,7 +2099,225 @@
 					]
 				}
 			],
-			"sid": 334628312162947
+			"sid": 334628312162947,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 266210950786273,
+							"parameters": {
+								"variable": "current_question",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 260538604816419,
+							"parameters": {
+								"variable": "prev_ans",
+								"value": "text_ans2.Text"
+							}
+						},
+						{
+							"callFunction": "SetPostAnswer",
+							"sid": 147310745615770,
+							"parameters": [
+								"\"You and 18% other users chose:\"",
+								"\"Awesome - we need more carpoolers like you. With more than a single passenger in each car we have an excuse to car-aoke our way into the city and reduce the emissions of our journey too.\"",
+								"\"-If you carpool at least twice a week for a whole year, you can help avoid more than 700kg of greenhouse gas emissions. \n-An average small-sized car emits 200g of carbon dioxide for every kilometer driven.\""
+							]
+						}
+					],
+					"sid": 801738332733888
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 234862265629796,
+							"parameters": {
+								"variable": "current_question",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 168555206991518,
+							"parameters": {
+								"variable": "prev_ans",
+								"value": "\"Wrong answer\""
+							}
+						},
+						{
+							"callFunction": "SetPostAnswer",
+							"sid": 231636076800500,
+							"parameters": [
+								"\"You and 18% other users chose:\"",
+								"\"Unfortunately, that’s incorrect. Most recycling centres usually end up discarding a lot of waste because it is not sorted correctly. Let’s make it our shared responsibility to remember to put the right recyclables into the right bins.\"",
+								"\"Aluminium cans that aren’t recycled usually end up in landfills where it will take about 500 years for the can to break down and degrade. \""
+							]
+						}
+					],
+					"sid": 733813768604453
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 860995234362963,
+							"parameters": {
+								"variable": "current_question",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 213848629983984,
+							"parameters": {
+								"variable": "prev_ans",
+								"value": "\"Wrong answer\""
+							}
+						},
+						{
+							"callFunction": "SetPostAnswer",
+							"sid": 121482786089623,
+							"parameters": [
+								"\"You and 18% other users chose:\"",
+								"\"Unfortunately, that’s incorrect. Most recycling centres usually end up discarding a lot of waste because it is not sorted correctly. Let’s make it our shared responsibility to remember to put the right recyclables into the right bins.\"",
+								"\"Aluminium cans that aren’t recycled usually end up in landfills where it will take about 500 years for the can to break down and degrade. \""
+							]
+						}
+					],
+					"sid": 788253739038562
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 722068517198318,
+							"parameters": {
+								"variable": "current_question",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 301806463659317,
+							"parameters": {
+								"variable": "prev_ans",
+								"value": "\"Wrong answer\""
+							}
+						},
+						{
+							"callFunction": "SetPostAnswer",
+							"sid": 147899851583489,
+							"parameters": [
+								"\"You and 18% other users chose:\"",
+								"\"Sometimes we forget to bring our own shopping bags with us, but let’s make a pledge to keep at least one reusable shopping bag with us at all times.\"",
+								"\"The impact of plastic bags on the environment is high. Plastic bags mostly end up in landfills, taking 300 years to break down, and slowly releasing toxic chemicals into the soil and air while they decompose. \""
+							]
+						}
+					],
+					"sid": 740898785043088
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 791817585683985,
+							"parameters": {
+								"variable": "current_question",
+								"comparison": 0,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 926948601390698,
+							"parameters": {
+								"variable": "prev_ans",
+								"value": "\"Wrong answer\""
+							}
+						},
+						{
+							"callFunction": "SetPostAnswer",
+							"sid": 685949758551726,
+							"parameters": [
+								"\"You and 18% other users chose:\"",
+								"\"It can take a lot of natural resources to produce textiles for clothing. Roughly 10,000 litres of water is required to produce a single pair of jeans. By repairing and repurposing our clothes, we get to hold on longer to the clothes we love and reduce the amount of waste sent to landfill yearly. \"",
+								"\"In 2018, Malaysians threw away roughly 195,300 tonnes of fabric waste. That’s almost two times the weight of Menara KL!\""
+							]
+						}
+					],
+					"sid": 439651736953208
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 434833299759475,
+							"parameters": {
+								"variable": "current_question",
+								"comparison": 0,
+								"value": "6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 407596731055202,
+							"parameters": {
+								"variable": "prev_ans",
+								"value": "text_ans2.Text"
+							}
+						},
+						{
+							"callFunction": "SetPostAnswer",
+							"sid": 911645906018360,
+							"parameters": [
+								"\"You and 18% other users chose:\"",
+								"\"When recycling cans and plastics, make sure to remove any food waste and properly rinse and dry the container before recycling them.\"",
+								"\"Reusing plastic containers is an effective and cheap tip that people can adopt to reduce plastic waste. We can reuse these safely about 25 times before it loses durability and becomes unsafe for use. \""
+							]
+						}
+					],
+					"sid": 303870452065969
+				}
+			]
 		},
 		{
 			"eventType": "comment",
@@ -766,10 +2359,10 @@
 				},
 				{
 					"id": "set-text",
-					"objectClass": "text_timer",
-					"sid": 583433666002074,
+					"objectClass": "text_score_right",
+					"sid": 777572966125249,
 					"parameters": {
-						"text": "timer"
+						"text": "\"You contributed by doing \" & score_right & \"/8 sustainable efforts\""
 					}
 				}
 			],
@@ -789,12 +2382,12 @@
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "sampah"
+						"object-clicked": "level1_q1_toggle"
 					}
 				},
 				{
 					"id": "compare-instance-variable",
-					"objectClass": "sampah",
+					"objectClass": "level1_q1_toggle",
 					"sid": 918001865893570,
 					"parameters": {
 						"instance-variable": "clickable",
@@ -804,7 +2397,7 @@
 				},
 				{
 					"id": "compare-instance-variable",
-					"objectClass": "sampah",
+					"objectClass": "level1_q1_toggle",
 					"sid": 859647208498220,
 					"parameters": {
 						"instance-variable": "complete",
@@ -815,46 +2408,23 @@
 			],
 			"actions": [
 				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 265302336398525,
-					"parameters": {
-						"audio-file": "hover Click_Standard_0",
-						"loop": "not-looping",
-						"volume": "0",
-						"tag-optional": "\"\""
-					}
+					"callFunction": "questionUISetup",
+					"sid": 362401265296458,
+					"parameters": [
+						"1"
+					]
 				},
 				{
-					"id": "set-layer-visible",
-					"objectClass": "System",
-					"sid": 254170196584653,
-					"parameters": {
-						"layer": "1",
-						"visibility": "visible"
-					}
+					"callFunction": "DisableItemClick",
+					"sid": 542062537536459
 				},
 				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 942969300566432,
-					"parameters": {
-						"variable": "question_time",
-						"value": "true"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 645604702548489,
-					"parameters": {
-						"variable": "current_question",
-						"value": "1"
-					}
+					"callFunction": "DisableTrivia",
+					"sid": 613251352014689
 				},
 				{
 					"id": "set-instvar-value",
-					"objectClass": "sampah",
+					"objectClass": "level1_q1_toggle",
 					"sid": 437613946745173,
 					"parameters": {
 						"instance-variable": "clickable",
@@ -863,7 +2433,7 @@
 				},
 				{
 					"id": "set-visible",
-					"objectClass": "sampah",
+					"objectClass": "level1_q1_toggle",
 					"sid": 218715497142285,
 					"parameters": {
 						"visibility": "invisible"
@@ -871,7 +2441,7 @@
 				},
 				{
 					"id": "set-instvar-value",
-					"objectClass": "sampah",
+					"objectClass": "level1_q1_toggle",
 					"sid": 189166143215243,
 					"parameters": {
 						"instance-variable": "complete",
@@ -880,60 +2450,50 @@
 				},
 				{
 					"id": "set-instvar-value",
-					"objectClass": "sampah2",
-					"sid": 528674072451435,
+					"objectClass": "level1_q1_toggle",
+					"sid": 598160815776769,
 					"parameters": {
 						"instance-variable": "clickable",
 						"value": "0"
 					}
 				},
 				{
-					"id": "set-visible",
-					"objectClass": "overlay",
-					"sid": 412831914497493,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "tip_box",
-					"sid": 343482976787861,
-					"parameters": {
-						"visibility": "invisible"
-					}
+					"callFunction": "CloseTrivia",
+					"sid": 823858727522933
 				}
 			],
-			"sid": 406612044925241
-		},
-		{
-			"eventType": "block",
-			"conditions": [
+			"sid": 406612044925241,
+			"children": [
 				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 511943930267062,
-					"parameters": {
-						"variable": "current_question",
-						"comparison": 0,
-						"value": "1"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 382372572107636,
+							"parameters": {
+								"variable": "current_question",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "SetQuestion",
+							"sid": 834540801353829,
+							"parameters": [
+								"\"You and your two housemates decide to spend the day in the city. You are at Sentral Station. Which option would you take to get into the city?\"",
+								"\"A: Carpool\"",
+								"\"B: Walk to the station and take the train\"",
+								"0",
+								"1"
+							]
+						}
+					],
+					"sid": 335186632046920
 				}
-			],
-			"actions": [
-				{
-					"callFunction": "SetQuestion",
-					"sid": 318169978764910,
-					"parameters": [
-						"\"What is 1 + 35\"",
-						"\"36\"",
-						"\"33\"",
-						"1",
-						"0"
-					]
-				}
-			],
-			"sid": 916235291240288
+			]
 		},
 		{
 			"eventType": "comment",
@@ -949,12 +2509,12 @@
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "sampah2"
+						"object-clicked": "level1_q2_toggle"
 					}
 				},
 				{
 					"id": "compare-instance-variable",
-					"objectClass": "sampah2",
+					"objectClass": "level1_q2_toggle",
 					"sid": 742124561789478,
 					"parameters": {
 						"instance-variable": "clickable",
@@ -964,7 +2524,7 @@
 				},
 				{
 					"id": "compare-instance-variable",
-					"objectClass": "sampah2",
+					"objectClass": "level1_q2_toggle",
 					"sid": 304071918727575,
 					"parameters": {
 						"instance-variable": "complete",
@@ -975,46 +2535,23 @@
 			],
 			"actions": [
 				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 431724842439972,
-					"parameters": {
-						"audio-file": "hover Click_Standard_0",
-						"loop": "not-looping",
-						"volume": "0",
-						"tag-optional": "\"\""
-					}
+					"callFunction": "questionUISetup",
+					"sid": 174225548811748,
+					"parameters": [
+						"2"
+					]
 				},
 				{
-					"id": "set-layer-visible",
-					"objectClass": "System",
-					"sid": 667155624911525,
-					"parameters": {
-						"layer": "1",
-						"visibility": "visible"
-					}
+					"callFunction": "DisableItemClick",
+					"sid": 555584407280620
 				},
 				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 191324895479149,
-					"parameters": {
-						"variable": "question_time",
-						"value": "true"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 412215895625366,
-					"parameters": {
-						"variable": "current_question",
-						"value": "2"
-					}
+					"callFunction": "DisableTrivia",
+					"sid": 688436050387065
 				},
 				{
 					"id": "set-instvar-value",
-					"objectClass": "sampah2",
+					"objectClass": "level1_q2_toggle",
 					"sid": 957121974609480,
 					"parameters": {
 						"instance-variable": "clickable",
@@ -1023,7 +2560,7 @@
 				},
 				{
 					"id": "set-visible",
-					"objectClass": "sampah2",
+					"objectClass": "level1_q2_toggle",
 					"sid": 730011508184265,
 					"parameters": {
 						"visibility": "invisible"
@@ -1031,7 +2568,7 @@
 				},
 				{
 					"id": "set-instvar-value",
-					"objectClass": "sampah2",
+					"objectClass": "level1_q2_toggle",
 					"sid": 132028194883135,
 					"parameters": {
 						"instance-variable": "complete",
@@ -1040,8 +2577,109 @@
 				},
 				{
 					"id": "set-instvar-value",
-					"objectClass": "sampah",
-					"sid": 518279753411672,
+					"objectClass": "level1_q2_toggle",
+					"sid": 308666159299402,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "0"
+					}
+				},
+				{
+					"callFunction": "CloseTrivia",
+					"sid": 630029829677246
+				}
+			],
+			"sid": 767634667952408,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 982074252239830,
+							"parameters": {
+								"variable": "current_question",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "SetQuestion",
+							"sid": 111824888175480,
+							"parameters": [
+								"\"We’re walking around a pop-up market selling local treats and trinkets. You purchase a canned drink and continue to check out the rest of the market stalls. You’ve finished your drink, rinsed the can and you’re about to put it into the recycling bin. Which is the correct bin to recycle an aluminium can?\"",
+								"\"General Waste\"",
+								"\"Bottles & Cans\"",
+								"0",
+								"1"
+							]
+						}
+					],
+					"sid": 283669572307684
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "Setup question 3"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 227497438592868,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "level1_q3_toggle"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "level1_q3_toggle",
+					"sid": 771101610319837,
+					"parameters": {
+						"instance-variable": "clickable",
+						"comparison": 0,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "level1_q3_toggle",
+					"sid": 734946513310991,
+					"parameters": {
+						"instance-variable": "complete",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "questionUISetup",
+					"sid": 305290045165561,
+					"parameters": [
+						"3"
+					]
+				},
+				{
+					"callFunction": "DisableItemClick",
+					"sid": 804186374385801
+				},
+				{
+					"callFunction": "DisableTrivia",
+					"sid": 792410575304915
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "level1_q3_toggle",
+					"sid": 677035723873248,
 					"parameters": {
 						"instance-variable": "clickable",
 						"value": "0"
@@ -1049,51 +2687,1681 @@
 				},
 				{
 					"id": "set-visible",
-					"objectClass": "overlay",
-					"sid": 241859574250713,
+					"objectClass": "level1_q3_toggle",
+					"sid": 359817155024225,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "level1_q3_toggle",
+					"sid": 986435333210771,
+					"parameters": {
+						"instance-variable": "complete",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "level1_q3_toggle",
+					"sid": 796367960094431,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "0"
+					}
+				},
+				{
+					"callFunction": "CloseTrivia",
+					"sid": 805119174744034
+				}
+			],
+			"sid": 939314154338561,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 155298701927332,
+							"parameters": {
+								"variable": "current_question",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "SetQuestion",
+							"sid": 181700313192231,
+							"parameters": [
+								"\"Let’s head over to the groceries section to top up this week’s set of groceries. There are so many products that come from a lot of different sources, near and far. Which is the more sustainable option for buying goods? \"",
+								"\"A: Choose the produce imported from all around the world.\"",
+								"\"B: Choose the locally-produced  variety with locally-sourced ingredients. \"",
+								"0",
+								"1"
+							]
+						}
+					],
+					"sid": 354208160021469
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "Setup question 4"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 135323681158013,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "level1_q4_toggle"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "level1_q4_toggle",
+					"sid": 377849058673334,
+					"parameters": {
+						"instance-variable": "clickable",
+						"comparison": 0,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "level1_q4_toggle",
+					"sid": 759595638951969,
+					"parameters": {
+						"instance-variable": "complete",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "questionUISetup",
+					"sid": 976155784844186,
+					"parameters": [
+						"4"
+					]
+				},
+				{
+					"callFunction": "DisableItemClick",
+					"sid": 957617708967692
+				},
+				{
+					"callFunction": "DisableTrivia",
+					"sid": 602248023684013
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "level1_q4_toggle",
+					"sid": 607908251775802,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "level1_q4_toggle",
+					"sid": 836830357038399,
+					"parameters": {
+						"instance-variable": "complete",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "level1_q4_toggle",
+					"sid": 134829659973577,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "0"
+					}
+				},
+				{
+					"callFunction": "CloseTrivia",
+					"sid": 946473257717498
+				}
+			],
+			"sid": 663227331867393,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 829919215830670,
+							"parameters": {
+								"variable": "current_question",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "SetQuestion",
+							"sid": 141830500703474,
+							"parameters": [
+								"\"Let’s head over to the groceries section to top up this week’s set of groceries. There are so many products that come from a lot of different sources, near and far. Which is the more sustainable option for buying goods?\"",
+								"\"A: Choose the produce imported from all around the world.\"",
+								"\"B: Choose the locally-produced  variety with locally-sourced ingredients.\"",
+								"0",
+								"1"
+							]
+						}
+					],
+					"sid": 367249584320990
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "Setup question 5"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 153507101263607,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "level1_q5_toggle"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "level1_q5_toggle",
+					"sid": 356381895246727,
+					"parameters": {
+						"instance-variable": "clickable",
+						"comparison": 0,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "level1_q5_toggle",
+					"sid": 663755841625752,
+					"parameters": {
+						"instance-variable": "complete",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "questionUISetup",
+					"sid": 336441278784555,
+					"parameters": [
+						"5"
+					]
+				},
+				{
+					"callFunction": "DisableItemClick",
+					"sid": 852542536357542
+				},
+				{
+					"callFunction": "DisableTrivia",
+					"sid": 779820598873006
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "level1_q5_toggle",
+					"sid": 784550674715392,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "level1_q5_toggle",
+					"sid": 844842986917263,
+					"parameters": {
+						"instance-variable": "complete",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "level1_q5_toggle",
+					"sid": 536629807636674,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "0"
+					}
+				},
+				{
+					"callFunction": "CloseTrivia",
+					"sid": 680032935355117
+				}
+			],
+			"sid": 780014014209845,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 702888960515408,
+							"parameters": {
+								"variable": "current_question",
+								"comparison": 0,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "SetQuestion",
+							"sid": 111108036203576,
+							"parameters": [
+								"\"Oops! We were zooming pretty fast on the razor scooters and we collided. We both fell, laughed it off and got straight back up. But you notice a tiny tear on your jeans. What do you do?\"",
+								"\"A: Throw your jeans away and buy a brand new pair.\"",
+								"\"B: Ask a tailor to stitch the tear and continue to wear them.\"",
+								"0",
+								"1"
+							]
+						}
+					],
+					"sid": 359025073631443
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "Setup question 6"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 349215029032207,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "level1_q6_toggle"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "level1_q6_toggle",
+					"sid": 241565921702367,
+					"parameters": {
+						"instance-variable": "clickable",
+						"comparison": 0,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "level1_q6_toggle",
+					"sid": 252742791969147,
+					"parameters": {
+						"instance-variable": "complete",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "questionUISetup",
+					"sid": 726981587140654,
+					"parameters": [
+						"6"
+					]
+				},
+				{
+					"callFunction": "DisableItemClick",
+					"sid": 131653158850989
+				},
+				{
+					"callFunction": "DisableTrivia",
+					"sid": 332649813246470
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "level1_q6_toggle",
+					"sid": 367547880105645,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "level1_q6_toggle",
+					"sid": 137939409311195,
+					"parameters": {
+						"instance-variable": "complete",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "level1_q6_toggle",
+					"sid": 338107761323424,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "0"
+					}
+				},
+				{
+					"callFunction": "CloseTrivia",
+					"sid": 579172486634409
+				}
+			],
+			"sid": 176859065262753,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 407345123967147,
+							"parameters": {
+								"variable": "current_question",
+								"comparison": 0,
+								"value": "6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "SetQuestion",
+							"sid": 800218546245245,
+							"parameters": [
+								"\"We decided to have an impromptu picnic but now we have a few empty plastic containers on our hands. What should we do with these?\"",
+								"\"A: Check if they are recyclable, and throw them into the nearest recycling bin.\"",
+								"\"B: Take them home, wash and reuse them.\"",
+								"0",
+								"1"
+							]
+						}
+					],
+					"sid": 976618483595525
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "button_post_answer",
+					"sid": 776098939895015
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "EndQuestion",
+					"sid": 710235498753558
+				},
+				{
+					"callFunction": "EnableItemClick",
+					"sid": 516908472819233
+				},
+				{
+					"callFunction": "ResetTrivia",
+					"sid": 809080775371260
+				}
+			],
+			"sid": 949975378285569
+		},
+		{
+			"eventType": "comment",
+			"text": "Setup trivia 1"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 320933486466286,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "trivia_l1_1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "trivia_l1_1",
+					"sid": 329275209747066,
+					"parameters": {
+						"instance-variable": "clickable",
+						"comparison": 0,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "trivia_l1_1",
+					"sid": 569881661543784,
+					"parameters": {
+						"instance-variable": "complete",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "card_trivia",
+					"sid": 877671311532731,
+					"parameters": {
+						"object": "trivia_l1_1",
+						"image-point-optional": "1"
+					}
+				},
+				{
+					"callFunction": "SetTrivia",
+					"sid": 566221046100060,
+					"parameters": [
+						"0",
+						"1",
+						"1",
+						"0",
+						"1",
+						"0",
+						"1",
+						"0",
+						"1",
+						"0",
+						"\"Tip #1: To waste is in poor taste\"",
+						"\"Bring your own reusable bottle with you when you travel. Most restaurants and cafes will gladly refill your bottle for you, and some will even offer you a little discount on your drink too!\""
+					]
+				}
+			],
+			"sid": 497282321071410
+		},
+		{
+			"eventType": "comment",
+			"text": "Setup trivia 2"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 417080590006116,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "trivia_l1_2"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "trivia_l1_2",
+					"sid": 725449462178216,
+					"parameters": {
+						"instance-variable": "clickable",
+						"comparison": 0,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "trivia_l1_2",
+					"sid": 913677113353455,
+					"parameters": {
+						"instance-variable": "complete",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "card_trivia",
+					"sid": 495450912289424,
+					"parameters": {
+						"object": "trivia_l1_2",
+						"image-point-optional": "1"
+					}
+				},
+				{
+					"callFunction": "SetTrivia",
+					"sid": 423167134709596,
+					"parameters": [
+						"1",
+						"0",
+						"0",
+						"1",
+						"1",
+						"0",
+						"1",
+						"0",
+						"1",
+						"0",
+						"\"Tip #2: Let’s ride against climate change\"",
+						"\"Having walkways and bike lanes in our neighborhood encourages walking and cycling. These are low-carbon choices that will reduce emissions in the city.\""
+					]
+				}
+			],
+			"sid": 546746509013485
+		},
+		{
+			"eventType": "comment",
+			"text": "Setup trivia 3"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 570601336462176,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "trivia_l1_3"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "trivia_l1_3",
+					"sid": 482804416156163,
+					"parameters": {
+						"instance-variable": "clickable",
+						"comparison": 0,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "trivia_l1_3",
+					"sid": 939813029056954,
+					"parameters": {
+						"instance-variable": "complete",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "card_trivia",
+					"sid": 295301453832207,
+					"parameters": {
+						"object": "trivia_l1_3",
+						"image-point-optional": "1"
+					}
+				},
+				{
+					"callFunction": "SetTrivia",
+					"sid": 567569851465827,
+					"parameters": [
+						"1",
+						"0",
+						"1",
+						"0",
+						"0",
+						"1",
+						"1",
+						"0",
+						"1",
+						"0",
+						"\"Tip #3: Meat free mondays everyday?\"",
+						"\"Most of our dietary choices still include meat options, but were you aware that different meats emit more carbon than others? Lamb is the most carbon-intensive meat, followed by beef, pork, chicken, then fish.\""
+					]
+				}
+			],
+			"sid": 448270277816337
+		},
+		{
+			"eventType": "comment",
+			"text": "Setup trivia 4"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 336526586808007,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "trivia_l1_4"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "trivia_l1_4",
+					"sid": 682011320385187,
+					"parameters": {
+						"instance-variable": "clickable",
+						"comparison": 0,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "trivia_l1_4",
+					"sid": 774557189118447,
+					"parameters": {
+						"instance-variable": "complete",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "card_trivia",
+					"sid": 513756521428884,
+					"parameters": {
+						"object": "trivia_l1_4",
+						"image-point-optional": "1"
+					}
+				},
+				{
+					"callFunction": "SetTrivia",
+					"sid": 338375066901086,
+					"parameters": [
+						"1",
+						"0",
+						"1",
+						"0",
+						"1",
+						"0",
+						"0",
+						"1",
+						"1",
+						"0",
+						"\"Tip #4: Be your own (urban) farmer\"",
+						"\"Have a try at growing your own fruit and vegetables, simple starter-kits can be purchased from local urban farmers. The produce would be organic since you won’t be using the harmful chemicals that are usually used in commercial agriculture, and it’s actually fairly simple to maintain! \n\""
+					]
+				}
+			],
+			"sid": 708981528631296
+		},
+		{
+			"eventType": "comment",
+			"text": "Setup trivia 5"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 659389872399001,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "trivia_l1_5"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "trivia_l1_5",
+					"sid": 484844497051723,
+					"parameters": {
+						"instance-variable": "clickable",
+						"comparison": 0,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "trivia_l1_5",
+					"sid": 142994019975231,
+					"parameters": {
+						"instance-variable": "complete",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "card_trivia",
+					"sid": 922954536292063,
+					"parameters": {
+						"object": "trivia_l1_5",
+						"image-point-optional": "1"
+					}
+				},
+				{
+					"callFunction": "SetTrivia",
+					"sid": 543842761024295,
+					"parameters": [
+						"1",
+						"0",
+						"1",
+						"0",
+						"1",
+						"0",
+						"1",
+						"0",
+						"0",
+						"1",
+						"\"Tip #5: Food for thought… \"",
+						"\"If you have leftovers or even extra groceries for the week, here are some tips towards living a zero-waste lifestyle when it comes to food:\n- Repurpose your leftovers the next day into a brand new dish!\n-Freeze your groceries to preserve them a little longer.\""
+					]
+				}
+			],
+			"sid": 311906459470500
+		},
+		{
+			"eventType": "comment",
+			"text": "Close the trivia"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 127441631954434,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "trivia_close"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "trivia_close",
+					"sid": 806194230684688,
+					"parameters": {
+						"instance-variable": "active"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "card_trivia",
+					"sid": 704320663282307,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "trivia_close",
+					"sid": 659110344167349,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "text_trivia_title",
+					"sid": 641394762546469,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "text_trivia",
+					"sid": 239746897096409,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 741451545375621,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "trivia_l1_1",
+							"sid": 550917534621104,
+							"parameters": {
+								"instance-variable": "clickable",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "trivia_l1_1",
+							"sid": 807369578583578,
+							"parameters": {
+								"instance-variable": "complete",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "ResetTrivia",
+							"sid": 570264930101396
+						}
+					],
+					"sid": 318459744572880
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "trivia_l1_2",
+							"sid": 491350356542689,
+							"parameters": {
+								"instance-variable": "clickable",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "trivia_l1_2",
+							"sid": 666109324776235,
+							"parameters": {
+								"instance-variable": "complete",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "ResetTrivia",
+							"sid": 326693100515924
+						}
+					],
+					"sid": 998704778444303
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "trivia_l1_3",
+							"sid": 678272168849450,
+							"parameters": {
+								"instance-variable": "clickable",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "trivia_l1_3",
+							"sid": 224032747479541,
+							"parameters": {
+								"instance-variable": "complete",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "ResetTrivia",
+							"sid": 859048073578718
+						}
+					],
+					"sid": 487064554915790
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "trivia_l1_4",
+							"sid": 959522154920265,
+							"parameters": {
+								"instance-variable": "clickable",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "trivia_l1_4",
+							"sid": 925859802690510,
+							"parameters": {
+								"instance-variable": "complete",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "ResetTrivia",
+							"sid": 945810731260216
+						}
+					],
+					"sid": 117032866965519
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "trivia_l1_5",
+							"sid": 499645652679247,
+							"parameters": {
+								"instance-variable": "clickable",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "trivia_l1_5",
+							"sid": 993673752292135,
+							"parameters": {
+								"instance-variable": "complete",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "ResetTrivia",
+							"sid": 586873382511421
+						}
+					],
+					"sid": 462713113136364
+				}
+			]
+		},
+		{
+			"functionName": "DisableItemClick",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "level1_q1_toggle",
+					"sid": 399262245483897,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "level1_q2_toggle",
+					"sid": 675292327785946,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "level1_q3_toggle",
+					"sid": 605553573773234,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "level1_q4_toggle",
+					"sid": 812456177821111,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "level1_q5_toggle",
+					"sid": 962971960617306,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "level1_q6_toggle",
+					"sid": 482243449500906,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 578956354158380
+		},
+		{
+			"functionName": "EnableItemClick",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "level1_q1_toggle",
+					"sid": 439005850256530,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "level1_q2_toggle",
+					"sid": 767816596138112,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "level1_q3_toggle",
+					"sid": 602486687710296,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "level1_q4_toggle",
+					"sid": 287646295872488,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "level1_q5_toggle",
+					"sid": 844804506453413,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "level1_q6_toggle",
+					"sid": 774902797336714,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 278038331990845
+		},
+		{
+			"functionName": "SetTrivia",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "t1_click",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 508907769694668
+				},
+				{
+					"name": "t1_complete",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 168219236510197
+				},
+				{
+					"name": "t2_click",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 466603258866672
+				},
+				{
+					"name": "t2_complete",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 273114955220534
+				},
+				{
+					"name": "t3_click",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 110731558101743
+				},
+				{
+					"name": "t3_complete",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 657137492245472
+				},
+				{
+					"name": "t4_click",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 128987179042176
+				},
+				{
+					"name": "t4_complete",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 417459463222430
+				},
+				{
+					"name": "t5_click",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 172382511686565
+				},
+				{
+					"name": "t5_complete",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 634229696024651
+				},
+				{
+					"name": "title",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 383966862323508
+				},
+				{
+					"name": "text",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 130714870428918
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "text_trivia_title",
+					"sid": 892686802737227,
+					"parameters": {
+						"text": "title"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "text_trivia",
+					"sid": 227950811461623,
+					"parameters": {
+						"text": "text",
+						"duration": "1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_1",
+					"sid": 461583673382993,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "t1_click"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_1",
+					"sid": 979896045360336,
+					"parameters": {
+						"instance-variable": "complete",
+						"value": "t1_complete"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_2",
+					"sid": 333589392133812,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "t2_click"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_2",
+					"sid": 224893801178312,
+					"parameters": {
+						"instance-variable": "complete",
+						"value": "t2_complete"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_3",
+					"sid": 665388258506568,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "t3_click"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_3",
+					"sid": 616337110536627,
+					"parameters": {
+						"instance-variable": "complete",
+						"value": "t3_complete"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_4",
+					"sid": 972447181392270,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "t4_click"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_4",
+					"sid": 532067598827415,
+					"parameters": {
+						"instance-variable": "complete",
+						"value": "t4_complete"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_5",
+					"sid": 653541054337212,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "t5_click"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_5",
+					"sid": 237658766039641,
+					"parameters": {
+						"instance-variable": "complete",
+						"value": "t5_complete"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "card_trivia",
+					"sid": 528417963622272,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "text_trivia_title",
+					"sid": 791083883605413,
+					"parameters": {
+						"object": "card_trivia",
+						"image-point-optional": "1"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "text_trivia",
+					"sid": 388592196255715,
+					"parameters": {
+						"object": "card_trivia",
+						"image-point-optional": "2"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "trivia_close",
+					"sid": 186421827001209,
+					"parameters": {
+						"object": "card_trivia",
+						"image-point-optional": "3"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "trivia_close",
+					"sid": 786948414125250,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "trivia_close",
+					"sid": 211769602991119,
+					"parameters": {
+						"instance-variable": "active",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "text_trivia_title",
+					"sid": 422095788086931,
 					"parameters": {
 						"visibility": "visible"
 					}
 				},
 				{
 					"id": "set-visible",
-					"objectClass": "tip_box",
-					"sid": 952851180527820,
+					"objectClass": "text_trivia",
+					"sid": 465238658949665,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 902660044211127
+		},
+		{
+			"eventType": "comment",
+			"text": "Resets trivia boxes"
+		},
+		{
+			"functionName": "ResetTrivia",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_1",
+					"sid": 984567955978201,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_1",
+					"sid": 629467496762680,
+					"parameters": {
+						"instance-variable": "complete",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_2",
+					"sid": 276494144450525,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_2",
+					"sid": 416092881707378,
+					"parameters": {
+						"instance-variable": "complete",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_3",
+					"sid": 154889828182405,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_3",
+					"sid": 409977705744056,
+					"parameters": {
+						"instance-variable": "complete",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_4",
+					"sid": 452968361417389,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_4",
+					"sid": 799855823852873,
+					"parameters": {
+						"instance-variable": "complete",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_5",
+					"sid": 622238881319667,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_5",
+					"sid": 252030929163580,
+					"parameters": {
+						"instance-variable": "complete",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 143537714389608
+		},
+		{
+			"functionName": "DisableTrivia",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_1",
+					"sid": 648763134679360,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_1",
+					"sid": 606348959328482,
+					"parameters": {
+						"instance-variable": "complete",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_2",
+					"sid": 527491916725587,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_2",
+					"sid": 264076042488269,
+					"parameters": {
+						"instance-variable": "complete",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_3",
+					"sid": 935945746413533,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_3",
+					"sid": 386739222154857,
+					"parameters": {
+						"instance-variable": "complete",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_4",
+					"sid": 586059067031105,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_4",
+					"sid": 567155366623736,
+					"parameters": {
+						"instance-variable": "complete",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_5",
+					"sid": 656205469194304,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_5",
+					"sid": 593126965169209,
+					"parameters": {
+						"instance-variable": "complete",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 832188057194237
+		},
+		{
+			"functionName": "CloseTrivia",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "card_trivia",
+					"sid": 937051063976980,
 					"parameters": {
 						"visibility": "invisible"
 					}
-				}
-			],
-			"sid": 767634667952408
-		},
-		{
-			"eventType": "block",
-			"conditions": [
+				},
 				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 719259993002173,
+					"id": "set-visible",
+					"objectClass": "trivia_close",
+					"sid": 673579761543567,
 					"parameters": {
-						"variable": "current_question",
-						"comparison": 0,
-						"value": "2"
+						"visibility": "invisible"
 					}
-				}
-			],
-			"actions": [
+				},
 				{
-					"callFunction": "SetQuestion",
-					"sid": 959705018514317,
-					"parameters": [
-						"\"Who is JFK?\"",
-						"\"Former President of Mali\"",
-						"\"Former President of the USA\"",
-						"0",
-						"1"
-					]
+					"id": "set-visible",
+					"objectClass": "text_trivia_title",
+					"sid": 483332351653957,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "text_trivia",
+					"sid": 677732662966564,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"callFunction": "ResetTrivia",
+					"sid": 304255919290356
 				}
 			],
-			"sid": 747454907788185
+			"sid": 304718792172762
 		},
 		{
 			"eventType": "comment",
@@ -1111,7 +4379,7 @@
 			"actions": [
 				{
 					"id": "set-instvar-value",
-					"objectClass": "sampah",
+					"objectClass": "level1_q1_toggle",
 					"sid": 863337512947212,
 					"parameters": {
 						"instance-variable": "clickable",
@@ -1120,11 +4388,41 @@
 				},
 				{
 					"id": "set-instvar-value",
-					"objectClass": "sampah2",
+					"objectClass": "level1_q2_toggle",
 					"sid": 169326621216710,
 					"parameters": {
 						"instance-variable": "clickable",
 						"value": "1"
+					}
+				},
+				{
+					"callFunction": "TogglePostAnswer",
+					"sid": 501368440404324
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "overlay",
+					"sid": 401061325336529,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 679664048311369,
+					"parameters": {
+						"layer": "1",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 531708264493979,
+					"parameters": {
+						"variable": "question_time",
+						"value": "false"
 					}
 				},
 				{
@@ -1138,6 +4436,118 @@
 				}
 			],
 			"sid": 757905333327460
+		},
+		{
+			"eventType": "comment",
+			"text": "for the UI of the question"
+		},
+		{
+			"functionName": "questionUISetup",
+			"functionDescription": "setting up questions",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "qNumber",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 448758183817914
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 481954250854679,
+					"parameters": {
+						"audio-file": "hover Click_Standard_0",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 108218029013713,
+					"parameters": {
+						"layer": "1",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 423751735514741,
+					"parameters": {
+						"variable": "question_time",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 923202202736320,
+					"parameters": {
+						"variable": "timer_time",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 954769723463389,
+					"parameters": {
+						"variable": "current_question",
+						"value": "qNumber"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "overlay",
+					"sid": 124390080252025,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "tip_box",
+					"sid": 220725393549274,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "bar_bg",
+					"sid": 986533353718257,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "bar_progress",
+					"sid": 688985210941984,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "bar_icon",
+					"sid": 923200835631390,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 306021161301340
 		},
 		{
 			"eventType": "comment",
@@ -1190,11 +4600,71 @@
 			"conditions": [],
 			"actions": [
 				{
+					"id": "set-visible",
+					"objectClass": "text_question",
+					"sid": 269429862133918,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "text_ans1",
+					"sid": 830939643809076,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "text_ans2",
+					"sid": 170097513784450,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "text_question",
+					"sid": 573318581356562,
+					"parameters": {
+						"object": "card_question",
+						"image-point-optional": "2"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "text_ans1",
+					"sid": 255765016324181,
+					"parameters": {
+						"object": "card_question",
+						"image-point-optional": "3"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "text_ans2",
+					"sid": 173845951890046,
+					"parameters": {
+						"object": "card_question",
+						"image-point-optional": "4"
+					}
+				},
+				{
 					"id": "set-text",
 					"objectClass": "text_question",
 					"sid": 834745876032940,
 					"parameters": {
 						"text": "textQ"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "text_ans1",
+					"sid": 222106524634558,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "1"
 					}
 				},
 				{
@@ -1212,6 +4682,15 @@
 					"sid": 513814043760490,
 					"parameters": {
 						"text": "textAns1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "text_ans2",
+					"sid": 169835477831535,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "1"
 					}
 				},
 				{
@@ -1257,6 +4736,48 @@
 			"conditions": [],
 			"actions": [
 				{
+					"id": "set-instvar-value",
+					"objectClass": "text_ans1",
+					"sid": 236657403719254,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "text_ans2",
+					"sid": 596327691123180,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "text_question",
+					"sid": 655723807911778,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "text_ans1",
+					"sid": 743369923155889,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "text_ans2",
+					"sid": 566429458710047,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
 					"id": "subtract-from-eventvar",
 					"objectClass": "System",
 					"sid": 196816321492065,
@@ -1266,18 +4787,19 @@
 					}
 				},
 				{
-					"id": "set-layer-visible",
+					"id": "set-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 720285190450979,
+					"sid": 705971532958090,
 					"parameters": {
-						"layer": "1",
-						"visibility": "invisible"
+						"variable": "timer_time",
+						"value": "false"
 					}
 				},
 				{
 					"id": "set-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 182465613567823,
+					"sid": 261313117014353,
+					"disabled": true,
 					"parameters": {
 						"variable": "question_time",
 						"value": "false"
@@ -1293,19 +4815,1913 @@
 					}
 				},
 				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 263092151861124,
+					"disabled": true,
+					"parameters": {
+						"layer": "1",
+						"visibility": "invisible"
+					}
+				},
+				{
 					"callFunction": "EndQuestion",
-					"sid": 911571469938275
+					"sid": 911571469938275,
+					"disabled": true
 				},
 				{
 					"id": "set-visible",
 					"objectClass": "overlay",
 					"sid": 187267340637690,
+					"disabled": true,
 					"parameters": {
 						"visibility": "invisible"
 					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "bar_bg",
+					"sid": 251793657955764,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "bar_progress",
+					"sid": 569171842423930,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "bar_icon",
+					"sid": 226349621647856,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"callFunction": "DisplayPostAnswer",
+					"sid": 368896280294037
 				}
 			],
 			"sid": 256159743595995
+		},
+		{
+			"functionName": "DisplayPostAnswer",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "text_post_stat",
+					"sid": 612583971280702,
+					"parameters": {
+						"object": "card_question",
+						"image-point-optional": "5"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "text_post_ans",
+					"sid": 674763842987039,
+					"parameters": {
+						"object": "card_question",
+						"image-point-optional": "6"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "text_post_explanation",
+					"sid": 337339118781001,
+					"parameters": {
+						"object": "card_question",
+						"image-point-optional": "7"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "text_post_title",
+					"sid": 868236087738094,
+					"parameters": {
+						"object": "card_question",
+						"image-point-optional": "8"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "text_post_trivia",
+					"sid": 798751841072314,
+					"parameters": {
+						"object": "card_question",
+						"image-point-optional": "9"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "button_post_answer",
+					"sid": 870110625835756,
+					"parameters": {
+						"object": "card_question",
+						"image-point-optional": "10"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "post_points",
+					"sid": 541542010573128,
+					"parameters": {
+						"object": "card_question",
+						"image-point-optional": "11"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "text_post_points",
+					"sid": 974984972290717,
+					"parameters": {
+						"object": "post_points",
+						"image-point-optional": "1"
+					}
+				},
+				{
+					"callFunction": "TogglePostAnswer",
+					"sid": 556094118006481
+				}
+			],
+			"sid": 258029888278755
+		},
+		{
+			"functionName": "TogglePostAnswer",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "text_post_stat",
+					"sid": 384739749144891,
+					"parameters": {
+						"visibility": "toggle"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "text_post_ans",
+					"sid": 919884513955725,
+					"parameters": {
+						"visibility": "toggle"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "text_post_explanation",
+					"sid": 590569250443816,
+					"parameters": {
+						"visibility": "toggle"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "text_post_title",
+					"sid": 336975417341710,
+					"parameters": {
+						"visibility": "toggle"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "text_post_trivia",
+					"sid": 216015041371643,
+					"parameters": {
+						"visibility": "toggle"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "button_post_answer",
+					"sid": 452508287668743,
+					"parameters": {
+						"visibility": "toggle"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "post_points",
+					"sid": 211986786353378,
+					"parameters": {
+						"visibility": "toggle"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "text_post_points",
+					"sid": 743972827825196,
+					"parameters": {
+						"visibility": "toggle"
+					}
+				}
+			],
+			"sid": 818779867684038
+		},
+		{
+			"functionName": "SetPostAnswer",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "stat",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 519040851577334
+				},
+				{
+					"name": "explanation",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 979076504912591
+				},
+				{
+					"name": "trivia",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 638846119668523
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "text_post_stat",
+					"sid": 476001091921781,
+					"parameters": {
+						"text": "stat"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "text_post_ans",
+					"sid": 260888651188056,
+					"parameters": {
+						"text": "prev_ans"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "text_post_explanation",
+					"sid": 782620645892231,
+					"parameters": {
+						"text": "explanation"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "text_post_trivia",
+					"sid": 566824429287655,
+					"parameters": {
+						"text": "trivia"
+					}
+				}
+			],
+			"sid": 576118853360180
+		},
+		{
+			"eventType": "comment",
+			"text": "Keeping Track of the user level/badges"
+		},
+		{
+			"functionName": "BadgeTrackerTracker",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "title",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 882909899304531
+				},
+				{
+					"name": "desc",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 693355566076077
+				},
+				{
+					"name": "value",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 232244703936406
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 444565881545074,
+					"parameters": {
+						"variable": "score_tally",
+						"comparison": 3,
+						"value": "value"
+					}
+				},
+				{
+					"id": "for",
+					"objectClass": "System",
+					"sid": 575969605506252,
+					"parameters": {
+						"name": "\"\"",
+						"start-index": "50",
+						"end-index": "100"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 779637763145770
+		},
+		{
+			"functionName": "BadgeTracker",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "text_badge",
+					"sid": 345850024034231,
+					"parameters": {
+						"text": "user_badge"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "text_badge_explanation",
+					"sid": 504887425739440,
+					"parameters": {
+						"text": "user_badge_explain"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 872000895103283,
+					"parameters": {
+						"variable": "score_previous",
+						"value": "100"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 659967612327028,
+					"parameters": {
+						"variable": "score_highest",
+						"value": "100"
+					}
+				}
+			],
+			"sid": 444722164547685,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 366000937682435,
+							"parameters": {
+								"variable": "score_tally",
+								"comparison": 3,
+								"value": "100"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 643521266327728,
+							"parameters": {
+								"variable": "user_badge",
+								"value": "\"let die the woman you love\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 244717411721983,
+							"parameters": {
+								"variable": "user_badge_explain",
+								"value": "\"This means you try to be sustainable but only when you remember. To improve you should etc  \""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 236211876338248,
+							"parameters": {
+								"variable": "score_previous",
+								"value": "100"
+							}
+						}
+					],
+					"sid": 739809359396971
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 369004257622675,
+							"parameters": {
+								"variable": "score_tally",
+								"comparison": 3,
+								"value": "90"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 625708346023670,
+							"parameters": {
+								"variable": "user_badge",
+								"value": "\"out am i\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 976626103270385,
+							"parameters": {
+								"variable": "user_badge_explain",
+								"value": "\"hey whats going on  \""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 332663821634114,
+							"parameters": {
+								"variable": "score_previous",
+								"value": "90"
+							}
+						}
+					],
+					"sid": 228207722936218
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 836634121632944,
+							"parameters": {
+								"variable": "score_tally",
+								"comparison": 3,
+								"value": "80"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 998216737483977,
+							"parameters": {
+								"variable": "user_badge",
+								"value": "\"back to formula?\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 296543820222120,
+							"parameters": {
+								"variable": "user_badge_explain",
+								"value": "\"anf i said, heeeeeeyeeeyyeeeyy  \""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 336042875240763,
+							"parameters": {
+								"variable": "score_previous",
+								"value": "80"
+							}
+						}
+					],
+					"sid": 441162729828993
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 126592931664876,
+							"parameters": {
+								"variable": "score_tally",
+								"comparison": 3,
+								"value": "70"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 730513517234509,
+							"parameters": {
+								"variable": "user_badge",
+								"value": "\"im something of a scientist myself\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 785695418279510,
+							"parameters": {
+								"variable": "user_badge_explain",
+								"value": "\"heeeeeyeyyeeeey  \""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 877183471571813,
+							"parameters": {
+								"variable": "score_previous",
+								"value": "70"
+							}
+						}
+					],
+					"sid": 954193015480175
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 855079834478064,
+							"parameters": {
+								"variable": "score_tally",
+								"comparison": 3,
+								"value": "60"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 845094103176446,
+							"parameters": {
+								"variable": "user_badge",
+								"value": "\"you know how much i sacrificed?\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 931633793020973,
+							"parameters": {
+								"variable": "user_badge_explain",
+								"value": "\"I said hey!  \""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 459334742648235,
+							"parameters": {
+								"variable": "score_previous",
+								"value": "60"
+							}
+						}
+					],
+					"sid": 938110133490775
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 684086736831243,
+							"parameters": {
+								"variable": "score_tally",
+								"comparison": 3,
+								"value": "50"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 676630097420502,
+							"parameters": {
+								"variable": "user_badge",
+								"value": "\"or suffer the children\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 426204203447991,
+							"parameters": {
+								"variable": "user_badge_explain",
+								"value": "\"what's going ohhhhonnnnnn\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 341076867576252,
+							"parameters": {
+								"variable": "score_previous",
+								"value": "50"
+							}
+						}
+					],
+					"sid": 814533133387257
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 486795946150736,
+							"parameters": {
+								"first-value": "score_previous",
+								"comparison": 3,
+								"second-value": "score_highest"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 978967569918574,
+							"parameters": {
+								"variable": "score_highest",
+								"value": "score_previous"
+							}
+						}
+					],
+					"sid": 570988744143134
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 934820928368730
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "BadgeTracker",
+					"sid": 218354508614708
+				}
+			],
+			"sid": 694078787939059
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "UI Boxes",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 716499425983364
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "text_profile_user",
+							"sid": 953454141334634,
+							"parameters": {
+								"text": "user_name"
+							}
+						}
+					],
+					"sid": 528866719714120
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 795589628654463,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "playerAvatar"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "playerAvatar",
+							"sid": 123213394701248,
+							"parameters": {
+								"instance-variable": "menu"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "playerAvatar",
+							"sid": 689044762418089,
+							"parameters": {
+								"instance-variable": "clickable",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "OpenProfile",
+							"sid": 221235338778481
+						}
+					],
+					"sid": 414637380124283
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 194957823732796,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "profile_close"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "CloseProfile",
+							"sid": 293726820747696
+						}
+					],
+					"sid": 367764565332404
+				},
+				{
+					"functionName": "OpenProfile",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "playerAvatar",
+							"sid": 944239482093181,
+							"parameters": {
+								"instance-variable": "clickable",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "card_profile_hub",
+							"sid": 578855431505214,
+							"parameters": {
+								"x": "435",
+								"y": "224"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 839796197732980,
+							"parameters": {
+								"variable": "pause_time",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "overlay",
+							"sid": 674047767755090,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 218251740064712,
+							"parameters": {
+								"audio-file": "hover Click_Standard_0",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"callFunction": "UIPositioning",
+							"sid": 176472829084920
+						}
+					],
+					"sid": 239019675319550
+				},
+				{
+					"functionName": "CloseProfile",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "playerAvatar",
+							"sid": 973923748300693,
+							"parameters": {
+								"instance-variable": "clickable",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "card_profile_hub",
+							"sid": 757884685462766,
+							"parameters": {
+								"x": "435",
+								"y": "11224"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 563387201600178,
+							"parameters": {
+								"variable": "pause_time",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "overlay",
+							"sid": 866435798076613,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 616092825445024,
+							"parameters": {
+								"audio-file": "hover Click_Standard_0",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"callFunction": "UIPositioning",
+							"sid": 787448796334323
+						}
+					],
+					"sid": 353762701378939
+				},
+				{
+					"functionName": "UIPositioning",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "profile_close",
+							"sid": 929549072333209,
+							"parameters": {
+								"object": "card_profile_hub",
+								"image-point-optional": "1"
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "card_profile",
+							"sid": 659443944571655,
+							"parameters": {
+								"object": "card_profile_hub",
+								"image-point-optional": "2"
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "card_badge",
+							"sid": 989908099360025,
+							"parameters": {
+								"object": "card_profile_hub",
+								"image-point-optional": "3"
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "text_profile_user",
+							"sid": 778961205994635,
+							"parameters": {
+								"object": "card_profile",
+								"image-point-optional": "3"
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "profile_avatar",
+							"sid": 238455774331366,
+							"parameters": {
+								"object": "card_profile",
+								"image-point-optional": "2"
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "text_badge",
+							"sid": 316511758139191,
+							"parameters": {
+								"object": "card_badge",
+								"image-point-optional": "3"
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "text_badge_explanation",
+							"sid": 704207275696879,
+							"parameters": {
+								"object": "card_badge",
+								"image-point-optional": "4"
+							}
+						}
+					],
+					"sid": 382770100930910
+				}
+			],
+			"sid": 850666385033394
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Drag & Drop",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Activate D&D portion"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 588890309916996,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "toggle_drag_drop"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 769288665959919,
+							"parameters": {
+								"layer": "3",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "overlay",
+							"sid": 737974145981643,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 791072691715497,
+							"parameters": {
+								"variable": "drag_time",
+								"value": "true"
+							}
+						},
+						{
+							"callFunction": "CloseTrivia",
+							"sid": 917548768000650
+						}
+					],
+					"sid": 859819388711583
+				},
+				{
+					"eventType": "comment",
+					"text": "Deactivate D&D"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 518251142326790,
+							"parameters": {
+								"variable": "drag_correct",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 553884500204391,
+							"parameters": {
+								"variable": "dragDone"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 473094544904631,
+							"parameters": {
+								"layer": "3",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "overlay",
+							"sid": 519756270148590,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 588253365920022,
+							"parameters": {
+								"variable": "drag_time",
+								"value": "false"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 698366181852666,
+							"parameters": {
+								"variable": "isFinished",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 304962865312851,
+							"parameters": {
+								"variable": "dragDone",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "toggle_drag_drop",
+							"sid": 347413119565520,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 948353056236609
+				},
+				{
+					"eventType": "comment",
+					"text": "for wrong answers"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "drag_styrofoam",
+							"sid": 586673500715391,
+							"parameters": {
+								"object": "drag_sampah_toggle"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "drag_styrofoam",
+							"sid": 551239277784890,
+							"parameters": {
+								"object": "drag_sampah_toggle",
+								"image-point-optional": "0"
+							}
+						}
+					],
+					"sid": 555799013952520,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-drop",
+									"objectClass": "drag_styrofoam",
+									"sid": 148150906697141,
+									"behaviorType": "DragDrop"
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "drag_styrofoam",
+									"sid": 795989129283038,
+									"parameters": {
+										"object": "drag_sampah_toggle"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "drag_styrofoam",
+									"sid": 795929971616598
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 695667469185938,
+									"parameters": {
+										"variable": "score_tally",
+										"value": "10"
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 631144988189285,
+									"parameters": {
+										"variable": "drag_check",
+										"value": "1"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 495014584121391,
+									"parameters": {
+										"audio-file": "Click_Standard_03",
+										"loop": "not-looping",
+										"volume": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 209207760545275
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "for right answers"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "drag_mask1",
+							"sid": 983067320722166,
+							"parameters": {
+								"object": "drag_sampah_toggle"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "drag_mask1",
+							"sid": 474970541067515,
+							"parameters": {
+								"object": "drag_sampah_toggle",
+								"image-point-optional": "0"
+							}
+						}
+					],
+					"sid": 655370035414466,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-drop",
+									"objectClass": "drag_mask1",
+									"sid": 510354583148384,
+									"behaviorType": "DragDrop"
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "drag_mask1",
+									"sid": 634379539368975,
+									"parameters": {
+										"object": "drag_sampah_toggle"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "drag_mask1",
+									"sid": 479772924154269
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 762826309354272,
+									"parameters": {
+										"variable": "score_tally",
+										"value": "10"
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 876410525567359,
+									"parameters": {
+										"variable": "drag_check",
+										"value": "1"
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 359113546433373,
+									"parameters": {
+										"variable": "drag_correct",
+										"value": "1"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 361698400049301,
+									"parameters": {
+										"audio-file": "Click_Standard_03",
+										"loop": "not-looping",
+										"volume": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 612183514589295
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "drag_mask2",
+							"sid": 573709732932060,
+							"parameters": {
+								"object": "drag_sampah_toggle"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "drag_mask2",
+							"sid": 627287946886404,
+							"parameters": {
+								"object": "drag_sampah_toggle",
+								"image-point-optional": "0"
+							}
+						}
+					],
+					"sid": 848078479656670,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-drop",
+									"objectClass": "drag_mask2",
+									"sid": 372729863802037,
+									"behaviorType": "DragDrop"
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "drag_mask2",
+									"sid": 908654388834067,
+									"parameters": {
+										"object": "drag_sampah_toggle"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "drag_mask2",
+									"sid": 927846313756133
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 590082178284442,
+									"parameters": {
+										"variable": "score_tally",
+										"value": "10"
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 272728325293839,
+									"parameters": {
+										"variable": "drag_check",
+										"value": "1"
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 810958107632931,
+									"parameters": {
+										"variable": "drag_correct",
+										"value": "1"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 768030537080819,
+									"parameters": {
+										"audio-file": "Click_Standard_03",
+										"loop": "not-looping",
+										"volume": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 881241896901383
+						}
+					]
+				}
+			],
+			"sid": 734437886546885
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Tests",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 910008695841121
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "temp_test",
+							"sid": 842949598216228,
+							"parameters": {
+								"text": "isFinished"
+							}
+						}
+					],
+					"sid": 695678525148221,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 398086677515025
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "temp_test",
+							"sid": 786213043822684,
+							"parameters": {
+								"text": "prev_ans"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "text_score_highest",
+							"sid": 899055464270274,
+							"parameters": {
+								"text": "score_highest"
+							}
+						}
+					],
+					"sid": 127325621669543
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "sound_trigger",
+							"sid": 857169855040807,
+							"parameters": {
+								"object": "sound_l1_station"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 276046286319231,
+							"parameters": {
+								"variable": "sound1_start"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 323087946717098,
+							"parameters": {
+								"audio-file": "bg_city1",
+								"loop": "looping",
+								"volume": "0",
+								"tag-optional": "\"train\""
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 649689190942617,
+							"parameters": {
+								"tag": "\"market\""
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 467118162115780,
+							"parameters": {
+								"variable": "sound1_start",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 325535480526698
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "sound_trigger",
+							"sid": 656686741556982,
+							"parameters": {
+								"object": "sound_l1_station"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 420530482074384,
+							"parameters": {
+								"variable": "sound1_start"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 809530050898617,
+							"parameters": {
+								"tag": "\"train\"",
+								"db": "-100",
+								"duration": "2",
+								"ending": "stop"
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 102393773750470,
+							"parameters": {
+								"tag": "\"river\""
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 120386504375447,
+							"parameters": {
+								"variable": "sound1_start",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 156052910758902
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "sound_trigger",
+							"sid": 295901895563876,
+							"parameters": {
+								"object": "sound_l1_river"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 728681560589735,
+							"parameters": {
+								"variable": "sound2_start"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 740450098152298,
+							"parameters": {
+								"audio-file": "mixkit-atmosphere-of-a-river-at-sunrise-2458",
+								"loop": "looping",
+								"volume": "0",
+								"tag-optional": "\"river\""
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 189343819630144,
+							"parameters": {
+								"tag": "\"train\""
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 639263523736550,
+							"parameters": {
+								"tag": "\"market\""
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 441816676185863,
+							"parameters": {
+								"variable": "sound2_start",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 904091479537922
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "sound_trigger",
+							"sid": 432880266430773,
+							"parameters": {
+								"object": "sound_l1_river"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 217166853366935,
+							"parameters": {
+								"variable": "sound2_start"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 890037755063711,
+							"parameters": {
+								"tag": "\"river\""
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 812716575718255,
+							"parameters": {
+								"tag": "\"market\""
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 895751374483811,
+							"parameters": {
+								"variable": "sound2_start",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 688235451143568
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "sound_trigger",
+							"sid": 265898491652853,
+							"parameters": {
+								"object": "sound_l1_market"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 683588725477380,
+							"parameters": {
+								"variable": "sound3_start"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 727501282879243,
+							"parameters": {
+								"audio-file": "mixkit-very-crowded-pub-or-party-loop-360",
+								"loop": "looping",
+								"volume": "0",
+								"tag-optional": "\"market\""
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 571431946168306,
+							"parameters": {
+								"tag": "\"train\""
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 666132901571458,
+							"parameters": {
+								"tag": "\"river\""
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 456490844959445,
+							"parameters": {
+								"variable": "sound3_start",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 191178892573495
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "sound_trigger",
+							"sid": 372469975488720,
+							"parameters": {
+								"object": "sound_l1_market"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 693060321876161,
+							"parameters": {
+								"variable": "sound3_start"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 352799658058110,
+							"parameters": {
+								"tag": "\"market\""
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 978028605308211,
+							"parameters": {
+								"tag": "\"river\""
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 530266736146566,
+							"parameters": {
+								"variable": "sound3_start",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 256818444069102
+				}
+			],
+			"sid": 314960304345935
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Stylings",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 215985458679841
+						}
+					],
+					"actions": [
+						{
+							"id": "set-css-style",
+							"objectClass": "button_post_answer",
+							"sid": 227698073727273,
+							"parameters": {
+								"property-name": "\"border-radius\"",
+								"value": "\"20px\""
+							}
+						},
+						{
+							"id": "set-css-style",
+							"objectClass": "button_post_answer",
+							"sid": 719292380877300,
+							"parameters": {
+								"property-name": "\"padding-top\"",
+								"value": "\"6px\""
+							}
+						},
+						{
+							"id": "set-css-style",
+							"objectClass": "button_post_answer",
+							"sid": 162928457940787,
+							"parameters": {
+								"property-name": "\"padding-bottom\"",
+								"value": "\"6px\""
+							}
+						},
+						{
+							"id": "set-css-style",
+							"objectClass": "button_post_answer",
+							"sid": 220609472754084,
+							"parameters": {
+								"property-name": "\"padding-left\"",
+								"value": "\"18px\""
+							}
+						},
+						{
+							"id": "set-css-style",
+							"objectClass": "button_post_answer",
+							"sid": 472661491370702,
+							"parameters": {
+								"property-name": "\"padding-right\"",
+								"value": "\"18px\""
+							}
+						},
+						{
+							"id": "set-css-style",
+							"objectClass": "button_post_answer",
+							"sid": 790616841329718,
+							"parameters": {
+								"property-name": "\"color\"",
+								"value": "\"#fff\""
+							}
+						},
+						{
+							"id": "set-css-style",
+							"objectClass": "button_post_answer",
+							"sid": 624772297038438,
+							"parameters": {
+								"property-name": "\"background-color\"",
+								"value": "\"#1A1623\""
+							}
+						},
+						{
+							"id": "set-css-style",
+							"objectClass": "button_post_answer",
+							"sid": 916912016513720,
+							"parameters": {
+								"property-name": "\"font-size\"",
+								"value": "\"14px\""
+							}
+						}
+					],
+					"sid": 823912935259214
+				}
+			],
+			"sid": 369791345126585
 		}
 	],
 	"sid": 482210164493416

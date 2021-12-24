@@ -1,16 +1,9 @@
 {
-	"name": "question_box",
+	"name": "sound_l1_station",
 	"plugin-id": "Sprite",
-	"sid": 618113157692541,
+	"sid": 849328201556481,
 	"isGlobal": false,
-	"instanceVariables": [
-		{
-			"name": "text_box",
-			"type": "boolean",
-			"desc": "",
-			"sid": 973079614583722
-		}
-	],
+	"instanceVariables": [],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
@@ -25,19 +18,12 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 7087666,
+						"imageSpriteId": 6106454,
 						"useCollisionPoly": true,
-						"imagePoints": [
-							{
-								"name": "Q",
-								"x": 0.24,
-								"y": 0.24
-							}
-						],
 						"duration": 1
 					}
 				],
-				"sid": 653334556900269,
+				"sid": 900862385739454,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

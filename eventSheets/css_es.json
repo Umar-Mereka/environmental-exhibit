@@ -2,6 +2,36 @@
 	"name": "CSS_ES",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "uploadCrop",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 565960521150680
+		},
+		{
+			"eventType": "variable",
+			"name": "avatarType",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "0 - sprite, 1 - upload, 2 - camera",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 300607078915146
+		},
+		{
+			"eventType": "variable",
+			"name": "currentAvatar",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 768747748615863
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -18,165 +48,142 @@
 					"parameters": {
 						"visibility": "visible"
 					}
+				},
+				{
+					"id": "set-max-length",
+					"objectClass": "TextInput",
+					"sid": 804782717929426,
+					"parameters": {
+						"max-length": "24"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "temp_test",
+					"sid": 576520755396256,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "TextInput",
+					"sid": 621354874694462,
+					"parameters": {
+						"property-name": "\"border-radius\"",
+						"value": "\"20px\""
+					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "TextInput",
+					"sid": 252058516500959,
+					"parameters": {
+						"property-name": "\"border\"",
+						"value": "\"none\""
+					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "TextInput",
+					"sid": 784454468142829,
+					"parameters": {
+						"property-name": "\"text-align\"",
+						"value": "\"center\""
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "button_upload",
+					"sid": 580611871636115,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 692242651846809,
+					"parameters": {
+						"layer": "1",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 268779421421863,
+					"parameters": {
+						"layer": "3",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"type": "comment",
+					"text": "Load all the images probs"
+				},
+				{
+					"id": "load-image-from-url",
+					"objectClass": "temp_sprite",
+					"sid": 276289972983440,
+					"parameters": {
+						"uri": "\"https://dl.airtable.com/.attachmentThumbnails/912ecd52f0042ca3a668004e5eca6a12/a361e8d9\"",
+						"size": "keep-current-size",
+						"cross-origin": "anonymous"
+					}
+				},
+				{
+					"id": "load-image-from-url",
+					"objectClass": "temp_sprite",
+					"sid": 159877034451628,
+					"parameters": {
+						"uri": "\"https://dl.airtable.com/.attachmentThumbnails/148a7f7c70cf636ec61196a833c84e9f/98bfce17\"",
+						"size": "keep-current-size",
+						"cross-origin": "anonymous"
+					}
+				},
+				{
+					"id": "load-image-from-url",
+					"objectClass": "temp_sprite",
+					"sid": 295824005058039,
+					"parameters": {
+						"uri": "\"https://dl.airtable.com/.attachmentThumbnails/52aa357327ff075a9623071afc31d312/f2150a79\"",
+						"size": "keep-current-size",
+						"cross-origin": "anonymous"
+					}
+				},
+				{
+					"id": "load-image-from-url",
+					"objectClass": "temp_sprite",
+					"sid": 752580029116896,
+					"parameters": {
+						"uri": "\"https://dl.airtable.com/.attachmentThumbnails/7ba5d3baff9abe15838bd85e455a7892/a5e87b0d\"",
+						"size": "keep-current-size",
+						"cross-origin": "anonymous"
+					}
+				},
+				{
+					"id": "load-image-from-url",
+					"objectClass": "temp_sprite",
+					"sid": 962317905864803,
+					"parameters": {
+						"uri": "\"https://dl.airtable.com/.attachmentThumbnails/732fade3e6cfe871548022fec3008b73/567e7f78\"",
+						"size": "keep-current-size",
+						"cross-origin": "anonymous"
+					}
+				},
+				{
+					"id": "load-image-from-url",
+					"objectClass": "temp_sprite",
+					"sid": 507751810155765,
+					"parameters": {
+						"uri": "\"https://dl.airtable.com/.attachmentThumbnails/d7242a6836ab2a64451bcef130efda5a/93d535c3\"",
+						"size": "keep-current-size",
+						"cross-origin": "anonymous"
+					}
 				}
 			],
 			"sid": 232856720148052
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 588285660858286,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "avatar1"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "load-image-from-url",
-					"objectClass": "playerAvatar",
-					"sid": 905923895137594,
-					"parameters": {
-						"uri": "\"https://dl.airtable.com/.attachmentThumbnails/78577be94ed574bd91fafa4cdfc8921c/00eb5b81\"",
-						"size": "keep-current-size",
-						"cross-origin": "anonymous"
-					}
-				},
-				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 474494858006983,
-					"parameters": {
-						"audio-file": "hover Click_Standard_0",
-						"loop": "not-looping",
-						"volume": "0",
-						"tag-optional": "\"\""
-					}
-				}
-			],
-			"sid": 638136657226981
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 391213341151844,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "avatar2"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "load-image-from-url",
-					"objectClass": "playerAvatar",
-					"sid": 936933937759054,
-					"parameters": {
-						"uri": "\"https://dl.airtable.com/.attachmentThumbnails/fa1711f6e86b800f8234a6598e32dc81/e93e3dca\"",
-						"size": "keep-current-size",
-						"cross-origin": "anonymous"
-					}
-				},
-				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 579423883150419,
-					"parameters": {
-						"audio-file": "hover Click_Standard_0",
-						"loop": "not-looping",
-						"volume": "0",
-						"tag-optional": "\"\""
-					}
-				}
-			],
-			"sid": 122206146867353
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 338989523538622,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "avatar3"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "load-image-from-url",
-					"objectClass": "playerAvatar",
-					"sid": 654065459846223,
-					"parameters": {
-						"uri": "\"https://dl.airtable.com/.attachmentThumbnails/be63e057c441703fada800d2ad3881b8/3ea5015e\"",
-						"size": "keep-current-size",
-						"cross-origin": "anonymous"
-					}
-				},
-				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 301293832300193,
-					"parameters": {
-						"audio-file": "hover Click_Standard_0",
-						"loop": "not-looping",
-						"volume": "0",
-						"tag-optional": "\"\""
-					}
-				}
-			],
-			"sid": 696920442466648
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 843556100715229,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "avatar4"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "load-image-from-url",
-					"objectClass": "playerAvatar",
-					"sid": 675831537109786,
-					"parameters": {
-						"uri": "\"https://dl.airtable.com/.attachmentThumbnails/779b78dad571fb65aaa8e394a30981df/5facd333\"",
-						"size": "keep-current-size",
-						"cross-origin": "anonymous"
-					}
-				},
-				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 894224785306571,
-					"parameters": {
-						"audio-file": "hover Click_Standard_0",
-						"loop": "not-looping",
-						"volume": "0",
-						"tag-optional": "\"\""
-					}
-				}
-			],
-			"sid": 359130361237479
 		},
 		{
 			"eventType": "block",
@@ -191,13 +198,970 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 440347859793207,
+					"sid": 548072593366262,
 					"parameters": {
-						"layout": "Level1Screen"
+						"layout": "MenuScreen"
 					}
 				}
 			],
 			"sid": 370419682354220
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "button_continue",
+					"sid": 148852064915666
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "temp_test",
+					"sid": 559724088006065,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 330628898773232,
+					"parameters": {
+						"variable": "user_name",
+						"value": "TextInput.Text"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 588979627178636,
+					"parameters": {
+						"layout": "MenuScreen"
+					}
+				}
+			],
+			"sid": 679102511788943
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Upload Image",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 684846906978147,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "FileChooser2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "click",
+							"objectClass": "FileChooser2",
+							"sid": 722023634060047
+						}
+					],
+					"sid": 454158951686742
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 343674849283047,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "button_upload"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 362304328168800,
+							"parameters": {
+								"layer": "2",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 189784302423710,
+							"parameters": {
+								"layer": "3",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "temp_sprite",
+							"sid": 863429493206302,
+							"behaviorType": "DragDrop",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "load-image-from-url",
+							"objectClass": "temp_sprite",
+							"sid": 433536602907160,
+							"parameters": {
+								"uri": "FileChooser2.FileURLAt(0)",
+								"size": "resize-to-image-size",
+								"cross-origin": "anonymous"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "temp_sprite",
+							"sid": 888717655918488,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "save-image",
+							"objectClass": "DrawingCanvas",
+							"sid": 693755872180304,
+							"parameters": {
+								"format": "png",
+								"jpeg-quality": "75",
+								"x": "0",
+								"y": "0",
+								"width": "0",
+								"height": "0"
+							}
+						},
+						{
+							"id": "load-image-from-url",
+							"objectClass": "playerAvatar",
+							"sid": 958679591597695,
+							"parameters": {
+								"uri": "DrawingCanvas.SavedImageURL",
+								"size": "resize-to-image-size",
+								"cross-origin": "anonymous"
+							}
+						}
+					],
+					"sid": 199215608286384
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 458703829876794,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "button_crop"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "load-image-from-url",
+							"objectClass": "playerAvatar",
+							"sid": 207022790619060,
+							"parameters": {
+								"uri": "DrawingCanvas.SavedImageURL",
+								"size": "resize-to-image-size",
+								"cross-origin": "anonymous"
+							}
+						},
+						{
+							"id": "load-image-from-url",
+							"objectClass": "avatar_choice",
+							"sid": 798620488139182,
+							"parameters": {
+								"uri": "DrawingCanvas.SavedImageURL",
+								"size": "keep-current-size",
+								"cross-origin": "anonymous"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "temp_sprite",
+							"sid": 688138249746205,
+							"behaviorType": "DragDrop",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 498586992080066,
+							"parameters": {
+								"variable": "uploadCrop",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 188536585245264,
+							"parameters": {
+								"layer": "2",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 210907638010261,
+							"parameters": {
+								"layer": "3",
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 135909590270550
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 565965221753874,
+							"parameters": {
+								"variable": "uploadCrop"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "button_continue",
+							"sid": 158179253133113,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 201830795606370
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 440322780932647
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "temp_test",
+							"sid": 127823420808376,
+							"parameters": {
+								"text": "uploadCrop"
+							}
+						},
+						{
+							"id": "paste-object",
+							"objectClass": "DrawingCanvas",
+							"sid": 896464647253552,
+							"parameters": {
+								"object": "temp_sprite",
+								"effects": "with-effects"
+							}
+						},
+						{
+							"id": "load-image-from-url",
+							"objectClass": "temp_sprite",
+							"sid": 351464572953060,
+							"parameters": {
+								"uri": "FileChooser2.FileURLAt(0)",
+								"size": "resize-to-image-size",
+								"cross-origin": "anonymous"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "temp_sprite",
+							"sid": 291746090956168,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "save-image",
+							"objectClass": "DrawingCanvas",
+							"sid": 581818947279146,
+							"parameters": {
+								"format": "png",
+								"jpeg-quality": "75",
+								"x": "0",
+								"y": "0",
+								"width": "0",
+								"height": "0"
+							}
+						}
+					],
+					"sid": 193532181889013
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-dragging",
+							"objectClass": "temp_sprite",
+							"sid": 610395221946101,
+							"behaviorType": "DragDrop"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "temp_sprite",
+							"sid": 873129339912423,
+							"parameters": {
+								"x": "clamp(Self.X, 10, 1706)"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "temp_sprite",
+							"sid": 136276550972978,
+							"parameters": {
+								"y": "clamp(Self.Y, 10, 960)"
+							}
+						}
+					],
+					"sid": 847367948006076
+				}
+			],
+			"sid": 342688466615164
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Character Select",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Scrolling through the avatars"
+				},
+				{
+					"eventType": "comment",
+					"text": "Keeping track of the number of choices"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 410221760476092,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "arrow_right"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 434192203231363,
+							"parameters": {
+								"variable": "currentAvatar",
+								"comparison": 3,
+								"value": "6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 726909581528661,
+							"parameters": {
+								"variable": "currentAvatar",
+								"value": "1"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 474494858006983,
+							"parameters": {
+								"audio-file": "hover Click_Standard_0",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 109082311244684
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 482220159804807,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "arrow_right"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 744813462683995,
+							"parameters": {
+								"variable": "currentAvatar",
+								"comparison": 0,
+								"value": "7"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 836098993572458,
+							"parameters": {
+								"variable": "currentAvatar",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 662795481932684
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 852496300588057,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "arrow_left"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 383376144316473,
+							"parameters": {
+								"variable": "currentAvatar",
+								"comparison": 5,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 300401696012343,
+							"parameters": {
+								"variable": "currentAvatar",
+								"value": "1"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 474494858006983,
+							"parameters": {
+								"audio-file": "hover Click_Standard_0",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 994845946560123
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 652982847389237,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "arrow_left"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 293104005359153,
+							"parameters": {
+								"variable": "currentAvatar",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 966668462277490,
+							"parameters": {
+								"variable": "currentAvatar",
+								"value": "6"
+							}
+						}
+					],
+					"sid": 267558547678058
+				},
+				{
+					"eventType": "comment",
+					"text": "What happens at each value - mainly switching the sprites"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 590342282040501,
+							"parameters": {
+								"variable": "currentAvatar",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "load-image-from-url",
+							"objectClass": "avatar_choice",
+							"sid": 314808226105503,
+							"parameters": {
+								"uri": "\"https://dl.airtable.com/.attachmentThumbnails/d7242a6836ab2a64451bcef130efda5a/93d535c3\"",
+								"size": "keep-current-size",
+								"cross-origin": "anonymous"
+							}
+						},
+						{
+							"id": "load-image-from-url",
+							"objectClass": "profile_avatar",
+							"sid": 944121589454180,
+							"parameters": {
+								"uri": "\"https://dl.airtable.com/.attachmentThumbnails/d7242a6836ab2a64451bcef130efda5a/93d535c3\"",
+								"size": "keep-current-size",
+								"cross-origin": "anonymous"
+							}
+						},
+						{
+							"id": "load-image-from-url",
+							"objectClass": "playerAvatar",
+							"sid": 210891666758623,
+							"parameters": {
+								"uri": "\"https://dl.airtable.com/.attachmentThumbnails/d7242a6836ab2a64451bcef130efda5a/93d535c3\"",
+								"size": "keep-current-size",
+								"cross-origin": "anonymous"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "button_continue",
+							"sid": 180549803277638,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 678340632511063
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 774978685348712,
+							"parameters": {
+								"variable": "currentAvatar",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "load-image-from-url",
+							"objectClass": "avatar_choice",
+							"sid": 962092312402133,
+							"parameters": {
+								"uri": "\"https://dl.airtable.com/.attachmentThumbnails/732fade3e6cfe871548022fec3008b73/567e7f78\"",
+								"size": "keep-current-size",
+								"cross-origin": "anonymous"
+							}
+						},
+						{
+							"id": "load-image-from-url",
+							"objectClass": "profile_avatar",
+							"sid": 755569975396638,
+							"parameters": {
+								"uri": "\"https://dl.airtable.com/.attachmentThumbnails/732fade3e6cfe871548022fec3008b73/567e7f78\"",
+								"size": "keep-current-size",
+								"cross-origin": "anonymous"
+							}
+						},
+						{
+							"id": "load-image-from-url",
+							"objectClass": "playerAvatar",
+							"sid": 782614460984843,
+							"parameters": {
+								"uri": "\"https://dl.airtable.com/.attachmentThumbnails/732fade3e6cfe871548022fec3008b73/567e7f78\"",
+								"size": "keep-current-size",
+								"cross-origin": "anonymous"
+							}
+						}
+					],
+					"sid": 752619419676404
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 681372084365632,
+							"parameters": {
+								"variable": "currentAvatar",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "load-image-from-url",
+							"objectClass": "avatar_choice",
+							"sid": 214206904748608,
+							"parameters": {
+								"uri": "\"https://dl.airtable.com/.attachmentThumbnails/7ba5d3baff9abe15838bd85e455a7892/a5e87b0d\"",
+								"size": "keep-current-size",
+								"cross-origin": "anonymous"
+							}
+						},
+						{
+							"id": "load-image-from-url",
+							"objectClass": "profile_avatar",
+							"sid": 704024755245548,
+							"parameters": {
+								"uri": "\"https://dl.airtable.com/.attachmentThumbnails/7ba5d3baff9abe15838bd85e455a7892/a5e87b0d\"",
+								"size": "keep-current-size",
+								"cross-origin": "anonymous"
+							}
+						},
+						{
+							"id": "load-image-from-url",
+							"objectClass": "playerAvatar",
+							"sid": 920539086603254,
+							"parameters": {
+								"uri": "\"https://dl.airtable.com/.attachmentThumbnails/7ba5d3baff9abe15838bd85e455a7892/a5e87b0d\"",
+								"size": "keep-current-size",
+								"cross-origin": "anonymous"
+							}
+						}
+					],
+					"sid": 284062051103573
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 871406521152685,
+							"parameters": {
+								"variable": "currentAvatar",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "load-image-from-url",
+							"objectClass": "avatar_choice",
+							"sid": 581375951740189,
+							"parameters": {
+								"uri": "\"https://dl.airtable.com/.attachmentThumbnails/52aa357327ff075a9623071afc31d312/f2150a79\"",
+								"size": "keep-current-size",
+								"cross-origin": "anonymous"
+							}
+						},
+						{
+							"id": "load-image-from-url",
+							"objectClass": "profile_avatar",
+							"sid": 890461811000364,
+							"parameters": {
+								"uri": "\"https://dl.airtable.com/.attachmentThumbnails/52aa357327ff075a9623071afc31d312/f2150a79\"",
+								"size": "keep-current-size",
+								"cross-origin": "anonymous"
+							}
+						},
+						{
+							"id": "load-image-from-url",
+							"objectClass": "playerAvatar",
+							"sid": 998767846100466,
+							"parameters": {
+								"uri": "\"https://dl.airtable.com/.attachmentThumbnails/52aa357327ff075a9623071afc31d312/f2150a79\"",
+								"size": "keep-current-size",
+								"cross-origin": "anonymous"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "button_continue",
+							"sid": 848406897975088,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "FileChooser2",
+							"sid": 546633498120780,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "button_upload",
+							"sid": 523773247490177,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 735059827533004
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 419832289602846,
+							"parameters": {
+								"variable": "currentAvatar",
+								"comparison": 0,
+								"value": "5"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 948211465437562,
+							"parameters": {
+								"variable": "uploadCrop"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "load-image-from-url",
+							"objectClass": "avatar_choice",
+							"sid": 151021359836320,
+							"parameters": {
+								"uri": "\"https://dl.airtable.com/.attachmentThumbnails/912ecd52f0042ca3a668004e5eca6a12/a361e8d9\"",
+								"size": "keep-current-size",
+								"cross-origin": "anonymous"
+							}
+						},
+						{
+							"id": "load-image-from-url",
+							"objectClass": "profile_avatar",
+							"sid": 770934852254101,
+							"parameters": {
+								"uri": "\"https://dl.airtable.com/.attachmentThumbnails/912ecd52f0042ca3a668004e5eca6a12/a361e8d9\"",
+								"size": "keep-current-size",
+								"cross-origin": "anonymous"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "FileChooser2",
+							"sid": 731512829427556,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "button_continue",
+							"sid": 447302646640233,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "button_upload",
+							"sid": 469158920959627,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 264878779211515
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 957665457314601,
+							"parameters": {
+								"variable": "currentAvatar",
+								"comparison": 0,
+								"value": "5"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 786294622729337,
+							"parameters": {
+								"variable": "uploadCrop"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "load-image-from-url",
+							"objectClass": "avatar_choice",
+							"sid": 440897072059809,
+							"parameters": {
+								"uri": "DrawingCanvas.SavedImageURL",
+								"size": "keep-current-size",
+								"cross-origin": "anonymous"
+							}
+						},
+						{
+							"id": "load-image-from-url",
+							"objectClass": "profile_avatar",
+							"sid": 872879439176972,
+							"parameters": {
+								"uri": "DrawingCanvas.SavedImageURL",
+								"size": "keep-current-size",
+								"cross-origin": "anonymous"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "FileChooser2",
+							"sid": 499848236948698,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "button_continue",
+							"sid": 485841937699152,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "button_upload",
+							"sid": 685195284013677,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 808802752555773
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 609861352535590,
+							"parameters": {
+								"variable": "currentAvatar",
+								"comparison": 0,
+								"value": "6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "load-image-from-url",
+							"objectClass": "avatar_choice",
+							"sid": 460910075606252,
+							"parameters": {
+								"uri": "\"https://dl.airtable.com/.attachmentThumbnails/148a7f7c70cf636ec61196a833c84e9f/98bfce17\"",
+								"size": "keep-current-size",
+								"cross-origin": "anonymous"
+							}
+						},
+						{
+							"id": "load-image-from-url",
+							"objectClass": "profile_avatar",
+							"sid": 618317339427062,
+							"parameters": {
+								"uri": "\"https://dl.airtable.com/.attachmentThumbnails/148a7f7c70cf636ec61196a833c84e9f/98bfce17\"",
+								"size": "keep-current-size",
+								"cross-origin": "anonymous"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "FileChooser2",
+							"sid": 894157819738393,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "button_upload",
+							"sid": 729742831673962,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 267347999492950
+				}
+			],
+			"sid": 908164704362480
 		}
 	],
 	"sid": 445239924784703

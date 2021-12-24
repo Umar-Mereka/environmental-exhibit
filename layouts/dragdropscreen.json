@@ -4,6 +4,7 @@
 		{
 			"name": "Layer 0",
 			"overriden": 0,
+			"subLayers": [],
 			"instances": [
 				{
 					"type": "bg_level1",
@@ -35,7 +36,7 @@
 					}
 				},
 				{
-					"type": "sampah",
+					"type": "level1_q1_toggle",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -52,8 +53,8 @@
 					"world": {
 						"x": 404,
 						"y": 436,
-						"width": 118.47099678662994,
-						"height": 118.47099678662994,
+						"width": 412.2790688174722,
+						"height": 159.22501968123063,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -61,96 +62,6 @@
 							1,
 							1,
 							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "playerAvatar",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 51,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 175,
-						"y": 385,
-						"width": 168.7817975889642,
-						"height": 168.7817975889642,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 3
-					}
-				}
-			],
-			"sid": 897966701266482,
-			"effectTypes": [],
-			"isInitiallyVisible": true,
-			"color": [
-				1,
-				1,
-				1,
-				1
-			],
-			"backgroundColor": [
-				1,
-				1,
-				1,
-				1
-			],
-			"isTransparent": false,
-			"parallaxX": 1,
-			"parallaxY": 1,
-			"scaleRate": 1,
-			"forceOwnTexture": false,
-			"renderingMode": "3d",
-			"drawOrder": "z-order",
-			"useRenderCells": false,
-			"blendMode": "normal",
-			"zElevation": 0,
-			"global": false
-		},
-		{
-			"name": "Overlay",
-			"overriden": 0,
-			"instances": [
-				{
-					"type": "overlay",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 52,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 14,
-						"y": 544,
-						"width": 885,
-						"height": 557,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							0.5
 						],
 						"angle": 0,
 						"zElevation": 0
@@ -199,7 +110,7 @@
 					}
 				},
 				{
-					"type": "card_dd",
+					"type": "playerAvatar",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -207,16 +118,20 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 57,
-					"instanceVariables": {},
+					"uid": 51,
+					"instanceVariables": {
+						"clickable": 1,
+						"complete": 0,
+						"menu": false
+					},
 					"behaviors": {},
 					"world": {
-						"x": 276,
-						"y": 83,
-						"width": 250,
-						"height": 250,
-						"originX": 0,
-						"originY": 0,
+						"x": 175,
+						"y": 385,
+						"width": 168.7817975889642,
+						"height": 168.7817975889642,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -224,7 +139,7 @@
 							1
 						],
 						"angle": 0,
-						"zElevation": 0
+						"zElevation": 3
 					}
 				},
 				{
@@ -299,6 +214,97 @@
 					}
 				}
 			],
+			"sid": 897966701266482,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": false,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Overlay",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "overlay",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 52,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 14,
+						"y": 544,
+						"width": 885,
+						"height": 557,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							0.5
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "card_dd",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 57,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 276,
+						"y": 83,
+						"width": 250,
+						"height": 250,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
 			"sid": 966145947019634,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
@@ -329,6 +335,7 @@
 		{
 			"name": "Drag Items",
 			"overriden": 0,
+			"subLayers": [],
 			"instances": [
 				{
 					"type": "drop_bin",
@@ -464,6 +471,50 @@
 						"y": 128.90145737014024,
 						"width": 59.37091385344502,
 						"height": 30.629638002849987,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "drag_mask2",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 64,
+					"instanceVariables": {},
+					"behaviors": {
+						"DragDrop": {
+							"properties": {
+								"axes": "both",
+								"enabled": true
+							}
+						},
+						"LineOfSight": {
+							"properties": {
+								"obstacles": "solids",
+								"range": 10000,
+								"cone-of-view": 360,
+								"use-collision-cells": true
+							}
+						}
+					},
+					"world": {
+						"x": 366.0153075346748,
+						"y": 318.5028350557742,
+						"width": 72.03594950128961,
+						"height": 42.055669940059246,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

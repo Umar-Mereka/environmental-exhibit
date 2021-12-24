@@ -9,6 +9,12 @@
 			"type": "number",
 			"desc": "is it the answer?",
 			"sid": 169659945461678
+		},
+		{
+			"name": "clickable",
+			"type": "number",
+			"desc": "",
+			"sid": 602930511831268
 		}
 	],
 	"behaviorTypes": [],

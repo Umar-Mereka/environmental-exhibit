@@ -1,0 +1,121 @@
+{
+	"name": "card_question",
+	"plugin-id": "Sprite",
+	"sid": 618113157692541,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "text_box",
+			"type": "boolean",
+			"desc": "",
+			"sid": 973079614583722
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 596,
+						"height": 446,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1841368,
+						"collisionPoly": {
+							"points": [
+								0.015100671140939598,
+								0.020179372197309416,
+								0.5,
+								0,
+								0.9832214765100671,
+								0.020179372197309416,
+								0.9983221476510067,
+								0.5,
+								0.9832214765100671,
+								0.9775784753363229,
+								0.5,
+								0.9955156950672646,
+								0.015100671140939598,
+								0.9775784753363229,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "timer",
+								"x": 0.24,
+								"y": 0.16
+							},
+							{
+								"name": "Q",
+								"x": 0.08389261744966443,
+								"y": 0.26905829596412556
+							},
+							{
+								"name": "ans1",
+								"x": 0.08389261744966443,
+								"y": 0.672645739910314
+							},
+							{
+								"name": "ans2",
+								"x": 0.08389261744966443,
+								"y": 0.7847533632286996
+							},
+							{
+								"name": "post_stat",
+								"x": 0.5,
+								"y": 0.15695067264573992
+							},
+							{
+								"name": "post_ans",
+								"x": 0.5,
+								"y": 0.31390134529147984
+							},
+							{
+								"name": "post_explanation",
+								"x": 0.5,
+								"y": 0.4484304932735426
+							},
+							{
+								"name": "post_extra_title",
+								"x": 0.5,
+								"y": 0.672645739910314
+							},
+							{
+								"name": "post_trivia",
+								"x": 0.5,
+								"y": 0.7847533632286996
+							},
+							{
+								"name": "post_button",
+								"x": 0.33557046979865773,
+								"y": 0.8968609865470852
+							},
+							{
+								"name": "post_pointz",
+								"x": 0,
+								"y": 0.31390134529147984
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 653334556900269,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

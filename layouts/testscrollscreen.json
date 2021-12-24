@@ -4,6 +4,7 @@
 		{
 			"name": "Layer 0",
 			"overriden": 0,
+			"subLayers": [],
 			"instances": [
 				{
 					"type": "Sprite5",
@@ -223,6 +224,7 @@
 		{
 			"name": "Objects",
 			"overriden": 0,
+			"subLayers": [],
 			"instances": [],
 			"sid": 563379255479585,
 			"effectTypes": [],

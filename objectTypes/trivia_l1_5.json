@@ -1,0 +1,57 @@
+{
+	"name": "trivia_l1_5",
+	"plugin-id": "Sprite",
+	"sid": 605171492520309,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "clickable",
+			"type": "number",
+			"desc": "",
+			"sid": 162249539751153
+		},
+		{
+			"name": "complete",
+			"type": "number",
+			"desc": "",
+			"sid": 779799186871999
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3367922,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 0.5,
+								"y": -0.08
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 699620707604295,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 26800,
+	"savedWithRelease": 27602,
 	"name": "Test",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -11,7 +11,7 @@
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
-			"version": "r268",
+			"version": "r276.2",
 			"bundled": false
 		},
 		{
@@ -19,7 +19,7 @@
 			"id": "Audio",
 			"name": "Audio",
 			"author": "Scirra",
-			"version": "r268",
+			"version": "r276.2",
 			"bundled": false
 		},
 		{
@@ -27,7 +27,7 @@
 			"id": "TiledBg",
 			"name": "Tiled Background",
 			"author": "Scirra",
-			"version": "r268",
+			"version": "r276.2",
 			"bundled": false
 		},
 		{
@@ -35,7 +35,7 @@
 			"id": "Mouse",
 			"name": "Mouse",
 			"author": "Scirra",
-			"version": "r268",
+			"version": "r276.2",
 			"bundled": false
 		},
 		{
@@ -43,7 +43,7 @@
 			"id": "Text",
 			"name": "Text",
 			"author": "Scirra",
-			"version": "r268",
+			"version": "r276.2",
 			"bundled": false
 		},
 		{
@@ -51,7 +51,7 @@
 			"id": "Button",
 			"name": "Button",
 			"author": "Scirra",
-			"version": "r268",
+			"version": "r276.2",
 			"bundled": false
 		},
 		{
@@ -59,18 +59,15 @@
 			"id": "video",
 			"name": "Video",
 			"author": "Scirra",
-			"version": "r268",
+			"version": "r276.2",
 			"bundled": false
 		},
 		{
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 			"type": "plugin",
 			"id": "progressbar",
 			"name": "Progress bar",
 			"author": "Scirra",
-			"version": "r268",
+			"version": "r276.2",
 			"bundled": false
 		},
 		{
@@ -78,7 +75,7 @@
 			"id": "filechooser",
 			"name": "File chooser",
 			"author": "Scirra",
-			"version": "r268",
+			"version": "r276.2",
 			"bundled": false
 		},
 		{
@@ -86,7 +83,7 @@
 			"id": "UserMedia",
 			"name": "User Media",
 			"author": "Scirra",
-			"version": "r268",
+			"version": "r276.2",
 			"bundled": false
 		},
 		{
@@ -94,7 +91,7 @@
 			"id": "Twitter",
 			"name": "Twitter",
 			"author": "Scirra",
-			"version": "r268",
+			"version": "r276.2",
 			"bundled": false
 		},
 		{
@@ -102,31 +99,23 @@
 			"id": "DrawingCanvas",
 			"name": "Drawing canvas",
 			"author": "Scirra",
-			"version": "r268",
+			"version": "r276.2",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "TextBox",
 			"name": "Text input",
-			"id": "Touch",
-			"name": "Touch",
 			"author": "Scirra",
-			"version": "r268",
+			"version": "r276.2",
 			"bundled": false
 		},
 		{
-=======
->>>>>>> parent of b4042d4 (lots of updates)
-=======
->>>>>>> parent of b4042d4 (lots of updates)
-=======
->>>>>>> parent of b4042d4 (lots of updates)
 			"type": "behavior",
 			"id": "DragnDrop",
 			"name": "Drag & Drop",
 			"author": "Scirra",
-			"version": "r268",
+			"version": "r276.2",
 			"bundled": false
 		},
 		{
@@ -134,31 +123,23 @@
 			"id": "LOS",
 			"name": "Line of sight",
 			"author": "Scirra",
-			"version": "r268",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "Tween",
-			"name": "Tween",
-			"author": "Scirra",
-			"version": "r268",
+			"version": "r276.2",
 			"bundled": false
 		}
 	],
 	"uniqueId": "71p28mlynva",
 	"objectTypes": {
 		"items": [
-			"Sprite",
+			"bg_studio",
 			"Audio",
 			"TiledBackground",
-			"Sprite2",
+			"bg_game_over",
 			"Sprite3",
 			"Mouse",
 			"Text",
 			"bg_level1",
-			"sampah",
-			"question_box",
+			"level1_q1_toggle",
+			"card_question",
 			"text_question",
 			"answer_box",
 			"text_ans1",
@@ -167,10 +148,9 @@
 			"text_score",
 			"questiontimechecker",
 			"text_timer",
-			"sampah2",
+			"level1_q2_toggle",
 			"exit_button",
 			"menu_button",
-			"Sprite4",
 			"avatar2",
 			"playerAvatar",
 			"continue_button",
@@ -180,11 +160,11 @@
 			"avatar4",
 			"overlay",
 			"tip_box",
-			"home_button",
+			"button_home",
 			"settings_button",
 			"instructions_button",
 			"drag_sampah_toggle",
-			"bg_pvs",
+			"bg_basic",
 			"card_video",
 			"Video",
 			"button_play_video",
@@ -193,15 +173,12 @@
 			"scroll_right",
 			"scroll_left",
 			"x_value",
-			"Button_continue",
+			"button_continue",
 			"test_sampah",
 			"Sprite5",
 			"card_dd",
 			"drop_bin",
 			"drag_mask1",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 			"drag_styrofoam",
 			"drag_mask2",
 			"ProgressBar",
@@ -255,18 +232,46 @@
 			"quiz5_a3",
 			"quiz5_a4",
 			"quiz5_a5",
-			"text_username"
-			"settingsTest",
-			"Touch"
-=======
-			"drag_styrofoam"
->>>>>>> parent of b4042d4 (lots of updates)
-=======
-			"drag_styrofoam"
->>>>>>> parent of b4042d4 (lots of updates)
-=======
-			"drag_styrofoam"
->>>>>>> parent of b4042d4 (lots of updates)
+			"text_username",
+			"trivia_l1_1",
+			"card_trivia",
+			"text_trivia_title",
+			"text_trivia",
+			"trivia_close",
+			"trivia_l1_2",
+			"text_post_stat",
+			"text_post_ans",
+			"text_post_explanation",
+			"text_post_title",
+			"text_post_trivia",
+			"button_post_answer",
+			"post_points",
+			"text_post_points",
+			"trivia_l1_4",
+			"trivia_l1_3",
+			"trivia_l1_5",
+			"level1_q5_toggle",
+			"level1_q6_toggle",
+			"menu_lvl1",
+			"menu_progress1",
+			"menu_lvl2",
+			"menu_lvl3",
+			"button_settings",
+			"card_profile_hub",
+			"card_profile",
+			"profile_close",
+			"text_profile_user",
+			"profile_avatar",
+			"card_badge",
+			"text_badge",
+			"text_badge_explanation",
+			"text_score_right",
+			"sound_trigger",
+			"sound_l1_station",
+			"sound_l1_market",
+			"sound_l1_river",
+			"Sprite",
+			"text_score_highest"
 		],
 		"subfolders": []
 	},
@@ -274,36 +279,50 @@
 	"containers": [
 		{
 			"members": [
-				"question_box",
-				"text_question"
-			],
-			"selectMode": "all"
-		},
-		{
-			"members": [
 				"bg_scroll",
 				"test_sampah"
 			],
 			"selectMode": "normal"
+		},
+		{
+			"members": [
+				"bar_bg",
+				"bar_icon",
+				"bar_progress"
+			],
+			"selectMode": "all"
 		}
 	],
 	"families": {
-		"items": [],
+		"items": [
+			"timerBar"
+		],
 		"subfolders": []
 	},
 	"layouts": {
 		"items": [
 			"StudioScreen",
 			"MenuScreen",
-			"GameOverScreen",
 			"Level1Screen",
 			"CharacterSelectScreen",
 			"PlayVideoScreen",
-			"TestScrollScreen",
-			"DragDropScreen",
-			"UITestScreen"
+			"Level2Screen"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"TestScrollScreen",
+					"DragDropScreen",
+					"UITestScreen",
+					"GameOverScreen",
+					"TimerBarTestScreen",
+					"VideoCaptureScreen",
+					"QuizScreen"
+				],
+				"subfolders": [],
+				"name": "Tests"
+			}
+		]
 	},
 	"eventSheets": {
 		"items": [
@@ -315,23 +334,11 @@
 			"PVS_ES",
 			"TSS_ES",
 			"DDS_ES",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 			"UIT_ES",
 			"TBTS_ES",
 			"VCS_ES",
-			"QS_ES"
-			"Event sheet 1"
-=======
-			"UIT_ES"
->>>>>>> parent of b4042d4 (lots of updates)
-=======
-			"UIT_ES"
->>>>>>> parent of b4042d4 (lots of updates)
-=======
-			"UIT_ES"
->>>>>>> parent of b4042d4 (lots of updates)
+			"QS_ES",
+			"L2_ES"
 		],
 		"subfolders": []
 	},
@@ -356,6 +363,31 @@
 					"name": "bg_city2.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 722527197658331
+				},
+				{
+					"name": "Click_Soft_00.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 891193407602879
+				},
+				{
+					"name": "Click_Standard_05.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 694861884562907
+				},
+				{
+					"name": "Click_Standard_03.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 933751370128207
+				},
+				{
+					"name": "mixkit-atmosphere-of-a-river-at-sunrise-2458.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 794368720047766
+				},
+				{
+					"name": "mixkit-very-crowded-pub-or-party-loop-360.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 522865365527024
 				}
 			],
 			"subfolders": []
@@ -457,19 +489,7 @@
 		},
 		"general": {
 			"items": [],
-			"subfolders": [
-				{
-					"items": [],
-					"subfolders": [
-						{
-							"items": [],
-							"subfolders": [],
-							"name": "Buttons"
-						}
-					],
-					"name": "Design Stuffs"
-				}
-			]
+			"subfolders": []
 		}
 	},
 	"timelines": {
@@ -515,6 +535,7 @@
 			0
 		],
 		"orientations": "landscape",
+		"webgpu": "auto",
 		"gpuPreference": "high-performance",
 		"scriptsType": "module",
 		"framerateMode": "vsync",
@@ -531,5 +552,5 @@
 	},
 	"viewportWidth": 854,
 	"viewportHeight": 480,
-	"firstLayout": null
+	"firstLayout": "StudioScreen"
 }

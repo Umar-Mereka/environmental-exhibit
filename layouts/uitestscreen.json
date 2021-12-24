@@ -4,46 +4,8 @@
 		{
 			"name": "Layer 0",
 			"overriden": 0,
-			"instances": [
-				{
-					"type": "settingsTest",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 68,
-					"instanceVariables": {
-						"SizeX": 0,
-						"SizeY": 0
-					},
-					"behaviors": {
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"world": {
-						"x": 578,
-						"y": 224,
-						"width": 74.15847549011914,
-						"height": 30.198554452161915,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				}
-			],
+			"subLayers": [],
+			"instances": [],
 			"sid": 990427091563792,
 			"effectTypes": [],
 			"isInitiallyVisible": true,

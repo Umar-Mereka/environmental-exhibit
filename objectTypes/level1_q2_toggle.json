@@ -1,0 +1,70 @@
+{
+	"name": "level1_q2_toggle",
+	"plugin-id": "Sprite",
+	"sid": 211735855158136,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "clickable",
+			"type": "number",
+			"desc": "",
+			"sid": 303404752290321
+		},
+		{
+			"name": "complete",
+			"type": "number",
+			"desc": "",
+			"sid": 546524813685355
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 215,
+						"height": 140,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 558134,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.5,
+								0,
+								1,
+								0,
+								1,
+								0.5,
+								1,
+								1,
+								0.502604289517194,
+								1,
+								0,
+								1,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 687521914465961,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
