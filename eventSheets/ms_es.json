@@ -7,11 +7,11 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
-					"sid": 682365509740893,
+					"sid": 176860711943015,
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "button_continue"
+						"object-clicked": "Sprite"
 					}
 				}
 			],
@@ -53,9 +53,113 @@
 						"object": "score_box",
 						"image-point-optional": "0"
 					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "overlay",
+					"sid": 697093458898656,
+					"parameters": {
+						"x": "0",
+						"y": "0"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "text_username",
+					"sid": 711525237898486,
+					"parameters": {
+						"text": "user_name"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "text_profile_user",
+					"sid": 308559476331011,
+					"parameters": {
+						"text": "user_name"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "text_score",
+					"sid": 908139723426842,
+					"parameters": {
+						"text": "score_tally"
+					}
 				}
 			],
 			"sid": 915168639452153
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 792719341508489,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "playerAvatar"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "playerAvatar",
+					"sid": 944472929255344,
+					"parameters": {
+						"instance-variable": "clickable",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "OpenProfile",
+					"sid": 207471174464444
+				}
+			],
+			"sid": 201289658023811
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 663284341095802,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "profile_close"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "CloseProfile",
+					"sid": 537341230641121
+				}
+			],
+			"sid": 217302298666923
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 627239567622040
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "BadgeTracker",
+					"sid": 413802133689104
+				}
+			],
+			"sid": 224002765642243
 		}
 	],
 	"sid": 225017219049683

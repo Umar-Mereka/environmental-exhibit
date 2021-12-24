@@ -198,9 +198,9 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 846858033802338,
+					"sid": 548072593366262,
 					"parameters": {
-						"layout": "Level1Screen"
+						"layout": "MenuScreen"
 					}
 				}
 			],
@@ -236,9 +236,9 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 457920291808493,
+					"sid": 588979627178636,
 					"parameters": {
-						"layout": "Level1Screen"
+						"layout": "MenuScreen"
 					}
 				}
 			],
@@ -768,6 +768,16 @@
 						},
 						{
 							"id": "load-image-from-url",
+							"objectClass": "profile_avatar",
+							"sid": 944121589454180,
+							"parameters": {
+								"uri": "\"https://dl.airtable.com/.attachmentThumbnails/d7242a6836ab2a64451bcef130efda5a/93d535c3\"",
+								"size": "keep-current-size",
+								"cross-origin": "anonymous"
+							}
+						},
+						{
+							"id": "load-image-from-url",
 							"objectClass": "playerAvatar",
 							"sid": 210891666758623,
 							"parameters": {
@@ -814,6 +824,16 @@
 						},
 						{
 							"id": "load-image-from-url",
+							"objectClass": "profile_avatar",
+							"sid": 755569975396638,
+							"parameters": {
+								"uri": "\"https://dl.airtable.com/.attachmentThumbnails/732fade3e6cfe871548022fec3008b73/567e7f78\"",
+								"size": "keep-current-size",
+								"cross-origin": "anonymous"
+							}
+						},
+						{
+							"id": "load-image-from-url",
 							"objectClass": "playerAvatar",
 							"sid": 782614460984843,
 							"parameters": {
@@ -852,6 +872,16 @@
 						},
 						{
 							"id": "load-image-from-url",
+							"objectClass": "profile_avatar",
+							"sid": 704024755245548,
+							"parameters": {
+								"uri": "\"https://dl.airtable.com/.attachmentThumbnails/7ba5d3baff9abe15838bd85e455a7892/a5e87b0d\"",
+								"size": "keep-current-size",
+								"cross-origin": "anonymous"
+							}
+						},
+						{
+							"id": "load-image-from-url",
 							"objectClass": "playerAvatar",
 							"sid": 920539086603254,
 							"parameters": {
@@ -882,6 +912,16 @@
 							"id": "load-image-from-url",
 							"objectClass": "avatar_choice",
 							"sid": 581375951740189,
+							"parameters": {
+								"uri": "\"https://dl.airtable.com/.attachmentThumbnails/52aa357327ff075a9623071afc31d312/f2150a79\"",
+								"size": "keep-current-size",
+								"cross-origin": "anonymous"
+							}
+						},
+						{
+							"id": "load-image-from-url",
+							"objectClass": "profile_avatar",
+							"sid": 890461811000364,
 							"parameters": {
 								"uri": "\"https://dl.airtable.com/.attachmentThumbnails/52aa357327ff075a9623071afc31d312/f2150a79\"",
 								"size": "keep-current-size",
@@ -960,6 +1000,16 @@
 							}
 						},
 						{
+							"id": "load-image-from-url",
+							"objectClass": "profile_avatar",
+							"sid": 770934852254101,
+							"parameters": {
+								"uri": "\"https://dl.airtable.com/.attachmentThumbnails/912ecd52f0042ca3a668004e5eca6a12/a361e8d9\"",
+								"size": "keep-current-size",
+								"cross-origin": "anonymous"
+							}
+						},
+						{
 							"id": "set-visible",
 							"objectClass": "FileChooser2",
 							"sid": 731512829427556,
@@ -1020,6 +1070,16 @@
 							}
 						},
 						{
+							"id": "load-image-from-url",
+							"objectClass": "profile_avatar",
+							"sid": 872879439176972,
+							"parameters": {
+								"uri": "DrawingCanvas.SavedImageURL",
+								"size": "keep-current-size",
+								"cross-origin": "anonymous"
+							}
+						},
+						{
 							"id": "set-visible",
 							"objectClass": "FileChooser2",
 							"sid": 499848236948698,
@@ -1065,6 +1125,16 @@
 							"id": "load-image-from-url",
 							"objectClass": "avatar_choice",
 							"sid": 460910075606252,
+							"parameters": {
+								"uri": "\"https://dl.airtable.com/.attachmentThumbnails/148a7f7c70cf636ec61196a833c84e9f/98bfce17\"",
+								"size": "keep-current-size",
+								"cross-origin": "anonymous"
+							}
+						},
+						{
+							"id": "load-image-from-url",
+							"objectClass": "profile_avatar",
+							"sid": 618317339427062,
 							"parameters": {
 								"uri": "\"https://dl.airtable.com/.attachmentThumbnails/148a7f7c70cf636ec61196a833c84e9f/98bfce17\"",
 								"size": "keep-current-size",

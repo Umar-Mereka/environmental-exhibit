@@ -1,28 +1,9 @@
 {
-	"name": "playerAvatar",
+	"name": "sound_l1_river",
 	"plugin-id": "Sprite",
-	"sid": 423676697719637,
+	"sid": 237153853716587,
 	"isGlobal": false,
-	"instanceVariables": [
-		{
-			"name": "clickable",
-			"type": "number",
-			"desc": "",
-			"sid": 672133425784267
-		},
-		{
-			"name": "complete",
-			"type": "number",
-			"desc": "",
-			"sid": 342249598835057
-		},
-		{
-			"name": "menu",
-			"type": "boolean",
-			"desc": "",
-			"sid": 483642399320458
-		}
-	],
+	"instanceVariables": [],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
@@ -37,12 +18,12 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 1312694,
+						"imageSpriteId": 305646,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 286446946678006,
+				"sid": 259561448604343,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

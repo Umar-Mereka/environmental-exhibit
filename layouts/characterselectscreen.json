@@ -78,7 +78,11 @@
 						"live-preview": false
 					},
 					"uid": 25,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"clickable": 1,
+						"complete": 0,
+						"menu": false
+					},
 					"behaviors": {},
 					"world": {
 						"x": 234,
@@ -559,6 +563,35 @@
 							1,
 							1
 						]
+					}
+				},
+				{
+					"type": "profile_avatar",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 168,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 422,
+						"y": 667,
+						"width": 36,
+						"height": 36,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
 					}
 				}
 			],

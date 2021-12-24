@@ -22,6 +22,56 @@
 			"sid": 495293551341430
 		},
 		{
+			"eventType": "variable",
+			"name": "score_right",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 937595828731534
+		},
+		{
+			"eventType": "variable",
+			"name": "score_previous",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 269878186104527
+		},
+		{
+			"eventType": "variable",
+			"name": "score_highest",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 769315482354507
+		},
+		{
+			"eventType": "variable",
+			"name": "user_badge",
+			"type": "string",
+			"initialValue": "baby",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 105768711642886
+		},
+		{
+			"eventType": "variable",
+			"name": "user_badge_explain",
+			"type": "string",
+			"initialValue": "baby",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 833042403690778
+		},
+		{
 			"eventType": "comment",
 			"text": "<---->",
 			"background-color": [
@@ -202,6 +252,56 @@
 			]
 		},
 		{
+			"eventType": "variable",
+			"name": "pause_time",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 301989160467225
+		},
+		{
+			"eventType": "variable",
+			"name": "sound1_start",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 347009295038507
+		},
+		{
+			"eventType": "variable",
+			"name": "sound2_start",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 860690102876909
+		},
+		{
+			"eventType": "variable",
+			"name": "sound3_start",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 212836920606197
+		},
+		{
+			"eventType": "comment",
+			"text": "<---->",
+			"background-color": [
+				0,
+				0,
+				0,
+				0
+			]
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -277,6 +377,16 @@
 						"variable": "current_question",
 						"value": "1"
 					}
+				},
+				{
+					"type": "comment",
+					"text": "temp",
+					"background-color": [
+						0.26666666666666666,
+						0.7725490196078432,
+						0.3686274509803922,
+						1
+					]
 				},
 				{
 					"id": "set-eventvar-value",
@@ -364,6 +474,7 @@
 					"id": "play",
 					"objectClass": "Audio",
 					"sid": 908858052718041,
+					"disabled": true,
 					"parameters": {
 						"audio-file": "ragtime-piano-scott-joplin-the-entertainer-1902",
 						"loop": "looping",
@@ -375,6 +486,7 @@
 					"id": "play",
 					"objectClass": "Audio",
 					"sid": 289724831800140,
+					"disabled": true,
 					"parameters": {
 						"audio-file": "bg_city1",
 						"loop": "looping",
@@ -386,6 +498,7 @@
 					"id": "play",
 					"objectClass": "Audio",
 					"sid": 689975686326688,
+					"disabled": true,
 					"parameters": {
 						"audio-file": "bg_city2",
 						"loop": "not-looping",
@@ -517,6 +630,15 @@
 					"isInverted": true
 				},
 				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 168933395258177,
+					"parameters": {
+						"variable": "pause_time"
+					},
+					"isInverted": true
+				},
+				{
 					"id": "compare-x",
 					"objectClass": "bg_level1",
 					"sid": 577800435899373,
@@ -535,6 +657,30 @@
 					"id": "set-x",
 					"objectClass": "bg_level1",
 					"sid": 962698116302826,
+					"parameters": {
+						"x": "self.x - (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "sound_l1_market",
+					"sid": 631188649817975,
+					"parameters": {
+						"x": "self.x - (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "sound_l1_river",
+					"sid": 824188322259418,
+					"parameters": {
+						"x": "self.x - (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "sound_l1_station",
+					"sid": 738545308070398,
 					"parameters": {
 						"x": "self.x - (scroll_speed * dt)"
 					}
@@ -700,6 +846,15 @@
 					"isInverted": true
 				},
 				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 776545811989272,
+					"parameters": {
+						"variable": "pause_time"
+					},
+					"isInverted": true
+				},
+				{
 					"id": "compare-x",
 					"objectClass": "bg_level1",
 					"sid": 224586621843063,
@@ -714,6 +869,30 @@
 					"id": "set-x",
 					"objectClass": "bg_level1",
 					"sid": 701278079190954,
+					"parameters": {
+						"x": "Self.X + (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "sound_l1_market",
+					"sid": 690405356412557,
+					"parameters": {
+						"x": "Self.X + (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "sound_l1_river",
+					"sid": 626131203111467,
+					"parameters": {
+						"x": "Self.X + (scroll_speed * dt)"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "sound_l1_station",
+					"sid": 707292169080582,
 					"parameters": {
 						"x": "Self.X + (scroll_speed * dt)"
 					}
@@ -869,6 +1048,14 @@
 			],
 			"actions": [
 				{
+					"callFunction": "DisableTrivia",
+					"sid": 835864254041676
+				},
+				{
+					"callFunction": "DisableItemClick",
+					"sid": 263786453451513
+				},
+				{
 					"id": "set-visible",
 					"objectClass": "button_continue",
 					"sid": 294079300076319,
@@ -883,6 +1070,63 @@
 					"parameters": {
 						"x": "100",
 						"y": "100"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "playerAvatar",
+					"sid": 641882834068946,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "score_box",
+					"sid": 682706426524581,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "text_score",
+					"sid": 819220214536486,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "text_username",
+					"sid": 863118883193682,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "text_score_right",
+					"sid": 611570071319725,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "overlay",
+					"sid": 252399143194342,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 991648273977883,
+					"parameters": {
+						"variable": "pause_time",
+						"value": "true"
 					}
 				}
 			],
@@ -906,9 +1150,9 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 663935502669308,
+					"sid": 924892079955254,
 					"parameters": {
-						"layout": "DragDropScreen"
+						"layout": "MenuScreen"
 					}
 				}
 			],
@@ -1079,6 +1323,16 @@
 						"comparison": 0,
 						"value": "1"
 					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "text_ans1",
+					"sid": 676806962906195,
+					"parameters": {
+						"instance-variable": "clickable",
+						"comparison": 0,
+						"value": "1"
+					}
 				}
 			],
 			"actions": [
@@ -1097,6 +1351,15 @@
 					"parameters": [
 						"10"
 					]
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 367486334567554,
+					"parameters": {
+						"variable": "score_right",
+						"value": "1"
+					}
 				}
 			],
 			"sid": 121386603954152,
@@ -1295,6 +1558,16 @@
 						"comparison": 0,
 						"value": "1"
 					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "text_ans2",
+					"sid": 521453218702371,
+					"parameters": {
+						"instance-variable": "clickable",
+						"comparison": 0,
+						"value": "1"
+					}
 				}
 			],
 			"actions": [
@@ -1313,6 +1586,15 @@
 					"parameters": [
 						"10"
 					]
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 147702480497556,
+					"parameters": {
+						"variable": "score_right",
+						"value": "1"
+					}
 				}
 			],
 			"sid": 837231625644111,
@@ -1514,6 +1796,16 @@
 						"instance-variable": "isAnswer",
 						"comparison": 0,
 						"value": "0"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "text_ans1",
+					"sid": 388050747256652,
+					"parameters": {
+						"instance-variable": "clickable",
+						"comparison": 0,
+						"value": "1"
 					}
 				}
 			],
@@ -1786,6 +2078,16 @@
 						"comparison": 0,
 						"value": "0"
 					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "text_ans1",
+					"sid": 796625249358919,
+					"parameters": {
+						"instance-variable": "clickable",
+						"comparison": 0,
+						"value": "1"
+					}
 				}
 			],
 			"actions": [
@@ -2054,6 +2356,14 @@
 					"parameters": {
 						"text": "timer"
 					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "text_score_right",
+					"sid": 777572966125249,
+					"parameters": {
+						"text": "\"You contributed by doing \" & score_right & \"/8 sustainable efforts\""
+					}
 				}
 			],
 			"sid": 265396669227737
@@ -2107,6 +2417,10 @@
 				{
 					"callFunction": "DisableItemClick",
 					"sid": 542062537536459
+				},
+				{
+					"callFunction": "DisableTrivia",
+					"sid": 613251352014689
 				},
 				{
 					"id": "set-instvar-value",
@@ -2232,6 +2546,10 @@
 					"sid": 555584407280620
 				},
 				{
+					"callFunction": "DisableTrivia",
+					"sid": 688436050387065
+				},
+				{
 					"id": "set-instvar-value",
 					"objectClass": "level1_q2_toggle",
 					"sid": 957121974609480,
@@ -2353,6 +2671,10 @@
 				{
 					"callFunction": "DisableItemClick",
 					"sid": 804186374385801
+				},
+				{
+					"callFunction": "DisableTrivia",
+					"sid": 792410575304915
 				},
 				{
 					"id": "set-instvar-value",
@@ -2478,6 +2800,10 @@
 					"sid": 957617708967692
 				},
 				{
+					"callFunction": "DisableTrivia",
+					"sid": 602248023684013
+				},
+				{
 					"id": "set-visible",
 					"objectClass": "level1_q4_toggle",
 					"sid": 607908251775802,
@@ -2590,6 +2916,10 @@
 				{
 					"callFunction": "DisableItemClick",
 					"sid": 852542536357542
+				},
+				{
+					"callFunction": "DisableTrivia",
+					"sid": 779820598873006
 				},
 				{
 					"id": "set-visible",
@@ -2706,6 +3036,10 @@
 					"sid": 131653158850989
 				},
 				{
+					"callFunction": "DisableTrivia",
+					"sid": 332649813246470
+				},
+				{
 					"id": "set-visible",
 					"objectClass": "level1_q6_toggle",
 					"sid": 367547880105645,
@@ -2786,6 +3120,10 @@
 				{
 					"callFunction": "EnableItemClick",
 					"sid": 516908472819233
+				},
+				{
+					"callFunction": "ResetTrivia",
+					"sid": 809080775371260
 				}
 			],
 			"sid": 949975378285569
@@ -3260,6 +3598,102 @@
 						}
 					],
 					"sid": 998704778444303
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "trivia_l1_3",
+							"sid": 678272168849450,
+							"parameters": {
+								"instance-variable": "clickable",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "trivia_l1_3",
+							"sid": 224032747479541,
+							"parameters": {
+								"instance-variable": "complete",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "ResetTrivia",
+							"sid": 859048073578718
+						}
+					],
+					"sid": 487064554915790
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "trivia_l1_4",
+							"sid": 959522154920265,
+							"parameters": {
+								"instance-variable": "clickable",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "trivia_l1_4",
+							"sid": 925859802690510,
+							"parameters": {
+								"instance-variable": "complete",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "ResetTrivia",
+							"sid": 945810731260216
+						}
+					],
+					"sid": 117032866965519
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "trivia_l1_5",
+							"sid": 499645652679247,
+							"parameters": {
+								"instance-variable": "clickable",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "trivia_l1_5",
+							"sid": 993673752292135,
+							"parameters": {
+								"instance-variable": "complete",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "ResetTrivia",
+							"sid": 586873382511421
+						}
+					],
+					"sid": 462713113136364
 				}
 			]
 		},
@@ -3755,9 +4189,130 @@
 						"instance-variable": "complete",
 						"value": "0"
 					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_5",
+					"sid": 622238881319667,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_5",
+					"sid": 252030929163580,
+					"parameters": {
+						"instance-variable": "complete",
+						"value": "0"
+					}
 				}
 			],
 			"sid": 143537714389608
+		},
+		{
+			"functionName": "DisableTrivia",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_1",
+					"sid": 648763134679360,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_1",
+					"sid": 606348959328482,
+					"parameters": {
+						"instance-variable": "complete",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_2",
+					"sid": 527491916725587,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_2",
+					"sid": 264076042488269,
+					"parameters": {
+						"instance-variable": "complete",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_3",
+					"sid": 935945746413533,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_3",
+					"sid": 386739222154857,
+					"parameters": {
+						"instance-variable": "complete",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_4",
+					"sid": 586059067031105,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_4",
+					"sid": 567155366623736,
+					"parameters": {
+						"instance-variable": "complete",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_5",
+					"sid": 656205469194304,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "trivia_l1_5",
+					"sid": 593126965169209,
+					"parameters": {
+						"instance-variable": "complete",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 832188057194237
 		},
 		{
 			"functionName": "CloseTrivia",
@@ -4106,6 +4661,15 @@
 				{
 					"id": "set-instvar-value",
 					"objectClass": "text_ans1",
+					"sid": 222106524634558,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "text_ans1",
 					"sid": 946303482153259,
 					"parameters": {
 						"instance-variable": "isAnswer",
@@ -4118,6 +4682,15 @@
 					"sid": 513814043760490,
 					"parameters": {
 						"text": "textAns1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "text_ans2",
+					"sid": 169835477831535,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "1"
 					}
 				},
 				{
@@ -4162,6 +4735,24 @@
 			"eventType": "function-block",
 			"conditions": [],
 			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "text_ans1",
+					"sid": 236657403719254,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "text_ans2",
+					"sid": 596327691123180,
+					"parameters": {
+						"instance-variable": "clickable",
+						"value": "0"
+					}
+				},
 				{
 					"id": "set-visible",
 					"objectClass": "text_question",
@@ -4512,12 +5103,720 @@
 			"sid": 576118853360180
 		},
 		{
+			"eventType": "comment",
+			"text": "Keeping Track of the user level/badges"
+		},
+		{
+			"functionName": "BadgeTrackerTracker",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "title",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 882909899304531
+				},
+				{
+					"name": "desc",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 693355566076077
+				},
+				{
+					"name": "value",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 232244703936406
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 444565881545074,
+					"parameters": {
+						"variable": "score_tally",
+						"comparison": 3,
+						"value": "value"
+					}
+				},
+				{
+					"id": "for",
+					"objectClass": "System",
+					"sid": 575969605506252,
+					"parameters": {
+						"name": "\"\"",
+						"start-index": "50",
+						"end-index": "100"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 779637763145770
+		},
+		{
+			"functionName": "BadgeTracker",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "text_badge",
+					"sid": 345850024034231,
+					"parameters": {
+						"text": "user_badge"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "text_badge_explanation",
+					"sid": 504887425739440,
+					"parameters": {
+						"text": "user_badge_explain"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 872000895103283,
+					"parameters": {
+						"variable": "score_previous",
+						"value": "100"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 659967612327028,
+					"parameters": {
+						"variable": "score_highest",
+						"value": "100"
+					}
+				}
+			],
+			"sid": 444722164547685,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 366000937682435,
+							"parameters": {
+								"variable": "score_tally",
+								"comparison": 3,
+								"value": "100"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 643521266327728,
+							"parameters": {
+								"variable": "user_badge",
+								"value": "\"let die the woman you love\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 244717411721983,
+							"parameters": {
+								"variable": "user_badge_explain",
+								"value": "\"This means you try to be sustainable but only when you remember. To improve you should etc  \""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 236211876338248,
+							"parameters": {
+								"variable": "score_previous",
+								"value": "100"
+							}
+						}
+					],
+					"sid": 739809359396971
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 369004257622675,
+							"parameters": {
+								"variable": "score_tally",
+								"comparison": 3,
+								"value": "90"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 625708346023670,
+							"parameters": {
+								"variable": "user_badge",
+								"value": "\"out am i\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 976626103270385,
+							"parameters": {
+								"variable": "user_badge_explain",
+								"value": "\"hey whats going on  \""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 332663821634114,
+							"parameters": {
+								"variable": "score_previous",
+								"value": "90"
+							}
+						}
+					],
+					"sid": 228207722936218
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 836634121632944,
+							"parameters": {
+								"variable": "score_tally",
+								"comparison": 3,
+								"value": "80"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 998216737483977,
+							"parameters": {
+								"variable": "user_badge",
+								"value": "\"back to formula?\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 296543820222120,
+							"parameters": {
+								"variable": "user_badge_explain",
+								"value": "\"anf i said, heeeeeeyeeeyyeeeyy  \""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 336042875240763,
+							"parameters": {
+								"variable": "score_previous",
+								"value": "80"
+							}
+						}
+					],
+					"sid": 441162729828993
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 126592931664876,
+							"parameters": {
+								"variable": "score_tally",
+								"comparison": 3,
+								"value": "70"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 730513517234509,
+							"parameters": {
+								"variable": "user_badge",
+								"value": "\"im something of a scientist myself\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 785695418279510,
+							"parameters": {
+								"variable": "user_badge_explain",
+								"value": "\"heeeeeyeyyeeeey  \""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 877183471571813,
+							"parameters": {
+								"variable": "score_previous",
+								"value": "70"
+							}
+						}
+					],
+					"sid": 954193015480175
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 855079834478064,
+							"parameters": {
+								"variable": "score_tally",
+								"comparison": 3,
+								"value": "60"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 845094103176446,
+							"parameters": {
+								"variable": "user_badge",
+								"value": "\"you know how much i sacrificed?\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 931633793020973,
+							"parameters": {
+								"variable": "user_badge_explain",
+								"value": "\"I said hey!  \""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 459334742648235,
+							"parameters": {
+								"variable": "score_previous",
+								"value": "60"
+							}
+						}
+					],
+					"sid": 938110133490775
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 684086736831243,
+							"parameters": {
+								"variable": "score_tally",
+								"comparison": 3,
+								"value": "50"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 676630097420502,
+							"parameters": {
+								"variable": "user_badge",
+								"value": "\"or suffer the children\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 426204203447991,
+							"parameters": {
+								"variable": "user_badge_explain",
+								"value": "\"what's going ohhhhonnnnnn\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 341076867576252,
+							"parameters": {
+								"variable": "score_previous",
+								"value": "50"
+							}
+						}
+					],
+					"sid": 814533133387257
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 486795946150736,
+							"parameters": {
+								"first-value": "score_previous",
+								"comparison": 3,
+								"second-value": "score_highest"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 978967569918574,
+							"parameters": {
+								"variable": "score_highest",
+								"value": "score_previous"
+							}
+						}
+					],
+					"sid": 570988744143134
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 934820928368730
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "BadgeTracker",
+					"sid": 218354508614708
+				}
+			],
+			"sid": 694078787939059
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "UI Boxes",
 			"description": "",
 			"isActiveOnStart": true,
-			"children": [],
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 716499425983364
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "text_profile_user",
+							"sid": 953454141334634,
+							"parameters": {
+								"text": "user_name"
+							}
+						}
+					],
+					"sid": 528866719714120
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 795589628654463,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "playerAvatar"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "playerAvatar",
+							"sid": 123213394701248,
+							"parameters": {
+								"instance-variable": "menu"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "playerAvatar",
+							"sid": 689044762418089,
+							"parameters": {
+								"instance-variable": "clickable",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "OpenProfile",
+							"sid": 221235338778481
+						}
+					],
+					"sid": 414637380124283
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 194957823732796,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "profile_close"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "CloseProfile",
+							"sid": 293726820747696
+						}
+					],
+					"sid": 367764565332404
+				},
+				{
+					"functionName": "OpenProfile",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "playerAvatar",
+							"sid": 944239482093181,
+							"parameters": {
+								"instance-variable": "clickable",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "card_profile_hub",
+							"sid": 578855431505214,
+							"parameters": {
+								"x": "435",
+								"y": "224"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 839796197732980,
+							"parameters": {
+								"variable": "pause_time",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "overlay",
+							"sid": 674047767755090,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 218251740064712,
+							"parameters": {
+								"audio-file": "hover Click_Standard_0",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"callFunction": "UIPositioning",
+							"sid": 176472829084920
+						}
+					],
+					"sid": 239019675319550
+				},
+				{
+					"functionName": "CloseProfile",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "playerAvatar",
+							"sid": 973923748300693,
+							"parameters": {
+								"instance-variable": "clickable",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "card_profile_hub",
+							"sid": 757884685462766,
+							"parameters": {
+								"x": "435",
+								"y": "11224"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 563387201600178,
+							"parameters": {
+								"variable": "pause_time",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "overlay",
+							"sid": 866435798076613,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 616092825445024,
+							"parameters": {
+								"audio-file": "hover Click_Standard_0",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"callFunction": "UIPositioning",
+							"sid": 787448796334323
+						}
+					],
+					"sid": 353762701378939
+				},
+				{
+					"functionName": "UIPositioning",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "profile_close",
+							"sid": 929549072333209,
+							"parameters": {
+								"object": "card_profile_hub",
+								"image-point-optional": "1"
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "card_profile",
+							"sid": 659443944571655,
+							"parameters": {
+								"object": "card_profile_hub",
+								"image-point-optional": "2"
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "card_badge",
+							"sid": 989908099360025,
+							"parameters": {
+								"object": "card_profile_hub",
+								"image-point-optional": "3"
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "text_profile_user",
+							"sid": 778961205994635,
+							"parameters": {
+								"object": "card_profile",
+								"image-point-optional": "3"
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "profile_avatar",
+							"sid": 238455774331366,
+							"parameters": {
+								"object": "card_profile",
+								"image-point-optional": "2"
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "text_badge",
+							"sid": 316511758139191,
+							"parameters": {
+								"object": "card_badge",
+								"image-point-optional": "3"
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "text_badge_explanation",
+							"sid": 704207275696879,
+							"parameters": {
+								"object": "card_badge",
+								"image-point-optional": "4"
+							}
+						}
+					],
+					"sid": 382770100930910
+				}
+			],
 			"sid": 850666385033394
 		},
 		{
@@ -4661,78 +5960,6 @@
 						}
 					],
 					"sid": 948353056236609
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 392807018966786,
-							"parameters": {
-								"variable": "drag_check",
-								"comparison": 0,
-								"value": "0"
-							}
-						},
-						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 275380898584862,
-							"parameters": {
-								"variable": "dragDone"
-							},
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"id": "set-layer-visible",
-							"objectClass": "System",
-							"sid": 980322701872340,
-							"parameters": {
-								"layer": "3",
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "overlay",
-							"sid": 284513843415065,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 590737687611234,
-							"parameters": {
-								"variable": "drag_time",
-								"value": "false"
-							}
-						},
-						{
-							"id": "add-to-eventvar",
-							"objectClass": "System",
-							"sid": 762336786729579,
-							"parameters": {
-								"variable": "isFinished",
-								"value": "1"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 821068763896409,
-							"parameters": {
-								"variable": "dragDone",
-								"value": "true"
-							}
-						}
-					],
-					"sid": 498304002796021,
-					"disabled": true
 				},
 				{
 					"eventType": "comment",
@@ -5058,9 +6285,345 @@
 							"parameters": {
 								"text": "prev_ans"
 							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "text_score_highest",
+							"sid": 899055464270274,
+							"parameters": {
+								"text": "score_highest"
+							}
 						}
 					],
 					"sid": 127325621669543
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "sound_trigger",
+							"sid": 857169855040807,
+							"parameters": {
+								"object": "sound_l1_station"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 276046286319231,
+							"parameters": {
+								"variable": "sound1_start"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 323087946717098,
+							"parameters": {
+								"audio-file": "bg_city1",
+								"loop": "looping",
+								"volume": "0",
+								"tag-optional": "\"train\""
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 649689190942617,
+							"parameters": {
+								"tag": "\"market\""
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 467118162115780,
+							"parameters": {
+								"variable": "sound1_start",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 325535480526698
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "sound_trigger",
+							"sid": 656686741556982,
+							"parameters": {
+								"object": "sound_l1_station"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 420530482074384,
+							"parameters": {
+								"variable": "sound1_start"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 809530050898617,
+							"parameters": {
+								"tag": "\"train\"",
+								"db": "-100",
+								"duration": "2",
+								"ending": "stop"
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 102393773750470,
+							"parameters": {
+								"tag": "\"river\""
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 120386504375447,
+							"parameters": {
+								"variable": "sound1_start",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 156052910758902
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "sound_trigger",
+							"sid": 295901895563876,
+							"parameters": {
+								"object": "sound_l1_river"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 728681560589735,
+							"parameters": {
+								"variable": "sound2_start"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 740450098152298,
+							"parameters": {
+								"audio-file": "mixkit-atmosphere-of-a-river-at-sunrise-2458",
+								"loop": "looping",
+								"volume": "0",
+								"tag-optional": "\"river\""
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 189343819630144,
+							"parameters": {
+								"tag": "\"train\""
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 639263523736550,
+							"parameters": {
+								"tag": "\"market\""
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 441816676185863,
+							"parameters": {
+								"variable": "sound2_start",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 904091479537922
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "sound_trigger",
+							"sid": 432880266430773,
+							"parameters": {
+								"object": "sound_l1_river"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 217166853366935,
+							"parameters": {
+								"variable": "sound2_start"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 890037755063711,
+							"parameters": {
+								"tag": "\"river\""
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 812716575718255,
+							"parameters": {
+								"tag": "\"market\""
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 895751374483811,
+							"parameters": {
+								"variable": "sound2_start",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 688235451143568
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "sound_trigger",
+							"sid": 265898491652853,
+							"parameters": {
+								"object": "sound_l1_market"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 683588725477380,
+							"parameters": {
+								"variable": "sound3_start"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 727501282879243,
+							"parameters": {
+								"audio-file": "mixkit-very-crowded-pub-or-party-loop-360",
+								"loop": "looping",
+								"volume": "0",
+								"tag-optional": "\"market\""
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 571431946168306,
+							"parameters": {
+								"tag": "\"train\""
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 666132901571458,
+							"parameters": {
+								"tag": "\"river\""
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 456490844959445,
+							"parameters": {
+								"variable": "sound3_start",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 191178892573495
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "sound_trigger",
+							"sid": 372469975488720,
+							"parameters": {
+								"object": "sound_l1_market"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 693060321876161,
+							"parameters": {
+								"variable": "sound3_start"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 352799658058110,
+							"parameters": {
+								"tag": "\"market\""
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 978028605308211,
+							"parameters": {
+								"tag": "\"river\""
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 530266736146566,
+							"parameters": {
+								"variable": "sound3_start",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 256818444069102
 				}
 			],
 			"sid": 314960304345935

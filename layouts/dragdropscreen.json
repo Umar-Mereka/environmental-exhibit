@@ -119,7 +119,11 @@
 						"live-preview": false
 					},
 					"uid": 51,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"clickable": 1,
+						"complete": 0,
+						"menu": false
+					},
 					"behaviors": {},
 					"world": {
 						"x": 175,

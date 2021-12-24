@@ -256,7 +256,22 @@
 			"menu_progress1",
 			"menu_lvl2",
 			"menu_lvl3",
-			"button_settings"
+			"button_settings",
+			"card_profile_hub",
+			"card_profile",
+			"profile_close",
+			"text_profile_user",
+			"profile_avatar",
+			"card_badge",
+			"text_badge",
+			"text_badge_explanation",
+			"text_score_right",
+			"sound_trigger",
+			"sound_l1_station",
+			"sound_l1_market",
+			"sound_l1_river",
+			"Sprite",
+			"text_score_highest"
 		],
 		"subfolders": []
 	},
@@ -290,7 +305,8 @@
 			"MenuScreen",
 			"Level1Screen",
 			"CharacterSelectScreen",
-			"PlayVideoScreen"
+			"PlayVideoScreen",
+			"Level2Screen"
 		],
 		"subfolders": [
 			{
@@ -321,7 +337,8 @@
 			"UIT_ES",
 			"TBTS_ES",
 			"VCS_ES",
-			"QS_ES"
+			"QS_ES",
+			"L2_ES"
 		],
 		"subfolders": []
 	},
@@ -361,6 +378,16 @@
 					"name": "Click_Standard_03.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 933751370128207
+				},
+				{
+					"name": "mixkit-atmosphere-of-a-river-at-sunrise-2458.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 794368720047766
+				},
+				{
+					"name": "mixkit-very-crowded-pub-or-party-loop-360.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 522865365527024
 				}
 			],
 			"subfolders": []
@@ -525,5 +552,5 @@
 	},
 	"viewportWidth": 854,
 	"viewportHeight": 480,
-	"firstLayout": null
+	"firstLayout": "StudioScreen"
 }

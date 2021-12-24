@@ -1,0 +1,74 @@
+{
+	"name": "card_profile_hub",
+	"plugin-id": "Sprite",
+	"sid": 156081225361233,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 400,
+						"height": 880,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1278117,
+						"collisionPoly": {
+							"points": [
+								0.015,
+								0.006818181818181818,
+								0.5,
+								0,
+								0.9825,
+								0.006818181818181818,
+								0.9975,
+								0.5,
+								0.9825,
+								0.9920454545454546,
+								0.5,
+								1,
+								0.015,
+								0.9920454545454546,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "close_button",
+								"x": 0.875,
+								"y": 0.028409090909090908
+							},
+							{
+								"name": "profile",
+								"x": 0.5,
+								"y": 0.06818181818181818
+							},
+							{
+								"name": "badge",
+								"x": 0.5,
+								"y": 0.29545454545454547
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 855534761386966,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

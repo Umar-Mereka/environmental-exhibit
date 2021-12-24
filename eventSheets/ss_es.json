@@ -22,9 +22,9 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 496116589070026,
+					"sid": 949865093597443,
 					"parameters": {
-						"layout": "MenuScreen"
+						"layout": "CharacterSelectScreen"
 					}
 				}
 			],
@@ -53,6 +53,24 @@
 				}
 			],
 			"sid": 410561438080991
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-end-of-layout",
+					"objectClass": "System",
+					"sid": 922008030133412
+				}
+			],
+			"actions": [
+				{
+					"id": "stop-all",
+					"objectClass": "Audio",
+					"sid": 164455785316888
+				}
+			],
+			"sid": 750167271114783
 		}
 	],
 	"sid": 372748299650649
